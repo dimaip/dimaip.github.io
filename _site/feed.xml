@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web&amp;Stuff</title>
+    <description>Random reflections on modern web development techniques.</description>
+    <link>http://dimaip.tumblr.com/</link>
+    <atom:link href="http://dimaip.tumblr.com/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 08 Jul 2014 09:54:51 +0400</pubDate>
+    <lastBuildDate>Tue, 08 Jul 2014 09:54:51 +0400</lastBuildDate>
+    <generator>Jekyll v2.1.0</generator>
+    
+      <item>
+        <title>Testing your CSS with CSSCritic and Hologram</title>
+        <description>&lt;p&gt;I’m a big fan of &lt;a href=&quot;http://alistapart.com/article/creating-style-guides&quot;&gt;styleguide driven development&lt;/a&gt; and even have plans of writing a longer post about my experience with it some time. But I had one last concern left in my mind: when all website styles are so deeply woven together, &lt;em&gt;how to test is something goes wrong&lt;/em&gt;?&lt;/p&gt;
+
+&lt;p&gt;The answer is an amazingly simple CSS test suite called &lt;a href=&quot;https://github.com/cburgmer/csscritic&quot;&gt;CSSCritic&lt;/a&gt;. It basically makes a snapshot of every element of your website, and then compares if anything has changed via simple image diff. If the changes is wanted, you mark it as accepted and then it becomes your new reference.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/csscritic.png&quot; alt=&quot;CSSCritic in action&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The next question is how to generate test pages for CSSCritic with every element from our styleguide. Creating it by hand would be very laborious. Luckily I use Hologram to automatically generate styleguides from documented CSS stylesheets, and that seemed like a good place to start. &lt;/p&gt;
+
+&lt;p&gt;Our styleguide is made of three long pages with atoms, molecules and organisms, according to atomic design methodology. The problem is that for CSSCritic it’s best to have multiple small html files for every website unit.&lt;/p&gt;
+
+&lt;p&gt;Here are the steps to accomplish it:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;In every Hologram CSS block, define a secondary category for each block of CSS, call it the same as element name. This way, in addition to main styleguide files, there will be generated small files for each page block.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;That’s cool, but adding them all to CSSCritic by hand would be too laborious, so here’s my kind of hackish way to do it: create a php script on server which would return directory listing with needed files in JSON, and then add them all automatically to CSSCrititc. I modified regressioRuner.html in the following way.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;csscritic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addReporter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;csscritic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;BasicHTMLReporter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getJSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/relfak-style/forCritic.php&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;csscritic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/relfak-style/&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;csscritic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Saves a bit of time.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Also I have created another copy of Hologram specially for CSSCritic, with tweaked assets, i.e. hidden example code blocks and page header and so on. Then I have updated my grunt file so Hologram would create blocks for CSScritic and a usual styleguide.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The main issue with CSSCrititc is that it doesn’t work with files from another domain, i.e. fonts embedded from fonts.com fail to load in my tests. There are workarounds, but I hadn’t have time to fix it yet.&lt;/p&gt;
+
+&lt;p&gt;If you find this post valuable or would like to hear about this CSS testing thing in greater detail, please comment!&lt;/p&gt;
+
+&lt;p&gt;Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh].&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 08 Jul 2014 03:23:32 +0400</pubDate>
+        <link>http://dimaip.tumblr.com/2014/07/08/testing-css-with-csscritic-and-hologram/</link>
+        <guid isPermaLink="true">http://dimaip.tumblr.com/2014/07/08/testing-css-with-csscritic-and-hologram/</guid>
+        
+        <category>css</category>
+        
+        <category>styleguide</category>
+        
+        <category>hologram</category>
+        
+        <category>csscritic</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
