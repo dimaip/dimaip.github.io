@@ -3,6 +3,7 @@ layout: post
 title:  "Testing your CSS with CSSCritic and Hologram"
 date:   2014-07-07 23:23:32
 tags: css styleguide hologram csscritic
+comments: true
 ---
 
 I'm a big fan of [styleguide driven development][styleguide] and even have plans of writing a longer post about my experience with it some time. But I had one last concern left in my mind: when all website styles are so deeply woven together, *how to test is something goes wrong*?
@@ -42,9 +43,6 @@ Saves a bit of time.
 The main issue with CSSCrititc is that it doesn't work with files from another domain, i.e. fonts embedded from fonts.com fail to load in my tests. There are workarounds, but I hadn't have time to fix it yet.
 
 If you find this post valuable or would like to hear about this CSS testing thing in greater detail, please comment!
-
-
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
 
 [styleguide]: http://alistapart.com/article/creating-style-guides
 [CSSCritic]: https://github.com/cburgmer/csscritic
