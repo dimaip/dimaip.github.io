@@ -18,7 +18,7 @@ Our styleguide is made of three long pages with atoms, molecules and organisms, 
 
 Here are the steps to accomplish it:
 
-1. In every Hologram CSS block, define a secondary category for each block of CSS, call it the same as element name. This way, in addition to main styleguide files, there will be generated small files for each page block.
+1. In every Hologram CSS block, define a secondary category for each block of CSS, call it the same as element name. This way, in addition to main styleguide files, there will be generated small files for each page block. (_Note that multiple categories are defined as YAML array, not as CSV_)
 
 2. That's cool, but adding them all to CSSCritic by hand would be too laborious, so here's my kind of hackish way to do it: create a php script on server which would return directory listing with needed files in JSON, and then add them all automatically to CSSCrititc. I modified regressioRuner.html in the following way.
 
