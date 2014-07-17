@@ -65,6 +65,7 @@ Of course if you need something more fancy, you can add one more element to your
 3. Hide it from CSS, once it's loaded.
 
 #Where to go next
+
 ###Defer loading JS 
 Really simple:
 
