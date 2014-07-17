@@ -18,7 +18,7 @@ This is easily solved by loadCSS:
     loadCSS( "styles.css" );
 </script>
 <noscript>
-  <link href="/typo3conf/ext/speciality_relfak/Resources/Public/foundation/stylesheets/relfak.css" type="text/css" rel="stylesheet"/>
+  <link href="style.css" type="text/css" rel="stylesheet"/>
 </noscript>
 {% endhighlight %}
 
