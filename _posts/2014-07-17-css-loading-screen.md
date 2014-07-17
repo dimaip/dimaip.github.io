@@ -12,7 +12,7 @@ So how to fix it?
 #Defer loading of main CSS
 This is easily solved by loadCSS:
 
-```
+{% highlight html %}
 <script type="text/javascript">
     function loadCSS(e,t,n){"use strict";var i=window.document.createElement("link");var o=t||window.document.getElementsByTagName("script")[0];i.rel="stylesheet";i.href=e;i.media="only x";o.parentNode.insertBefore(i,o);setTimeout(function(){i.media=n||"all"})}
     loadCSS( "styles.css" );
@@ -20,7 +20,7 @@ This is easily solved by loadCSS:
 <noscript>
   <link href="/typo3conf/ext/speciality_relfak/Resources/Public/foundation/stylesheets/relfak.css" type="text/css" rel="stylesheet"/>
 </noscript>
-```
+{% endhighlight %}
 
 Now the page shows up immediately after the HTML has been loaded. But of course it shows up unstyled, which may scare people off even more than the white screen.
 
@@ -33,7 +33,8 @@ While the poor user on mobile is waiting for your stylesheet to load, show him t
 
 The implementation in the most trivial form could be something like this:
 
-```
+{% highlight html %}
+<style>
 body:before {
     content: 'The page is loading...';
     position: absolute;
@@ -48,13 +49,14 @@ body:before {
     padding-top: 24px;
     font-family: sans-serif;
 }
-```
+</style>
+{% endhighlight %}
 
 And in your stylesheet add something like this:
 
-```
+{% highlight css %}
 body:before {display: none;}
-```
+{% endhighlight %}
 
 Once the stylesheet is loaded, the loading screen disappears. 
 Of course if you need something more fancy, you can add one more element to your HTML and style it the way you want, this is just an example.
@@ -69,7 +71,7 @@ Of course if you need something more fancy, you can add one more element to your
 ###Defer loading JS 
 Really simple:
 
-```
+{% highlight js %}
 function downloadJSAtOnload() {
     var element = document.createElement("script");
     element.src = "your.min.js";
@@ -80,7 +82,7 @@ window.addEventListener("load", downloadJSAtOnload, false);
 else if (window.attachEvent)
 window.attachEvent("onload", downloadJSAtOnload);
 else window.onload = downloadJSAtOnload;
-```
+{% endhighlight %}
 
 ###Ajax-load below-the-fold content
 If your page is very heavy, do it! Lazy-load your news articles or whatever secondary content you have there. Just don't overdo it!
