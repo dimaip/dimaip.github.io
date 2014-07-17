@@ -11,6 +11,7 @@ So how to fix it?
 
 #Defer loading of main CSS
 This is easily solved by loadCSS:
+
 ```
 <script type="text/javascript">
     function loadCSS(e,t,n){"use strict";var i=window.document.createElement("link");var o=t||window.document.getElementsByTagName("script")[0];i.rel="stylesheet";i.href=e;i.media="only x";o.parentNode.insertBefore(i,o);setTimeout(function(){i.media=n||"all"})}
@@ -20,6 +21,7 @@ This is easily solved by loadCSS:
   <link href="/typo3conf/ext/speciality_relfak/Resources/Public/foundation/stylesheets/relfak.css" type="text/css" rel="stylesheet"/>
 </noscript>
 ```
+
 Now the page shows up immediately after the HTML has been loaded. But of course it shows up unstyled, which may scare people off even more than the white screen.
 
 #The hard solution
@@ -63,8 +65,9 @@ Of course if you need something more fancy, you can add one more element to your
 3. Hide it from CSS, once it's loaded.
 
 #Where to go next
-##Defer loading JS 
+###Defer loading JS 
 Really simple:
+
 ```
 function downloadJSAtOnload() {
     var element = document.createElement("script");
@@ -77,10 +80,11 @@ else if (window.attachEvent)
 window.attachEvent("onload", downloadJSAtOnload);
 else window.onload = downloadJSAtOnload;
 ```
-##Ajax-load below-the-fold content
+
+###Ajax-load below-the-fold content
 If your page is very heavy, do it! Lazy-load your news articles or whatever secondary content you have there. Just don't overdo it!
 
-##Optimize CSS
+###Optimize CSS
 Minify, concatenate, make sure there are no unused styles left (unCSS to the rescue!).
 
 #Your feedback
