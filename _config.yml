@@ -11,3 +11,8 @@ host: server.psmb.ru
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+analytics :
+  provider : google
+  google : 
+      tracking_id : 'UA-52948019-1'
