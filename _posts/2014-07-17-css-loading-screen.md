@@ -9,7 +9,7 @@ comments: true
 Ever since Google PageSpeed has began warning us about [Optimizing CSS Delivery](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery) and render-blocking JS and CSS I began to be uneasy about this issue. When on mobile, having to wait for minutes staring at the blank white screen can put people off.
 So how to fix it?
 
-#Defer loading of main CSS
+##Defer loading of main CSS
 
 This is easily solved by loadCSS:
 
@@ -25,12 +25,12 @@ This is easily solved by loadCSS:
 
 Now the page shows up immediately after the HTML has been loaded. But of course it shows up unstyled, which may scare people off even more than the white screen.
 
-#The hard solution
+##The hard solution
 
 The best thing we could do is to extract the styles which are responsible for loading above-the-fold content and inlining them in your HTML. But if your CSS is written in modular way (stuff like atomic design, OOCSS), you'll need almost all of your base styles, grids and so on to render the above the fold stuff. And if your CSS code is dynamically generated, you may be unable to automatically inline it anyways.
 So I came-up with a very simple hackish solution.
 
-#CSS loading screen
+##CSS loading screen
 
 While the poor user on mobile is waiting for your stylesheet to load, show him the loading screen so he would now that the page is not dead. On that loading screen it is possible to show some essential information like contacts or working schedule. When the CSS is onle fully loaded, the message dissapears.
 
@@ -70,9 +70,9 @@ Of course if you need something more fancy, you can add one more element to your
 2. Add some simple loading screen which would show up instead of the usual white screen. Stuff it with essential information for mobile users if needed.
 3. Hide it from CSS, once it's loaded.
 
-#Where to go next
+##Where to go next
 
-###Defer loading JS 
+####Defer loading JS 
 
 Really simple:
 
@@ -89,14 +89,14 @@ window.attachEvent("onload", downloadJSAtOnload);
 else window.onload = downloadJSAtOnload;
 {% endhighlight %}
 
-###Ajax-load below-the-fold content
+####Ajax-load below-the-fold content
 
 If your page is very heavy, do it! Lazy-load your news articles or whatever secondary content you have there. Just don't overdo it!
 
-###Optimize CSS
+####Optimize CSS
 
 Minify, concatenate, make sure there are no unused styles left (unCSS to the rescue!).
 
-#Your feedback
+##Your feedback
 
 So now the important part, what do you think about this idea of a loading screen for CSS? Have I missed anything horrible? Comment or tweet me, I'd love to hear some feedback, especially critical!
