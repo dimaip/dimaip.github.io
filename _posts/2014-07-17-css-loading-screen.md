@@ -72,7 +72,7 @@ Of course if you need something more fancy, you can add one more element to your
 
 ##Where to go next
 
-####Defer loading JS 
+#### 1. Defer loading JS 
 
 Really simple:
 
@@ -89,11 +89,11 @@ window.attachEvent("onload", downloadJSAtOnload);
 else window.onload = downloadJSAtOnload;
 {% endhighlight %}
 
-####Ajax-load below-the-fold content
+#### 2. Ajax-load below-the-fold content
 
 If your page is very heavy, do it! Lazy-load your news articles or whatever secondary content you have there. Just don't overdo it!
 
-####Optimize CSS
+#### 3. Optimize CSS
 
 Minify, concatenate, make sure there are no unused styles left (unCSS to the rescue!).
 
