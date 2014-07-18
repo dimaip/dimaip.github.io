@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Extending Typo3 News: flush the system cache!"
+title:  "[note] Extending Typo3 News: flush the system cache!"
 date:   2014-07-11 13:23:32
 tags: typo3 notetoself extbase
 comments: true
