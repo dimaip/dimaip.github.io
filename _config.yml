@@ -1,5 +1,6 @@
 # Site settings
-title: "Dmitri Pisarev for the web!"
+title: "Dmitri Pisarev"
+moto: "making front&back ends meet"
 email: dimaip@gmail.com
 description: "Reflections on modern web development techniques."
 baseurl: ""
