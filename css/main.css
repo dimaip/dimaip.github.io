@@ -60,6 +60,11 @@ a:visited { color: #205caa; }
   z-index: 1;
 }
 
+.site-title__moto{
+  clear: both;
+  font-style: italic;
+}
+
 .site-nav {
   float: right;
   line-height: 56px;
