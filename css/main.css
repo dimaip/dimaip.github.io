@@ -52,17 +52,21 @@ a:visited { color: #205caa; }
 .site-title:visited {
   display: block;
   color: #333;
-  font-size: 26px;
-  letter-spacing: -1px;
   float: left;
-  line-height: 56px;
   position: relative;
   z-index: 1;
 }
+.site-title__link,
+.site-title__link:hover,
+.site-title__link:visited {
+   color: #333;
+   font-size: 26px;
+   letter-spacing: -1px;
+}
 
 .site-title__moto{
-  clear: both;
   font-style: italic;
+  ащте-ышяуЖ 16px;
 }
 
 .site-nav {
