@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Testing your CSS with CSSCritic and Hologram"
-date:   2014-07-07 23:23:32
 tags: css styleguide hologram csscritic
 comments: true
 ---
