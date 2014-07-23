@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My hiccups with TYPO3 Neos
-date:   2014-07-23 12:13:32
+date: {}
 tags: neos typoscript
 comments: true
 published: true
@@ -44,3 +44,18 @@ Here's my second hiccup: when trying to implement Foundation Grid, I names one o
 **Time wasted**: 15 min.
 
 **Solution**: use lowerCamelCase when naming NodeType properties.
+
+-------
+
+## 3. Flush caches in Production
+
+After switching to production context, Neos wasn't able to find my custom Node Types. I smelled cache issues so I was able to quicly google this up:
+
+`FLOW_CONTEXT=Production ./flow flow:cache:flush --force`
+
+**Time wasted**: 15 min.
+
+
+
+
+
