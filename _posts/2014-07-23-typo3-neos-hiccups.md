@@ -55,6 +55,13 @@ After switching to production context, Neos wasn't able to find my custom Node T
 
 **Time wasted**: 15 min.
 
+-----
+
+## 4. Stuck in edit preview mode
+
+https://forge.typo3.org/issues/54336
+
+**Time wasted**: 10 min.
 
 
 
