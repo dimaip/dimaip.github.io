@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My hiccups with TYPO3 Neos
-date: {}
+date:   2014-07-23 12:13:32
 tags: neos typoscript
 comments: true
 published: true
