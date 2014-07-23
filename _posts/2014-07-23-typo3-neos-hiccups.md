@@ -28,6 +28,7 @@ TYPO3:
 It was my fault, but still I wish the docs would mention it somehow.
 
 **Time wasted**: 2 hours.
+
 **The solution**: include the relevant typoscript file from your root typoscript file!
 
 ```
