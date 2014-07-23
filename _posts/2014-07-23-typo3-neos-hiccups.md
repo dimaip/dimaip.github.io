@@ -59,7 +59,9 @@ After switching to production context, Neos wasn't able to find my custom Node T
 
 ## 4. Stuck in edit preview mode
 
-https://forge.typo3.org/issues/54336
+[https://forge.typo3.org/issues/54336](https://forge.typo3.org/issues/54336)
+
+**Solution**: Add `print < page` in your root.ts2
 
 **Time wasted**: 10 min.
 
