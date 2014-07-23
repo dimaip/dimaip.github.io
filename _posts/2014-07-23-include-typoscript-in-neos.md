@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "[note] My hiccups with TYPO3 Neos"
+title: My hiccups with TYPO3 Neos
 date: {}
 tags: neos typoscript
 comments: true
 published: true
 ---
-
 
 ## 1. Forgot to include TypoScript
 
