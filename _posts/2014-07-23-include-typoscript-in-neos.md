@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "[note] Don't forget to include TS in Neos!"
-date:   2014-07-23 13:23:32
+title: "[note] Don't forget to include TS in Neos!"
+date: {}
 tags: neos typoscript
 comments: true
+published: true
 ---
 
 Note to whom it may concern.
