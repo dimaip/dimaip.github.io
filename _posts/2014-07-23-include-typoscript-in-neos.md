@@ -22,3 +22,12 @@ include: NodeTypes/YourElement.ts2
 ```
 
 It was my fault, but still I wish the docs would mention it somehow.
+
+TODO: lookup what this does:
+
+```
+TYPO3:
+  Neos:
+    typoScript:
+      autoInclude:
+```
