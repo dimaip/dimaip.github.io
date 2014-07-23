@@ -34,7 +34,7 @@ It was my fault, but still I wish the docs would mention it somehow.
 include: NodeTypes/YourElement.ts2
 ```
 
-
+---------
 
 ## 2. Property names must not contain dashes!
 
