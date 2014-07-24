@@ -8,6 +8,7 @@ published: true
 ---
 
 ## Day 1
+
 ### 1. Forgot to include TypoScript
 
 I assumed that TYPO3 Neos includes TypoScript automatically for every node type.  
