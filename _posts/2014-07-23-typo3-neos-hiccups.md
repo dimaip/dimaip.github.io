@@ -7,7 +7,8 @@ comments: true
 published: true
 ---
 
-## 1. Forgot to include TypoScript
+## Day 1
+### 1. Forgot to include TypoScript
 
 I assumed that TYPO3 Neos includes TypoScript automatically for every node type.  
 Of course when I tried to access some property from template, which I thought I had defined, I got the following  error:
@@ -35,9 +36,8 @@ It was my fault, but still I wish the docs would mention it somehow.
 include: NodeTypes/YourElement.ts2
 ```
 
----------
 
-## 2. Property names must not contain dashes!
+### 2. Property names must not contain dashes!
 
 Here's my second hiccup: when trying to implement Foundation Grid, I names one of the properties `large-offset`. Of course it didn't work. 
 
@@ -45,9 +45,11 @@ Here's my second hiccup: when trying to implement Foundation Grid, I names one o
 
 **Solution**: use lowerCamelCase when naming NodeType properties.
 
--------
+---------
 
-## 3. Flush caches in Production
+## Day 2
+
+### 3. Flush caches in Production
 
 After switching to production context, Neos wasn't able to find my custom Node Types. I smelled cache issues so I was able to quicly google this up:
 
@@ -55,9 +57,8 @@ After switching to production context, Neos wasn't able to find my custom Node T
 
 **Time wasted**: 15 min.
 
------
 
-## 4. Stuck in edit preview mode
+### 4. Stuck in edit preview mode
 
 [https://forge.typo3.org/issues/54336](https://forge.typo3.org/issues/54336)
 
@@ -65,6 +66,14 @@ After switching to production context, Neos wasn't able to find my custom Node T
 
 **Time wasted**: 10 min.
 
+-----
 
+## Day 3
+
+### 5. Access properties of a node from template
+
+I've assigned a some node as a category, and tried to display it in fluid template like this: `<neos:link.node node="{category}">{category.title}</neos:link.node>`. Didn't work!
+
+**Solution**: Use `{category.properties.title}` instead: `<neos:link.node node="{category}">{category.properties.title}</neos:link.node>`
 
 
