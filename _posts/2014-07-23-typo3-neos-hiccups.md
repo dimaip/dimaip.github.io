@@ -76,4 +76,4 @@ I've assigned a some node as a category, and tried to display it in fluid templa
 
 **Solution**: Use `{category.properties.title}` instead: `<neos:link.node node="{category}">{category.properties.title}</neos:link.node>`
 
-
+**Time wasted**: 10 min.
