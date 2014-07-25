@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'Fira Sans';
+  src: url(fonts/FiraSans-Regular.woff); }
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  src: url(fonts/FiraSans-Italic.woff); }
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-weight: bold;
+  src: url(fonts/FiraSans-Bold.woff); }
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-weight: 300;
+  src: url(fonts/FiraSans-Light.woff); }
+
+/*Colors*/
+/*Resets*/
+body {
+  font-family: 'Fira Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+  font-size: 100%;
+  margin: 0; }
+
+p, h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  line-height: 1;
+  margin: 0; }
+
+ul {
+  list-style-type: none;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+/*Settings*/
+/*Utility classes*/
+.FixedWidth {
+  max-width: 800px;
+  margin: 0 auto; }
+
+/*Atoms*/
+.H1, .MarkDown h1, .H2, .MarkDown h2, .H3, .MarkDown h3, .SiteTitle-Link, .H4, .MarkDown h4, .Media, .H5, .MarkDown h5, .H6, .MarkDown h6, .SiteTitle-Moto {
+  line-height: 1.2;
+  margin: 12px 0; }
+
+.H1, .MarkDown h1 {
+  font-size: 60px;
+  font-weight: bold; }
+
+.H2, .MarkDown h2 {
+  font-size: 48px; }
+
+.H3, .MarkDown h3, .SiteTitle-Link {
+  font-size: 36px; }
+
+.H4, .MarkDown h4, .Media {
+  font-size: 24px; }
+
+.H5, .MarkDown h5 {
+  font-size: 18px; }
+
+.H6, .MarkDown h6, .SiteTitle-Moto {
+  font-size: 14px; }
+
+.Paragraph, .MarkDown p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 1.6em 0; }
+
+.Link, .MarkDown a {
+  text-decoration: underline; }
+
+.MarkDown hr {
+  border: solid 1px #cccccc;
+  border-bottom: none; }
+
+/*Molecules*/
+.SiteTitle {
+  float: left; }
+
+.SiteTitle-Link {
+  font-weight: bold;
+  line-height: 1; }
+
+.SiteTitle-Moto {
+  color: #aaaaaa;
+  font-weight: 300;
+  line-height: 1;
+  margin: 0; }
+
+.Nav {
+  float: right; }
+
+.Media {
+  margin: 24px 0;
+  position: relative; }
+
+.Media-Date {
+  color: #aaaaaa;
+  text-align: right;
+  margin-right: 12px;
+  width: 120px;
+  font-weight: 300;
+  display: inline-block; }
+
+.Social {
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin-left: 12px; }
+
+.Header {
+  overflow: hidden;
+  margin-top: 12px;
+  margin-bottom: 48px; }
+
+.PostsList {
+  margin-bottom: 48px; }
+
+.PostContent {
+  margin: 48px 0; }
+
+.PostHeader-Meta {
+  color: #aaaaaa; }
+
+.Footer-Right > * {
+  float: right;
+  clear: both; }

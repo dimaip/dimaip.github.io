@@ -1,8 +1,84 @@
-<footer class="Footer">
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>[note] Extending Typo3 News: flush the system cache!</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="description" content="Reflections on modern web development techniques.">
+    <link rel="canonical" href="http://dimaip.tumblr.com/2014/07/11/extending-typo3-news/">
+	<!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/my.css">
+
+</head>
+
+
+    <body>
+
+    <header class="Header">
+
+  <div class="FixedWidth">
+    <div class="SiteTitle">
+        <a class="SiteTitle-Link" href="/">Dmitri Pisarev</a>
+        <div class="SiteTitle-Moto" href="/">Web development with Love</div>
+    </div>
+    <nav class="Nav">
+        
+          <a class="Nav-Link" href="/about/">About</a>
+        
+          
+        
+          
+        
+          
+        
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="FixedWidth">
+      <div class="Post">
+
+	<header class="PostHeader">
+    	<h1 class="H1">[note] Extending Typo3 News: flush the system cache!</h1>
+    	<p class="PostHeader-Meta">Jul 11, 2014</p>
+	</header>
+
+	<article class="PostContent MarkDown">
+	<p>Note to self: when <a href="http://docs.typo3.org/typo3cms/extensions/news/latest/Main/Tutorial/ExtendingNews/Index.html">extending EXT:News</a> in Typo3 with own classes, don’t forget to <code>flush system cache</code> in addition to <code>flush all caches</code>!
+(<em>Banging my head over the wall</em>)</p>
+
+	</article>
+  
+	
+	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'webandstuff'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	
+
+</div>
+    </div>
+
+    <footer class="Footer">
   <div class="FixedWidth">
     <div class="Footer-Right">
       <p class="RssSubscribe">
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">subscribe via RSS</a>
+        <a href="/feed.xml">subscribe via RSS</a>
       </p>
       <ul class="Socials">
         <li class="Social">
@@ -52,3 +128,6 @@
   ga('send', 'pageview');
 
 </script>
+
+    </body>
+</html>

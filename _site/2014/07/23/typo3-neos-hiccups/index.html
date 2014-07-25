@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dmitri Pisarev</title>
+    <title>My hiccups with TYPO3 Neos</title>
     <meta name=viewport content="width=device-width, initial-scale=1">
     <meta name="description" content="Reflections on modern web development techniques.">
-    <link rel="canonical" href="http://dimaip.tumblr.com/">
+    <link rel="canonical" href="http://dimaip.tumblr.com/2014/07/23/typo3-neos-hiccups/">
 	<!-- Custom CSS -->
     <link rel="stylesheet" href="/css/my.css">
 
@@ -41,48 +41,104 @@
 
 
     <div class="FixedWidth">
-        <ul class="PostsList">
-    
-      <li class="Media">
-        <span class="Media-Date">Jul 25, 2014</span>
-        <a class="Media-Link" href="/2014/07/25/the-cure-of-thoughtlessness/">The cure of thoughtlessness</a>
-      </li>
-    
-      <li class="Media">
-        <span class="Media-Date">Jul 23, 2014</span>
-        <a class="Media-Link" href="/2014/07/23/typo3-neos-hiccups/">My hiccups with TYPO3 Neos</a>
-      </li>
-    
-      <li class="Media">
-        <span class="Media-Date">Jul 19, 2014</span>
-        <a class="Media-Link" href="/2014/07/19/5-tips-on-making-foundation-based-site-faster.md/">5 tips on making your Foundation based site faster</a>
-      </li>
-    
-      <li class="Media">
-        <span class="Media-Date">Jul 17, 2014</span>
-        <a class="Media-Link" href="/2014/07/17/css-loading-screen/">Loading screen for CSS</a>
-      </li>
-    
-      <li class="Media">
-        <span class="Media-Date">Jul 11, 2014</span>
-        <a class="Media-Link" href="/2014/07/11/extending-typo3-news/">[note] Extending Typo3 News: flush the system cache!</a>
-      </li>
-    
-      <li class="Media">
-        <span class="Media-Date">Jul 8, 2014</span>
-        <a class="Media-Link" href="/2014/07/08/styleguide-driven-atomic-design-pattern/">Styleguide-driven Atomic Design pattern</a>
-      </li>
-    
-      <li class="Media">
-        <span class="Media-Date">Jul 7, 2014</span>
-        <a class="Media-Link" href="/2014/07/07/testing-css-with-csscritic-and-hologram/">Testing your CSS with CSSCritic and Hologram</a>
-      </li>
-    
-  </ul>
+      <div class="Post">
 
+	<header class="PostHeader">
+    	<h1 class="H1">My hiccups with TYPO3 Neos</h1>
+    	<p class="PostHeader-Meta">Jul 23, 2014</p>
+	</header>
+
+	<article class="PostContent MarkDown">
+	<h2 id="day-1">Day 1</h2>
+
+<h3 id="forgot-to-include-typoscript">1. Forgot to include TypoScript</h3>
+
+<p>I assumed that TYPO3 Neos includes TypoScript automatically for every node type.<br />
+Of course when I tried to access some property from template, which I thought I had defined, I got the following  error:</p>
+
+<p><code>
+No "page/body/content/main/default/element/itemRenderer/default/element/column0" TypoScript object found. Please make sure to define one in your TypoScript configuration. (20140723102105f65989)
+</code></p>
+
+<p>TODO: lookup what this does:</p>
+
+<p><code>
+TYPO3:
+  Neos:
+    typoScript:
+      autoInclude:
+</code></p>
+
+<p>It was my fault, but still I wish the docs would mention it somehow.</p>
+
+<p><strong>Time wasted</strong>: 2 hours.</p>
+
+<p><strong>The solution</strong>: include the relevant typoscript file from your root typoscript file!</p>
+
+<p><code>
+include: NodeTypes/YourElement.ts2
+</code></p>
+
+<h3 id="property-names-must-not-contain-dashes">2. Property names must not contain dashes!</h3>
+
+<p>Here’s my second hiccup: when trying to implement Foundation Grid, I names one of the properties <code>large-offset</code>. Of course it didn’t work. </p>
+
+<p><strong>Time wasted</strong>: 15 min.</p>
+
+<p><strong>Solution</strong>: use lowerCamelCase when naming NodeType properties.</p>
+
+<hr />
+
+<h2 id="day-2">Day 2</h2>
+
+<h3 id="flush-caches-in-production">3. Flush caches in Production</h3>
+
+<p>After switching to production context, Neos wasn’t able to find my custom Node Types. I smelled cache issues so I was able to quicly google this up:</p>
+
+<p><code>FLOW_CONTEXT=Production ./flow flow:cache:flush --force</code></p>
+
+<p><strong>Time wasted</strong>: 15 min.</p>
+
+<h3 id="stuck-in-edit-preview-mode">4. Stuck in edit preview mode</h3>
+
+<p><a href="https://forge.typo3.org/issues/54336">https://forge.typo3.org/issues/54336</a></p>
+
+<p><strong>Solution</strong>: Add <code>print &lt; page</code> in your root.ts2</p>
+
+<p><strong>Time wasted</strong>: 10 min.</p>
+
+<hr />
+
+<h2 id="day-3">Day 3</h2>
+
+<h3 id="access-properties-of-a-node-from-template">5. Access properties of a node from template</h3>
+
+<p>I’ve assigned a some node as a category, and tried to display it in fluid template like this: <code>&lt;neos:link.node node="{category}"&gt;{category.title}&lt;/neos:link.node&gt;</code>. Didn’t work!</p>
+
+<p><strong>Solution</strong>: Use <code>{category.properties.title}</code> instead: <code>&lt;neos:link.node node="{category}"&gt;{category.properties.title}&lt;/neos:link.node&gt;</code></p>
+
+<p><strong>Time wasted</strong>: 10 min.</p>
+
+	</article>
   
+	
+	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'webandstuff'; // required: replace example with your forum shortname
 
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	
 
+</div>
     </div>
 
     <footer class="Footer">
