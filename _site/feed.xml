@@ -5,8 +5,8 @@
     <description>Reflections on modern web development techniques.</description>
     <link>http://dimaip.tumblr.com/</link>
     <atom:link href="http://dimaip.tumblr.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 26 Jul 2014 03:30:52 +0400</pubDate>
-    <lastBuildDate>Sat, 26 Jul 2014 03:30:52 +0400</lastBuildDate>
+    <pubDate>Sat, 26 Jul 2014 03:39:46 +0400</pubDate>
+    <lastBuildDate>Sat, 26 Jul 2014 03:39:46 +0400</lastBuildDate>
     <generator>Jekyll v2.1.0</generator>
     
       <item>
@@ -16,7 +16,7 @@ In this post I’m going to suggest a few easy steps towards making your css fra
 
 &lt;h2 id=&quot;minimize-the-number-of-requests&quot;&gt;0. Minimize the number of requests&lt;/h2&gt;
 
-&lt;p&gt;If your CSS and JS is not minified and concatenated, stop reading this article, &lt;a href=&quot;https://github.com/mishoo/UglifyJS&quot;&gt;uglify it&lt;/a&gt;, and than return. You just have no excuse! Then look around and see how else you may minimize the number of requests.&lt;/p&gt;
+&lt;p&gt;If your CSS and JS is not minified and concatenated, stop reading this article, &lt;a href=&quot;https://github.com/mishoo/UglifyJS&quot;&gt;uglify it&lt;/a&gt;, and then return. You just have no excuse! Then look around and see how else you may minimize the number of requests.&lt;/p&gt;
 
 &lt;h2 id=&quot;partial-load-of-components&quot;&gt;1. Partial load of components&lt;/h2&gt;
 &lt;p&gt;This one is easy. Don’t import all of the Foundation’s components into your stylesheet, you won’t need them all! Foundation is really good at making code modular, that’s why I’m not ashamed of using it even on production website, and only for mock-ups.
