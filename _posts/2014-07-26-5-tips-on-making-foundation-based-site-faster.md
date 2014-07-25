@@ -10,7 +10,7 @@ In this post I'm going to suggest a few easy steps towards making your css frame
 
 ## 0. Minimize the number of requests
 
-If your CSS and JS is not minified and concatenated, stop reading this article, [uglify it](https://github.com/mishoo/UglifyJS), and than return. You just have no excuse! Then look around and see how else you may minimize the number of requests.
+If your CSS and JS is not minified and concatenated, stop reading this article, [uglify it](https://github.com/mishoo/UglifyJS), and then return. You just have no excuse! Then look around and see how else you may minimize the number of requests.
 
 ## 1. Partial load of components
 This one is easy. Don't import all of the Foundation's components into your stylesheet, you won't need them all! Foundation is really good at making code modular, that's why I'm not ashamed of using it even on production website, and only for mock-ups.
