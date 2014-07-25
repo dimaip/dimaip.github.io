@@ -25,7 +25,11 @@
 /* Syntax highlighting styles */
 /* ----------------------------------------------------------*/
 
-.highlight  { background: #ffffff; }
+.highlight {
+    background: #ececec;
+    padding: 12px;
+    border: 1px solid #ccc;
+}
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */
@@ -127,8 +131,9 @@ $u: 12px;
 
 /*Utility classes*/
 .FixedWidth{
-    max-width: 800px;
+    max-width: 824px;
     margin: 0 auto;
+    padding: 0 $u;
 }
 
 /*Atoms*/
