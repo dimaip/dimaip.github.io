@@ -14,7 +14,7 @@ My frontend code is modular and very well organised with the [Atomic design meth
 
 ##Separation of content and presentation
 
-The idea of separation of content and presentation has begun long ago for the world wide web. I grew up as web developer in [CSSZenGarden](http://www.csszengarden.com/) and have that idea in my guts. But this idea has a sibling in the world of classical software development -- Model-View-Controller pattern. I find this pattern very well applicable to the process of website building.
+The idea of separation of content and presentation has emrged long ago for the world wide web. I grew up as web developer in [CSSZenGarden](http://www.csszengarden.com/) and have that idea in my guts. But this idea has a sibling in the world of classical software development -- Model-View-Controller pattern. I find this pattern very well applicable to the process of website building.
 
 I have an idea to employ Neos to filling the gap between these two worlds, and ultimately saving the whole world wide web!
 
