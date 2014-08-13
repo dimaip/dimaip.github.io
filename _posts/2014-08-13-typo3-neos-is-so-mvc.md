@@ -6,7 +6,7 @@ tags: typo3 neos mvc
 comments: true
 ---
 
-This year I took a deep dive into the world of frontend. To my surprise it's not so much about "pixel-perfect" spaghetti CSS code whirled over HTML page by page anymore. Nowadays frontend has architecture and deep meaning. The other thing that surprised me is that not many of server-side guys seem to care about it, they think they have a separate, much more sophisticated realm of its own. Heck, even designers have become closer to understanding frontend, than the server-side people. This article will be an attempt to look at the most advanced server-side CMS with the eyes of frontend architect and MVC-lover.
+This year I took a deep dive into the world of frontend. To my surprise it's not so much about "pixel-perfect" spaghetti CSS code whirled over HTML, page by page. Nowadays frontend has architecture, it has deep thought behind it. The other thing that surprised me is that not many of server-side guys seem to care about it, they think they have a separate, much more sophisticated realm of its own. Heck, even designers have become closer to understanding frontend, than the server-side people. This article will be an attempt to look at the most advanced server-side CMS with the eyes of frontend architect and MVC-lover.
 
 ##Starting point
 
