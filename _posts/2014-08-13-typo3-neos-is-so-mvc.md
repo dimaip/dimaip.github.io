@@ -10,7 +10,7 @@ This year I took a deep dive into the world of frontend. To my surprise it's not
 
 ##Starting point
 
-My frontend code is modular and very well organised with the [Atomic design methodology](http://bradfrostweb.com/blog/post/atomic-web-design/), a flavor of [OOCSS](https://github.com/stubbornella/oocss/wiki) and [SMACSS](https://smacss.com/). Also I use [BEM](http://bem.info/) naming convention for classes. On top of that, [the living styleguide](http://alistapart.com/article/creating-style-guides) is generated to provide a collection of LEGO blocks for the whole design team. The CSS is lean and rational, you don't find a magic number in it often. Now I hear you say, what does it have to do with a CMS? -- It has a lot to do with Neos!
+My frontend code is modular and very well organised with the [Atomic design methodology](http://bradfrostweb.com/blog/post/atomic-web-design/), a flavor of [OOCSS](https://github.com/stubbornella/oocss/wiki) and [SMACSS](https://smacss.com/). Also I use [BEM](http://bem.info/) naming convention for classes. On top of that, [the living styleguide](http://alistapart.com/article/creating-style-guides) is generated to provide a collection of LEGO blocks for the whole design team. The CSS is lean and rational, you don't find a [magic number](http://csswizardry.com/2012/11/code-smells-in-css/) in it often. Now I hear you say, what does it have to do with a CMS? -- It has a lot to do with Neos!
 
 ##Separation of content and presentation
 
