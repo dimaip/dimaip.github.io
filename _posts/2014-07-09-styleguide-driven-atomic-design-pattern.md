@@ -6,7 +6,10 @@ tags: css styleguide atomic-design
 comments: true
 ---
 
+**THIS POST IS A DRAFT, SORRY!**
+
 #Preface
+
 I wanted to write a long post about all and everything in web development, but this proved to be very difficult, that's why I turn it into a collection of links and just an overview of technology, and write so more detailed posts on each technology later.
 
 #The problem
