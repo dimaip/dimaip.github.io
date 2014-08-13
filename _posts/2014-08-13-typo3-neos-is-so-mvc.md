@@ -61,4 +61,4 @@ This article was meant as a very rough analogy, which certainly has its limits. 
 
 *DOES IT MAKE ANY SENSE AT ALL?! I need your response!*
 
-PS: my English is poor, so any sort of proof-reading and editing is always welcome.
+**PS: my English is poor, so any sort of proof-reading and editing is always welcome.**
