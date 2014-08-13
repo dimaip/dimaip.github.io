@@ -55,10 +55,10 @@ And yes, we even have some sort of routing in the form of 'root' TS object, but 
 
 ##Conclusion
 
-The front end and server-side people should communicate more! We have ideas to share, and here, at front end, we also have passion for code crisp architecture and beautiful design.
+The front end and server-side people should communicate more! We have ideas to share, and here, at front end, we also have a passion for code, crisp architecture and beautiful design.
 
 This article was meant as a very rough analogy, which certainly has its limits. It's more of an insight, a fresh look at how we look at our code.
 
-DOES IT MAKE ANY SENSE AT ALL?! I need your response!
+*DOES IT MAKE ANY SENSE AT ALL?! I need your response!*
 
 PS: my English is poor, so any sort of proof-reading and editing is always welcome.
