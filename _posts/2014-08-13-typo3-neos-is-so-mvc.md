@@ -59,6 +59,6 @@ The front end and server-side people should communicate more! We have ideas to s
 
 This article was meant as a very rough analogy, which certainly has its limits. It's more of an insight, a fresh look at how we look at our code.
 
-*DOES IT MAKE ANY SENSE AT ALL?! I need your response!*
+**DOES IT MAKE ANY SENSE AT ALL?! I need your response!**
 
-**PS: my English is poor, so any sort of proof-reading and editing is always welcome.**
+*PS: my English is poor, so any sort of proof-reading and editing is always welcome.*
