@@ -55,7 +55,11 @@ $infoCollectionNode = $this->context->getNode('/sites/sfi/news/info');
         	$nodeTemplate->setNodeType($this->nodeTypeManager->getNodeType('Sfi.News:News'));
         	$nodeTemplate->setProperty('title',$newsItem['title']);
         	$nodeTemplate->setProperty('teaser',$newsItem['short']);
-        	$date = new \DateTime($newsItem['datetime']);
+        	if($newsItem['datetime']){
+        		$date = new \DateTime();
+        		$date->setTimestamp($newsItem['datetime']);
+        		$nodeTemplate->setProperty('date',$date);        		
+        	}
         	$nodeTemplate->setProperty('date',$date);
         	$nodeTemplate->setProperty('authorName',$newsItem['author']);
         	//And finally creare the new node
@@ -93,7 +97,7 @@ if($newsItem['image']){
 		$imageTemplate = new \TYPO3\TYPO3CR\Domain\Model\NodeTemplate();
     	$imageTemplate->setNodeType($this->nodeTypeManager->getNodeType('TYPO3.Neos.NodeTypes:Image'));
     	$imageTemplate->setProperty('image',$image);
-    	if($captions[$i])
+    	if(isset($captions[$i]))
     		$imageTemplate->setProperty('alternativeText',$captions[$i]);
     	$assetsNode->createNodeFromTemplate($imageTemplate);
 	}
