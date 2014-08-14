@@ -9,22 +9,22 @@ comments: true
 
 
 
-Unless you are starting with completely new project, one of the first things you need to get started with Neos, is to migrate content from old TYPO3 installation.
+Unless you are starting with a fresh project, one of the first things you need to get done when starting with Neos is to migrate content from old TYPO3 installation.
 
-To my surprise, I found almost zero information on this subject. There are great slides available by Karsten, but his awesome project is not ready yet, so I was stuck in the middle of nowhere with zero knowledge about the new system.
+To my surprise, I found almost zero information on this subject. There are [great slides](https://speakerdeck.com/kdambekalns/migrating-from-typo3-cms-to-typo3-neos) available by Karsten, but his awesome plugin is not ready yet, so I was stuck in the middle of nowhere with zero knowledge about the new system.
 
-I hope this post will save you at least from part of the frustration I had gone through.
+I hope this post will save you at least from part of frustration that I had gone through.
 
-I needed to migrate only tt_news records, but you can easily adapt it to anything you need.
+I needed to migrate only tt_news records, but you can easily adapt it to anything you need just grasp the methode.
 
 ##1. Command Controller
 
-The first question I had was where to put my migration code. I decided to that it makes most sense to create a command line task for that. Luckily Neos provides an easy way of creating command controllers. Here is [a good tutorial on how to create one](http://www.matthias-witte.net/create-your-own-typo3-flow-command-line-controller/2012/11/)
+The first question I had was where to put my migration code. Most apropriate is to create a command line task for that. Luckily Neos provides an easy way of creating command controllers. Here is [a good tutorial on how to create one](http://www.matthias-witte.net/create-your-own-typo3-flow-command-line-controller/2012/11/).
 
 ##2. Get records from old TYPO3
 
 Next I copied all of the relevant tables from old database to the new one.
-I needed a few minutes to figure out how to deal with direct database connections, but it wasn't hard:
+I needed a few minutes to figure out how to deal with direct database connections, but it wasn't hard. This is a function that retrieves all records of certain tt_news category, but you can use any query you want here.
 
 {% highlight php %}
 private function getNewsByCat($cat){
@@ -64,7 +64,7 @@ $infoCollectionNode = $this->context->getNode('/sites/sfi/news/info');
 
 ###Bodytext
 
-I wanted my new News object to be really flexible in the future, so bodytext I wanted to store in the mainContent child node.
+I wanted my new News object to be really flexible in the future, so I decided to store bodytext in the mainContent child node.
 
 TODO: I'll need to parse bodytext for TYPO3 specific things like <link> tag.
 
@@ -83,6 +83,7 @@ if($newsItem['bodytext']){
 With images I had to spend even more time.
 
 Here's the code:
+
 {% highlight php %}
 if($newsItem['image']){
 	$assetsNode = $newsNode->getNode('assets');
@@ -116,7 +117,7 @@ private function importImage($filename){
 
 ###Files
 
-And finally migrating files:
+And finally, migrating files:
 
 {% highlight php %}
 if($newsItem['news_files']){
@@ -133,7 +134,7 @@ if($newsItem['news_files']){
 }
 {% endhighlight %}
 
-And relevant file function:
+And a relevant file creation function:
 
 {% highlight php %}
 private function importFile($filename){
@@ -148,7 +149,7 @@ private function importFile($filename){
 
 ##Result
 
-Finally here you can see the final code: [the gist](https://gist.github.com/dimaip/43d027f184e06f1cd37c)
-It's a very low-quality code, but I wanted it to serve as an example, until proper migration package is released by Karsten.
+Here you can see the final code: [the gist](https://gist.github.com/dimaip/43d027f184e06f1cd37c)
+It is a very low-quality code, just to show you theidea and basic methodes, until proper migration package is released by Karsten.
 
-**And what's your experience with migrating content from old TYPO3? Share!**
+**And what is your experience with migrating content from old TYPO3? Share!**
