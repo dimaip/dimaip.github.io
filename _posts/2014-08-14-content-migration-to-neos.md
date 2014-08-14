@@ -148,7 +148,7 @@ private function importFile($filename){
 
 ##Result
 
-Finally here you can see the final code: https://gist.github.com/dimaip/43d027f184e06f1cd37c
+Finally here you can see the final code: [](https://gist.github.com/dimaip/43d027f184e06f1cd37c)
 It's a very low-quality code, but I wanted it to serve as an example, until proper migration package is released by Karsten.
 
 **And what's your experience with migrating content from old TYPO3? Share!**
