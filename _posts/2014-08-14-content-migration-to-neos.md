@@ -11,18 +11,19 @@ comments: true
 
 Unless you are starting with completely new project, one of the first things you need to get started with Neos, is to migrate content from old TYPO3 installation.
 
-To my surprise, I found almost zero information on this subject. There are great slides available by Karsten, by his awesome project is not ready yet, so I was stuck in the middle of nowhere with zero knowledge aout the new system.
+To my surprise, I found almost zero information on this subject. There are great slides available by Karsten, but his awesome project is not ready yet, so I was stuck in the middle of nowhere with zero knowledge about the new system.
 
-I hope this post will save you at least from part of the frustration.
-I needed to migrate tt_news records, put you can easily adapt it to anything you need.
+I hope this post will save you at least from part of the frustration I had gone through.
+
+I needed to migrate only tt_news records, but you can easily adapt it to anything you need.
 
 ##1. Command Controller
 
-The first question I had was where to put my migration code. I decided to that it makes most sense to create a command line task for that. Luckily Neos provides an easy way of creating command controllers. Here is a good tutorial on how to create one: http://www.matthias-witte.net/create-your-own-typo3-flow-command-line-controller/2012/11/
+The first question I had was where to put my migration code. I decided to that it makes most sense to create a command line task for that. Luckily Neos provides an easy way of creating command controllers. Here is [a good tutorial on how to create one](http://www.matthias-witte.net/create-your-own-typo3-flow-command-line-controller/2012/11/)
 
 ##2. Get records from old TYPO3
 
-Next I copied all of the relevant tables from old database to new one.
+Next I copied all of the relevant tables from old database to the new one.
 I needed a few minutes to figure out how to deal with direct database connections, but it wasn't hard:
 
 {% highlight php %}
@@ -39,7 +40,7 @@ WHERE mm.uid_foreign = '.$cat." AND tt_news.deleted=0 AND tt_news.hidden=0";
 
 ##3. Node template
 
-Now to actually insert anything to TYPO3CR, you need to create a NodeTemplate object for every news record, and fill it in with relevant properties. I had defined my own node type: Sfi.Sfi:News to hold news records.
+I had defined my own node type: Sfi.Sfi:News to hold news records. Now to actually insert anything to TYPO3CR, you need to create a NodeTemplate object for every news record, and fill it in with relevant properties.
 
 The simple properties were easy to nail:
 
