@@ -78,3 +78,27 @@ I've assigned a some node as a category, and tried to display it in fluid templa
 **Solution**: Use `{category.properties.title}` instead: `<neos:link.node node="{category}">{category.properties.title}</neos:link.node>`
 
 **Time wasted**: 10 min.
+
+## A few weeks later
+
+I've been busy migrating content for a while, and all went well so far.
+
+Once in a while I needed to clear all site data and start all over again. Here's how to do it:
+
+1. Run the following SQL to kill all of your media resources:
+
+```
+SET FOREIGN_KEY_CHECKS=0;
+truncate typo3_flow_resource_resource;
+truncate typo3_flow_resource_resourcepointer;
+truncate typo3_media_domain_model_asset;
+truncate typo3_media_domain_model_image;
+SET FOREIGN_KEY_CHECKS=1;
+```
+
+Notice that you have to disable key checks before truncating, otherwise it won't work.
+
+2. Delete files itself: `rm -f Data/Persistent/Resources/*` and `rm -f Web/_Resources/Persistent/*`
+ 
+3. `./flow site:prune --confirmation TRUE` -- clean website data and import your site data after: `./flow site:import --yoursitehere`
+
