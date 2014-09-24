@@ -41,7 +41,7 @@ sshfs#USERNAME@SERVERADDRRESS:/path /media/your_mount    fuse      user,_netdev,
 {% highlight bash %}
 #Install sshfs, if not already installed
 sudo apt-get install sshfs
-#make dir as a mount point
+#make dir for mount point
 sudo mkdir /media/your_mount
 #Mount all partitions according to fstab file
 sudo mount -a
