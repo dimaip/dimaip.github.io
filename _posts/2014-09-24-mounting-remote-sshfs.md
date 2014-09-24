@@ -35,7 +35,7 @@ sudo vi /etc/fstab
 And add this line to the end of fstab file:
 
 {% highlight bash %}
-sshfs#USERNAME@SERVERADDRRESS:/path /media/server    fuse      user,_netdev,reconnect,uid=1000,gid=1000,follow_symlinks,identityfile=/home/USERNAME/.ssh/id_rsa,idmap=user,allow_other  0   0
+sshfs#USERNAME@SERVERADDRRESS:/path /media/your_mount    fuse      user,_netdev,reconnect,uid=1000,gid=1000,follow_symlinks,identityfile=/home/USERNAME/.ssh/id_rsa,idmap=user,allow_other  0   0
 {% endhighlight %}
 
 {% highlight bash %}
