@@ -47,7 +47,7 @@ I joined a team that focused on improving editor experience. Fixing bugs, improv
 Also I managed to add a few features like TypoScript inclussion globbing, TypoScript image object and a few other improvements.
 
 
-#Wrap up
+##Wrap up
 
 Contributing to Open Source projects is a win-win solution for both agencies and freelancers alike. You get the tool that really fits your needs like a glove, that you learn throughout and can fix yourself, in case things go wrong. But also you contribute to something bigger than yourself and your bussiness interests, something that adds real value to life of editors and developers throughout the world. This is the spirit Kasper Skaarhoj has put into our community from the start, and I really care we will be able to keep it breathing among us.
 
