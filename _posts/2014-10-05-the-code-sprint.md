@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What I've learned at TYPO3 Neos code sptint Denmark"
+title:  "What I've learned at TYPO3 Neos code sprint in Denmark"
 tags: typo3 neos codesprint
 comments: true
 ---
@@ -8,27 +8,27 @@ comments: true
 After a six hour walk around Copenhagen, one of the best cities on earth, I have a few hours before the flight to stop and think what this week meant for me.
 
 !["Our" castle](/assets/castle.jpg)
-*"Our" castle*
+<br>*"Our" castle*
 
 ##Where I've been to last week?
 
 It is not so simple to explain. It was not a vacation. But I would not call it work either... It was not a conference, nor was it a tutition or a school.
-Bunch of people literally from all over the world come together to share a common passion: building a content management system (CMS) that does not suck. We call it a code sprint.
+Bunch of people, literally from all over the world, come together to share a common passion: building a content management system (CMS) that does not suck. We call it a code sprint.
 None of us was paid for participation, we did it from pure passion. But none of us had to pay either, thanks to our amazing sponsors!
 
 To summarize: bunch of geeks living in a XVth century castle, building best CMS on earth -- [TYPO3 Neos](http://neos.typo3.org).
 
 ![A kickoff meeting to start the sprint](/assets/kickoff.jpg)
-*A kickoff meeting to start the sprint*
+<br>*A kickoff meeting to start the sprint*
 
-##What I've learnt
+##What I have learnt
 
-Going to the sprint I knew I would probably learn a few things... You see, I'm at peers with computers since '95, since '05 doing professional web development, so I had thought about myself that I would know a few things by now. But compared with the guys that were there, my knowledge in all areas was an absolute zero. And that is such a cool and humbling experience!
+Going to the sprint I knew I would probably learn a few things... You see, I'm at peers with computers since '95, since '05 doing professional web development, so I had hoped that I would have learnt a few things by then. But compared with the guys that were at the sprint, my knowledge in all areas was an absolute zero. And that is such a cool and humbling experience!
 
 ![Some of the lead developers in action](/assets/core.jpg)
-*Some of the lead developers in action*
+<br>*Some of the lead developers in action*
 
-I had never been learning so intensively in my life. Ever.
+I had never been learning so intensively in my whole life. Ever.
 It felt like all of the participants were jumping on top of my poor head, trying to shove into it as many things as possible.
 
 As a result:
@@ -41,22 +41,22 @@ As a result:
 * improved my Git skills;
 * got to feel what working agile is like;
 * got a few insights on how RESTful services should work;
-* and even begun usung VIM mode in Sublime... Geekish!
+* and even began using VIM mode in SublimeText... Geekish!
 
 ![Dining with style...](/assets/dine.jpg)
-*Dining with style...*
+<br>*Dining with style...*
 
 ##What was done
 
 But, of course, the sprint is not a programming school, and we came together to contribute, not just to learn.
 
-It's really hard to imagine, what amount of work 30 developers can pull off during one week! ACL, backend translation, content dimensions, countless bugfixes, finalizing a release of Neos version 1.2 is just a very shallow overview.
+It's really hard to imagine what amount of work 30 passionate developers can pull off during one week! ACL, backend translation, content dimensions, countless bugfixes, finalizing a release of Neos version 1.2 is just a very shallow overview.
 
 I joined a team that focused on improving editor experience. Fixing bugs, improving error detection and notification: all of those things that could get you frustrated with Neos pretty quickly!
 Also I managed to add a few features like TypoScript inclussion globbing, TypoScript image object and a few other improvements.
 
 ![My typical workplace](/assets/workplace.jpg)
-*My typical workplace*
+<br>*My typical workplace*
 
 ##Wraping up
 
@@ -65,12 +65,12 @@ Contributing to Open Source projects is a win-win solution for both agencies and
 
 ##A few personal things
 
-Cooking and cleaning up together, conversasions during long walks, morning runs: everything was so natural and welcoming, that I could barelly notice that it was my first event in TYPO3 community. I'm especially grateful to Aske Ertmann, who took all of the bitter organizational things for himself. No doubt 1.2 will be a very solid release, with such a release manager!
+Cooking and cleaning up together, conversasions during long walks, morning runs: everything was so natural and welcoming, that I could barelly remember that it was my first event in TYPO3 community. I'm especially grateful to Aske Ertmann, who took all of the bitter organizational tasks for himself. No doubt 1.2 will be a very solid release, with such a release manager!
 
 ![One of the daily walks. Checking out the surroundings](/assets/surroundings.jpg)
-*One of the daily walks. Checking out the surroundings*
+<br>*One of the daily walks. Checking out the surroundings*
 
 ![My amazing room mate, Visay from Cambodia(!)](/assets/visay.jpg)
-*My amazing room mate, Visay from Cambodia(!)*
+<br>*My amazing room mate, Visay from Cambodia(!)*
 
-[Watch the whole album](https://plus.google.com/photos/111842839438389408798/albums/6064058344696631249)
+[View all of photos from the event](https://plus.google.com/photos/111842839438389408798/albums/6064058344696631249)
