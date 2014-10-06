@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What I've learned at TYPO3 Neos code sprint in Denmark"
+title:  "What I have learned at TYPO3 Neos code sprint in Denmark"
 tags: typo3 neos codesprint
 comments: true
 ---
