@@ -339,8 +339,8 @@ code {
   text-decoration: underline; }
 
 .List, .MarkDown ul {
-  list-style-type: disk;
-  padding-left: 12px; }
+  list-style-type: disc;
+  padding-left: 24px; }
 
 .MarkDown hr {
   border: solid 1px #ccc;
