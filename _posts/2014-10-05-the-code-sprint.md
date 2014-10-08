@@ -67,6 +67,8 @@ Contributing to Open Source projects is a win-win solution for both agencies and
 
 Cooking and cleaning up together, conversasions during long walks, morning runs: everything was so natural and welcoming, that I could barelly remember that it was my first event in TYPO3 community. I'm especially grateful to Aske Ertmann, who took all of the bitter organizational tasks for himself. No doubt 1.2 will be a very solid release, with such a release manager!
 
+And one more thing. It is so enjoyable that my contribution to the NEOS project is possible as part of my work time at our amazing [St Philaret's Christian Institute](http://sfi.ru/eng/). Now we finally have a chance for cool new website :)
+
 ![One of the daily walks. Checking out the surroundings](/assets/surroundings.jpg)
 <br>*One of the daily walks. Checking out the surroundings*
 
