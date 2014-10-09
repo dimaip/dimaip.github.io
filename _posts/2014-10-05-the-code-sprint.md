@@ -10,7 +10,7 @@ After a six hour walk around Copenhagen, one of the best cities on earth, I have
 !["Our" castle](/assets/castle.jpg)
 <br>*"Our" castle*
 
-##Where I've been to last week?
+##Where I've been to last week
 
 It is not so simple to explain. It was not a vacation. But I would not call it work either... It was not a conference, nor was it a tutition or a school.
 Bunch of people, literally from all over the world, come together to share a common passion: building a content management system (CMS) that does not suck. We call it a code sprint.
