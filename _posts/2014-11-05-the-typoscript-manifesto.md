@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The TypoScript manifesto"
+title:  "The TypoScript Manifesto"
 tags: typo3 neos typoscript
 comments: true
 ---
