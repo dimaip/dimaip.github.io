@@ -9,7 +9,7 @@ comments: true
 
 TypoScript2 is an amazing language, that suits TYPO3Neos and TYPO3CR perfectly. If you do not like it, get to meet it better, you will.
 
-Think about TypoScript as a sort of [Controller layer, between TYPOCR(Model) and Fluid(View)](http://dimaip.github.io/2014/08/13/typo3-neos-is-so-mvc/).
+Think about TypoScript as a sort of [Controller layer, between TYPO3CR(Model) and Fluid(View)](http://dimaip.github.io/2014/08/13/typo3-neos-is-so-mvc/).
 
 
 ##Keep templates as lean and logic-less as possible
