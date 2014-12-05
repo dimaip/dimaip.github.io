@@ -19,6 +19,11 @@ But first, allow me to introduce to you our small team:
 * [Natalia](https://www.facebook.com/profile.php?id=100002126400211) -- the Boss! Soon to become a PhD in Church History, one to ask about all sorts of scientific research questions, expert in Russian educational laws and an awesome person too!
 * And [me](https://www.facebook.com/dimaip) -- mediocre frontender with love for all things beautiful, including Neos, since this summer.
 
+!['Alexandra'](/assets/str.jpg)
+!['Sofia'](/assets/sofia.jpg)
+!['Natalia'](/assets/nign.jpg)
+!['Dmitri'](/assets/me.jpg)
+
 ###The Institute
 
 We together are proud to be an information services team behind truly unique education center -- St' Philat's Christian Institute. It is the first free theological Institute in Russia, which neither belongs to the state nor to the official structures of the church, which allows it to be a centre of dialog between church and society.
