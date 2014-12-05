@@ -8,6 +8,8 @@ comments: true
 
 So yeah, we have just launched a Neos project we have been working on for almost half a year -- the [website of St Philaret`s Christian Orthodox Institute](http://sfi.ru). I want to share with you the experience I have gained during this time, both technical and humanitarian.
 
+![sfi.ru website](assets/sfi.png)
+
 ###The team
 
 But first, allow me to introduce to you our small team: 
