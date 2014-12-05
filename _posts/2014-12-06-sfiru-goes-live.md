@@ -34,6 +34,7 @@ So for all of us, me included, working on this project meant way more than a fin
 ###The goal
 
 The objectives of the website redesign were clear:
+
 * Represent loads of legal and educational information in a clear way without frightening the user.
 * Tell our story in simple words, that not only scientists or clergy would be able to understand. 
 * Show the life of the Institute with the eyes of a student, try to bring in some of the spirit, that dwells a midst the walls of the Institute.
