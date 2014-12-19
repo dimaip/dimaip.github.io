@@ -86,3 +86,5 @@ Now we got all we had on step two, but ran automatically on every code commit to
 Of course what we have achieved is not rocket science and there are many ways to improve this setup. First of all you might like to add more stages to your project, like a staging environment. You might want to employ more advanced testing techniques to make sure you site really works the way it should before going live. Behavioural tests (Behat) come to my mind first, but I’m really open to other ideas on how to test Neos websites.
 
 And finally there is a whole new world of [Docker](https://www.docker.com/), but that is already a different story.
+
+Special thanks go to [Johannes Steu](https://twitter.com/stolle_) for teaching me 95% of things I write about here.
