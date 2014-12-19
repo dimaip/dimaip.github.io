@@ -23,9 +23,7 @@ This tutorial will give you an overview of 3 key components of deploying TYPO3 F
 The first natural step after I started using TYPO3 Neos to build websites was to put all of my packages into git code repositories and pull them together via Composer PHP package manager. That’s how Neos itself works.
 
 1. Upload your site package and other custom packages to Github repository (private or public).
-
 2. Clone [base Neos distribution](https://git.typo3.org/Neos/Distributions/Base.git) and create your own distribution on top of it: add your Github repositories to repository list of composer.json file, and then require your packages. [Example](https://github.com/sfi-ru/SfiDistr/blob/master/composer.json).
-
 3. Add your customized Neos distribution as a separate repository in Github. [Here is mine.](https://github.com/sfi-ru/SfiDistr)
 
 **Workflow:**
