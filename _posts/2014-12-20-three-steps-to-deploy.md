@@ -18,7 +18,7 @@ This tutorial will give you an overview of 3 key components of deploying TYPO3 F
 * Basic Composer understanding
 * SSH access to deployment server and Linux/MacOS development PC
 
-## Step 1: Put code into git repositories and compile it with Composer
+### Step 1: Put code into git repositories and compile it with Composer
 
 The first natural step after I started using TYPO3 Neos to build websites was to put all of my packages into git code repositories and pull them together via Composer PHP package manager. That’s how Neos itself works.
 
@@ -37,7 +37,7 @@ The first natural step after I started using TYPO3 Neos to build websites was to
 * All of your code now is safe and easily accessible in Github repositories
 * Clear and conscious way to manage and assemble dependencies
 
-## Step 2: Deploy code with TYPO3 Surf
+### Step 2: Deploy code with TYPO3 Surf
 
 The previous step has got us far, now lets add some durability to our deployment solution.
 
@@ -60,7 +60,7 @@ Let’s install and configure [Surf](http://typo3.org/additional-products/surf/)
 * Easy to roll-back to previous versions of deployment.
 * Automatic smoke-test before going live.
 
-## Step 3: Continuous delivery with CircleCI
+### Step 3: Continuous delivery with CircleCI
 
 Now it’s a pleasure to see how Surf automatically deploys our Composer-based project, but we would like Surf to do it on every new commit to master branch of our repository. That’s easy to do with CircleCI:
 
@@ -81,7 +81,7 @@ Now we got all we had on step two, but ran automatically on every code commit to
 * You can do some more advanced tests in CircleCI, in addition to smoke tests done by Surf
 * Configure more advanced workflows with multiple stages and nodes
 
-## Where to go next
+### Where to go next
 
 Of course what we have achieved is not rocket science and there are many ways to improve this setup. First of all you might like to add more stages to your project, like a staging environment. You might want to employ more advanced testing techniques to make sure you site really works the way it should before going live. Behavioural tests (Behat) come to my mind first, but I’m really open to other ideas on how to test Neos websites.
 
