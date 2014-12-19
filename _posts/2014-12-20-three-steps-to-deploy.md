@@ -62,6 +62,8 @@ Let’s install and configure [Surf](http://typo3.org/additional-products/surf/)
 
 ### Step 3: Continuous delivery with CircleCI
 
+!['CircleCI'](/assets/circleci.png)
+
 Now it’s a pleasure to see how Surf automatically deploys our Composer-based project, but we would like Surf to do it on every new commit to master branch of our repository. That’s easy to do with CircleCI:
 
 1. Register on [circleci.com](http://circleci.com) and create new project based on your project’s Github repository.
