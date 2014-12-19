@@ -87,4 +87,4 @@ Of course what we have achieved is not rocket science and there are many ways to
 
 And finally there is a whole new world of [Docker](https://www.docker.com/), but that is already a different story.
 
-Special thanks go to [Johannes Steu](https://twitter.com/stolle_) for teaching me 95% of things I write about here.
+*Special thanks go to [Johannes Steu](https://twitter.com/stolle_) for teaching me 95% of things I write about here.*
