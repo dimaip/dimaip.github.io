@@ -13,6 +13,7 @@ One of such topics I was afraid to touch was deployment. Sftp-ing to the server 
 This tutorial will give you an overview of 3 key components of deploying TYPO3 Flow/Neos applications: code repository (Github) + deployment toolbox (Surf) + continuous delivery tool (CircleCI). We use hosted solutions here instead of things like Jenkins and GitLab because they are much easier to setup for beginners while still being free for open source projects.
 
 **Requirements:**
+
 * Some Git and Github knowledge
 * Basic Composer understanding
 * SSH access to deployment server and Linux/MacOS development PC
