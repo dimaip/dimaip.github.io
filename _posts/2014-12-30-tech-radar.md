@@ -50,6 +50,7 @@ Joined the Neos team for [code sprint in Denmark](http://dimaip.github.io/2014/1
 ##2015
 
 And here are things I want to learn in 2015:
+
 * Do [RESS with Neos](https://github.com/ttreeagency/Ttree.Ress)
 * Use [ElasticSearch with Neos](https://github.com/Flowpack/Flowpack.ElasticSearch.ContentRepositoryAdaptor)
 * [PaaS with Docker](http://thenewstack.io/docker-is-driving-a-new-breed-of-paas/)
