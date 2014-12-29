@@ -17,13 +17,13 @@ Typography, usability and design in general.
 Rethinking frontend development:
 
 * Mobile first
-* Atomic design, BEM, OOCSS
-* Living styleguides
-* NoPSD, Designing in browser, together with designer
+* [Atomic design](http://bradfrost.com/blog/post/atomic-web-design/), [BEM](http://bem.info/), [OOCSS](https://github.com/stubbornella/oocss/wiki)
+* [Living styleguides](http://alistapart.com/article/creating-style-guides)
+* [NoPSD](http://thoughtworks.github.io/p2/issue02/continuous-design/), Designing in browser, together with designer
 
 ##Q3 2014
 
-Began learning TYPO3 Neos and all that follows:
+Began learning [TYPO3 Neos](http://neos.typo3.org/) and all that follows:
 
 * Flow
 * Neos
@@ -50,11 +50,10 @@ Joined the Neos team for [code sprint in Denmark](http://dimaip.github.io/2014/1
 ##2015
 
 And here are things I want to learn in 2015:
-* Do RESS with Neos
-* Use ElasticSearch with Neos
-* PaaS with Docker
-* Maybe Varnish
-* Testable frontend: CSS critic + PhantomJS
+* Do [RESS with Neos](https://github.com/ttreeagency/Ttree.Ress)
+* Use [ElasticSearch with Neos](https://github.com/Flowpack/Flowpack.ElasticSearch.ContentRepositoryAdaptor)
+* [PaaS with Docker](http://thenewstack.io/docker-is-driving-a-new-breed-of-paas/)
+* Testable frontend: CSS critic + PhantomJS + BeHat
 * Work more Agile, but more organized
 * Learn more about Google Analitics & A/B testing and data-driven development in general
 
