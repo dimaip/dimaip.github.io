@@ -84,3 +84,5 @@ The most important one is that we'll have about a minute of downtime when redepl
 Of course there are way more advanced setups than this like multi-host deployment, proper service discovery and other things like this. But if you need such advanced features, it's propably best to look in the direction of full-blown PaaS services like [Deis](http://deis.io/) or [Flynn](https://flynn.io/).
 
 Now that I have this setup, I'm taking a break for at least half a year from this nifty subject of devops and do actual work: Design, CSS, Neos...
+
+**Due credit**: most of my Docker knowledge come from styding Docker images by [Marcin Ryzycki](https://github.com/ryzy) and asking him a lot of silly questions :) 
