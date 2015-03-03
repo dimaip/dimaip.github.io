@@ -1,5 +1,9 @@
 ---
-published: false
+layout: post
+title:  "Hybrid deploy with Docker and Surf"
+date:   2015-03-03 20:23:32
+tags: docker deploy surf neos
+comments: true
 ---
 
 In the [previous article](http://dimaip.github.io/2014/12/20/three-steps-to-deploy/) I've written about three essential steps to modern deployment: code hosting with git and Github + contineous integration with CircleCI and Composer + contineous deployment with Surf.
