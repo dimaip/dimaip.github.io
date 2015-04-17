@@ -298,7 +298,7 @@ img {
 
 code {
   overflow-wrap: break-word;
-  white-space: nowrap; }
+  white-space: pre; }
 
 /*Settings*/
 /*Utility classes*/
