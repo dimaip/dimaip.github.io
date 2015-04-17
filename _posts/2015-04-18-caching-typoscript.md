@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Cache Like a Pro: Understanding the Caching Mechanism in Neos"
+title:  "Caching in Neos: examples and gothchas"
 tags: neos typoscript caching
 comments: true
 ---
