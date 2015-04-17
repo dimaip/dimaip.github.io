@@ -297,7 +297,8 @@ img {
   height: auto; }
 
 code {
-  overflow-wrap: break-word; }
+  overflow-wrap: break-word;
+  white-space: nowrap; }
 
 /*Settings*/
 /*Utility classes*/
