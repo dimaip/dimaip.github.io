@@ -1,5 +1,8 @@
 ---
-published: false
+layout: post
+title:  "Cache Like a Pro: Understanding the Caching Mechanism in Neos"
+tags: neos typoscript caching
+comments: true
 ---
 
 This week I finally learned how caching mechanism works in [Neos](http://neos.typo3.org). Time to share!
