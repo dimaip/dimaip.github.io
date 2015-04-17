@@ -9,6 +9,9 @@ twitter_username: dimaip
 github_username:  dimaip
 host: server.psmb.ru
 
+sass:
+  style: :expanded # You might prefer to minify using :compressed
+
 # Build settings
 markdown: kramdown
 permalink: pretty
