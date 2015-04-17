@@ -41,7 +41,7 @@ So far things look really easy, but wait, there are a few nuances that would mak
 
 Neos has this little piece of configuration that caused me a lot of trouble:
 
-{% highlight %}
+{% highlight C%}
 prototype(TYPO3.Neos:Content) {
 	prototype(TYPO3.Neos:ContentCollection) {
 		# Make ContentCollection inside content node types embedded by default.
@@ -56,7 +56,7 @@ prototype(TYPO3.Neos:Content) {
 
 Most people render their root content collection from their page object (or any object inheriting from TYPO3.Neos:Document), but not me. I always have some proxy object, inheriting from TYPO3.Neos:Content, inside of which I render the root content collection. The result? -- ContentCollections get embeded into the page object, so if I change some element inside of that ContentCollection and refresh the page, the changes are gone. Here's how to fix it:
 
-{% highlight %}
+{% highlight C%}
 prototype(TYPO3.Neos:Content).prototype(TYPO3.Neos:ContentCollection).@cache.mode = 'cached'
 {% endhighlight %}
 
@@ -68,7 +68,7 @@ When using the typo3cr pagination widget, the state of the page is defined not o
 
 Now we know how to make it work, add the same config to all parent cache definitions:
 
-{% highlight %}
+{% highlight C%}
 page.path.to.your.objct.@cache.entryIdentifier.pagination = ${request.pluginArguments.YOUR_PAGINATION_WIDGET_ID.currentPage}
 page.@cache.entryIdentifier.pagination = ${request.pluginArguments.YOUR_PAGINATION_WIDGET_ID.currentPage}
 root.@cache.entryIdentifier.pagination = ${request.pluginArguments.YOUR_PAGINATION_WIDGET_ID.currentPage}

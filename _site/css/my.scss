@@ -1,5 +1,3 @@
-
-
 @font-face {
     font-family: 'Fira Sans';
     src: url(fonts/FiraSans-Regular.woff);
@@ -121,9 +119,13 @@ a{
     text-decoration: none;
     color: inherit;
 }
-
-code {
+img{
+    max-width: 100%;
+    height: auto;
+}
+code{
     overflow-wrap: break-word;
+    white-space: pre;
 }
 
 /*Settings*/
@@ -160,6 +162,10 @@ $u: 12px;
     text-decoration: underline;
 }
 
+.List{
+    list-style-type: disc;
+    padding-left: 2*$u;
+}   
 
 
 .MarkDown{
@@ -171,6 +177,7 @@ $u: 12px;
     h6{@extend .H6;}
     p{@extend .Paragraph;}
     a{@extend .Link;}
+	ul{@extend .List;}
     hr{
         border: solid 1px $Gray--Line;
         border-bottom: none;
@@ -207,7 +214,7 @@ $u: 12px;
         color: $Gray--Light;
         text-align: right;
         margin-right: $u;
-        width: 10*$u;
+        width: 11*$u;
         font-weight: 300;
         display: inline-block;
     }
