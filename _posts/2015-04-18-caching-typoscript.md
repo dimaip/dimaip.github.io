@@ -84,4 +84,4 @@ More additions are comming in the future, like [runtime cached segments](https:/
 
 I hope this post has helped you to quickly get up to speed with caching concepts in Neos. If not, write a caching-related question in the comments and I'll try to help.
 
-**Big thanks to Aske Ertmann and Christian Müller for help in understanding all this stuff!**
+**Big thanks to Aske Ertmann and Christian Müller for help in understanding all this stuff and to Florian Weiss for proofreading!**
