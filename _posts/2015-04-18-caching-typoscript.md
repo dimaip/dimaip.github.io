@@ -5,31 +5,31 @@ tags: neos typoscript caching
 comments: true
 ---
 
-This week I finally learned how caching mechanism works in [Neos](http://neos.typo3.org). Time to share!
+This week I finally learned how caching mechanisms work in [Neos](http://neos.typo3.org). Time to share!
 
 ##Basic concepts
 
 A quick summary of what we know from the [official documentation](http://docs.typo3.org/neos/TYPO3NeosDocumentation/IntegratorGuide/ContentCache.html).
-- Each TypoSript path may have its own caching configuration of type `cached`, `embed` and `uncached`. By default all paths are 'embeded' into their paraent's cache entry.
+- Each TypoSript path may have its own caching configuration of type `cached`, `embed` and `uncached`. By default all paths are 'embedded' into their paraent's cache entry.
 - For configuration of type `cached` there are two things you need to configure: what defines a unique cache entry (`entryIdentifier`) and in what circumstances it should be flushed (`entryTags`).
 - For configuration of type `uncached` you must not forget to fill the `context` configuration with all of the context variables needed for rendering given path (like `node` or `documentNode`).
 
 ##Some examples
 
-So in most cases you don't need to touch cache configuration at all. Usually you would define new cache entries for the sake of flushing the cache for content that is comming from other pages, so the `entryTags` configuration would be closely related to the FlowQuery you use to pull in your content. There are three main options you have for configuring entry Tags: `NodeType_[My.Package:NodeTypeName]`, `Node_[Identifier]` and `DescendantOf_[Identifier]`.
+So in most cases you don't need to touch the cache configuration at all. Usually you would define new cache entries for the sake of flushing the cache for content that is comming from other pages, so the `entryTags` configuration would be closely related to the FlowQuery you use to pull in your content. There are three main options you have for configuring entry Tags: `NodeType_[My.Package:NodeTypeName]`, `Node_[Identifier]` and `DescendantOf_[Identifier]`.
 
 Here are a few examples from our in-house news package:
 
 
-###Flush cache when child of certain node changes
+###Flush the cache when a child of a certain node changes
 
-With this FlowQuery I pull in news from certain, dynamically configured node: `collection = ${q(rootNode).children('[instanceof Sfi.News:Listable]').get()}`
+With this FlowQuery I pull in news from a certain, dynamically configured node: `collection = ${q(rootNode).children('[instanceof Sfi.News:Listable]').get()}`
 
 And here's the corresponding entryTag: `${'DescendantOf_' + rootNode.identifier}`.
 
-###Flush cache when node of certain type changes
+###Flush the cache when a node of a certain type changes
 
-With this FlowQuery we pull-in only inportant news of special type to the carousel on main page: `collection = ${q(site).find('[instanceof Sfi.News:ImportantMixin]').filter('[important = TRUE]').get()}`
+With this FlowQuery we pull-in only inportant news of a special type to the carousel on the main page: `collection = ${q(site).find('[instanceof Sfi.News:ImportantMixin]').filter('[important = TRUE]').get()}`
 
 And here's the corresponding entryTag: `${'NodeType_Sfi.News:ImportantMixin'}`
 
@@ -62,7 +62,7 @@ prototype(TYPO3.Neos:Content).prototype(TYPO3.Neos:ContentCollection).@cache.mod
 
 ###Pagination
 
-When using typo3cr pagination widget, the state of the page is defined not only by the TypoScript path, but also by pagination argument in request, so the `entryIdentifier` must include: `pagination = ${request.pluginArguments.YOUR_PAGINATION_WIDGET_ID.currentPage}`. Actually this is one of the rear cases where you need to add something non-standard to `entryIdentifier`. However, guess what, this config wouldn't work! The reason is given in the small note in documentation, and I bet you overlooked it:
+When using the typo3cr pagination widget, the state of the page is defined not only by the TypoScript path, but also by the pagination argument in request, so the `entryIdentifier` must include: `pagination = ${request.pluginArguments.YOUR_PAGINATION_WIDGET_ID.currentPage}`. Actually this is one of the rare cases where you need to add something non-standard to `entryIdentifier`. However, guess what, this config wouldn't work! The reason is given in the small note in the documentation, and it's easy to miss:
 
 > In the cache hierarchy the outermost cache entry determines all the nested entries, so it's important to add values that influence the rendering for every cached path along the hierarchy.
 
@@ -74,11 +74,11 @@ page.@cache.entryIdentifier.pagination = ${request.pluginArguments.YOUR_PAGINATI
 root.@cache.entryIdentifier.pagination = ${request.pluginArguments.YOUR_PAGINATION_WIDGET_ID.currentPage}
 {% endhighlight %}
 
-So the rule is, _if you add something non-standard to entryIdentifier, you must also include it in all parent cache defintions_.
+So the rule is, _if you add something non-standard to an entryIdentifier, you must also include it in all parent cache defintions_.
 
-##More cool stuff comming
+##More cool stuff coming
 
-In Neos 2.0 release there'll be a [very reasonable addition called GlobalCacheIdentifiers](https://review.typo3.org/#/c/36210/). Basically it stores all global things which influnce the rendering of a node, acting as default value for a nodeIdentifier: by defualt it's `format` and `baseUri`, but you can add more things there. So in Neos 2.0 we would no longer need to specify `entryIdentifier` in most of the cases.
+In the Neos 2.0 release there'll be a [very useful addition called GlobalCacheIdentifiers](https://review.typo3.org/#/c/36210/). Basically it stores all global things which influnce the rendering of a node, acting as default value for a nodeIdentifier: by default `format` and `baseUri`, but you can add more things there. So in Neos 2.0 we would no longer need to specify `entryIdentifier` in most of the cases.
 
 More additions are comming in the future, like [runtime cached segments](https://review.typo3.org/#/c/36239/), but even what we have now if pretty awesome.
 
