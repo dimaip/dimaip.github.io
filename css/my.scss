@@ -64,6 +64,9 @@ code{
     white-space: pre;
     color: $Gray--Light;
 }
+.highlight code {
+    color: initial;
+}
 
 /*Settings*/
 $u: 12px;
