@@ -77,6 +77,10 @@ root.@cache.entryIdentifier.pagination = ${request.pluginArguments.YOUR_PAGINATI
 
 So the rule is, _if you add something non-standard to an entryIdentifier, you must also include it in all parent cache defintions_.
 
+##Use faster caching backends
+
+In Flow you can substitute caching backend for every type of cache. By default Flow and Neos use FileBackend, and it's supper slow with flushing tagged caches. For production sites it's an absolute must to use more advanced caching backends like Redis for tagged caches. Here's how the [Caches.yaml](https://github.com/sfi-ru/SfiDistr/blob/master/Configuration/Production/Caches.yaml) should look. 
+
 ##More cool stuff coming
 
 In the Neos 2.0 release there'll be a [very useful addition called GlobalCacheIdentifiers](https://review.typo3.org/#/c/36210/). Basically it stores all global things which influnce the rendering of a node, acting as default value for a nodeIdentifier: by default `format` and `baseUri`, but you can add more things there. So in Neos 2.0 we would no longer need to specify `entryIdentifier` in most of the cases.
