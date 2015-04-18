@@ -10,6 +10,7 @@ This week I finally learned how caching mechanisms work in [Neos](http://neos.ty
 ##Basic concepts
 
 A quick summary of what we know from the [official documentation](http://docs.typo3.org/neos/TYPO3NeosDocumentation/IntegratorGuide/ContentCache.html).
+
 - Each TypoSript path may have its own caching configuration of type `cached`, `embed` and `uncached`. By default all paths are 'embedded' into their paraent's cache entry.
 - For configuration of type `cached` there are two things you need to configure: what defines a unique cache entry (`entryIdentifier`) and in what circumstances it should be flushed (`entryTags`).
 - For configuration of type `uncached` you must not forget to fill the `context` configuration with all of the context variables needed for rendering given path (like `node` or `documentNode`).
