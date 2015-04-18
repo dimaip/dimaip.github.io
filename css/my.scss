@@ -81,14 +81,14 @@ $u: 12px;
 /*Atoms*/
 .H1,.H2,.H3,.H4,.H5,.H6 {
     line-height: 1.2;
-    margin-top: 2*$u;
+    margin-top: 1.5em;
     margin-bottom: $u;
 }
-.H1 {font-size: 48px;
+.H1 {font-size: 60px;
     font-weight: bold;
 }
-.H2 {font-size: 36px;}
-.H3 {font-size: 26px;}
+.H2 {font-size: 46px;}
+.H3 {font-size: 29px;}
 /* We don't use these*/
 .H4 {font-size: 21px;}
 .H5 {font-size: 18px;}
