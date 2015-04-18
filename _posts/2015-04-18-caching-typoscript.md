@@ -79,7 +79,7 @@ So the rule is, _if you add something non-standard to an entryIdentifier, you mu
 
 ##Use faster caching backends
 
-In Flow you can substitute caching backend for every type of cache. By default Flow and Neos use FileBackend, and it's supper slow with flushing tagged caches. For production sites it's an absolute must to use more advanced caching backends like Redis for tagged caches. Here's how the [Caches.yaml](https://github.com/sfi-ru/SfiDistr/blob/master/Configuration/Production/Caches.yaml) should look. 
+In Flow you can substitute caching backend for every type of cache. By default Flow and Neos use FileBackend, and it's supper slow with flushing tagged caches. For production sites it's an absolute must to use more advanced caching backends like Redis for tagged caches. It only takes a few minutes to adjust the configuration (you [do use Docker](http://dimaip.github.io/2015/03/03/hybrid-deploy-with-docker-and-surf/), right?) Here's how the [Caches.yaml](https://github.com/sfi-ru/SfiDistr/blob/master/Configuration/Production/Caches.yaml) should look. 
 
 ##More cool stuff coming
 
