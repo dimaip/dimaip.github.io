@@ -87,7 +87,7 @@ Now there's a `maximumLifetime` setting, it lets you define a lifetime of a cach
 
 First of all, there's a [`cacheLifetime` FlowQuery operation](http://docs.typo3.org/neos/TYPO3NeosDocumentation/Appendixes/FlowQueryOperationReference.html#cachelifetime), accordion to the docs it will get the minimum of all allowed cache lifetimes for the nodes in the current FlowQuery context. This means it will evaluate to the nearest future value of the hiddenBeforeDateTime or hiddenAfterDateTime properties of all nodes in the context. So if you rely on hiddenBefore/AfterDateTime, all you probably need is something like this: `maximumLifetime = ${q(node).context({'invisibleContentShown': true}).children().cacheLifetime()}`.
 
-But I was unfortunate enough to be using custom date property to show my announcements, so here's how I calculated the correct lifetime value myself: `maximumLifetime = ${q(collection).get(0).properties.date.timestamp - Date.now().timestamp}`. See [here for details](https://github.com/sfi-ru/Sfi.News/commit/f376bcf15abd6a6d7feceb9d47ec0a15ee4f1bd7).
+But I was unfortunate enough to be using custom date property to calculate the visibility of my announcements, so here's how I calculated the correct lifetime value myself: `maximumLifetime = ${q(collection).get(0).properties.date.timestamp - Date.now().timestamp}`. See [here for details](https://github.com/sfi-ru/Sfi.News/commit/f376bcf15abd6a6d7feceb9d47ec0a15ee4f1bd7).
 
 ##Use faster caching backends
 
