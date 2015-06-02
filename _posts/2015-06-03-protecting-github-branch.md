@@ -1,5 +1,8 @@
 ---
-published: false
+layout: post
+title:  "Protecting Github Branches"
+tags: git github
+comments: true
 ---
 
 For many years I was the sole developer on a project. I work in a [non-profit company](http://sfi.ru) that will never afford to have an array of cool developers. But in recent time a group of volunteers started to gather around our project, who dedicate some of their free time helping us out, on a part time basis. To me our website starts to feel a lot like an open source project, and that's where I started to appreciate that we host [all of our code](https://github.com/sfi-ru) on Github.
