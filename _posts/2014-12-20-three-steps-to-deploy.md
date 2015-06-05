@@ -44,7 +44,7 @@ The previous step has got us far, now lets add some durability to our deployment
 Let’s install and configure [Surf](http://typo3.org/additional-products/surf/):
 
 1. Require `typo3/surf` in your composer.json. Run composer update.
-2. Create a deployment configuration file similar to [this one](https://github.com/sfi-ru/SfiDistr/blob/master/Build/Surf/Sfi.php). Make sure you can make a password-less login to your server [via public key](http://www.thegeekstuff.com/2008/11/3-steps-to-perform-ssh-login-without-password-using-ssh-keygen-ssh-copy-id/).
+2. Create a deployment configuration file similar to [this one](https://github.com/sfi-ru/Surf/blob/master/Build/Surf/Surf.php). Make sure you can make a password-less login to your server [via public key](http://www.thegeekstuff.com/2008/11/3-steps-to-perform-ssh-login-without-password-using-ssh-keygen-ssh-copy-id/).
 3. Run `./flow surf:deploy DeploymentName` to run a deployment. On first run it would fail as it does not know how to connect to your database yet.
 4. Add Settings.yaml with your DB config on your deployment server to `/path-to-surf/shared/Configuration/Production/Settings.yaml`. Symlink your webroot to `releases/current`.
 5. Optionally configure smoke tests (see Surf docs).
