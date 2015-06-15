@@ -67,9 +67,9 @@ TYPO3CR – репозиторий контента. Та самая штука,
 В России же работают с Neos пока единицы, и очень бы хотелось, чтобы эта ситуация начала меняться. Присоединяйтесь!
 
 Что вы можете сделать прямо сейчас:
-Поиграться с демо: http://neos-master.demo.typo3.org/en/try-me.html?--typo3_neosdemotypo3org-registration%5B%40package%5D=typo3.neosdemotypo3org&--typo3_neosdemotypo3org-registration%5B%40controller%5D=registration&--typo3_neosdemotypo3org-registration%5B%40action%5D=newaccount
-Установить Neos себе при помощи Composer: https://neos.typo3.org/develop/download.html
-RTFM! https://neos.typo3.org/learn/documentation.html
-Присоединиться к нашему сообществу в Slack, и задать там любые вопросы: http://slack.neos.io/
+[Поиграться](http://neos-master.demo.typo3.org/en/try-me.html?--typo3_neosdemotypo3org-registration%5B%40package%5D=typo3.neosdemotypo3org&--typo3_neosdemotypo3org-registration%5B%40controller%5D=registration&--typo3_neosdemotypo3org-registration%5B%40action%5D=newaccount) с демо
+[Установить](https://neos.typo3.org/develop/download.html) Neos себе при помощи Composer
+[RTFM](https://neos.typo3.org/learn/documentation.html)!
+[Присоединиться](http://slack.neos.io/) к нашему сообществу в Slack, и задать там любые вопросы.
 Не проходите мимо канала #users-russia!
 
