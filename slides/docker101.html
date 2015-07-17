@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Docker 101</title>
+
+		<meta name="description" content="Docker 101: From Production to Development and back">
+		<meta name="author" content="Dmitri Pisarev">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/docker.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Docker 101</h1>
+					<h3>From Development to Production and back</h3>
+					<p>
+						<small>by <a href="http://dimaip.github.io">Dmitri Pisarev</a> / <a href="http://twitter.com/dimaip">@dimaip</a></small>
+					</p>
+				</section>
+				
+				<section>
+					<div style="text-align:left">
+						<img style="width:20%" src="_resources/team_me.jpg">
+						<img style="width:50%; vertical-align: 67%; margin-left: 50px" src="_resources/sfi.svg">
+					</div>
+					<ul>
+						<li>Work and study in <a href="http://sfi.ru">SFI.ru</a> — first independant Christian Theological University in Russia</li>
+						<li>Worked with TYPO3 since 2006</li>
+						<li>One year ago first installed Neos... And loved it!</li>
+						<li>Neos contributor since then</li>
+					</ul>
+				</section>
+
+
+				<section data-background="#0296C9">
+					<h1>What's Docker?</h1>
+				</section>
+				<section>
+					<h2>The Next Big Thing?</h2>
+					<em>You bet! Just look at the growth stats:</em>
+					<img src="_resources/growth-stats.png">
+				</section>
+				<section>
+					<h2>Extremly lightweight VM?</h2>
+					<p><em>Almost. At least it feels like one</em></p>
+					<div class="fragment" style="width:45%; float:left; margin: 20px">
+						<em>Virtual Machines</em><br>
+						<img src="_resources/vm.png">
+					</div>
+					<div class="fragment" style="width:45%; float:left; margin: 20px">
+						<em>Containers</em><br>
+						<img src="_resources/docker.png">
+						<br><span style="color:#ff2c2d">Way less fat here!</span>
+					</div>
+				</section>
+				<section>
+					<h2>FreeBSD jails on steroids?</h2>
+					<em>Yes, but we had that years ago...</em>
+					<br>
+					<br>
+					<div class="fragment" data-markdown>
+						| | |
+						|-|-
+						|`namespaces` | isolation
+						|`cgroups` | resource control
+						|`libcontainer` | Docker container format
+						|`UnionFS` | fast copy-on-write filesystem
+					</div>
+				</section>
+				<section>
+					<h2>Official answer</h2>
+					<p><em>Docker is an open platform for developing, shipping, and running (distributed) applications</em></p>
+					<img src="_resources/engine_and_hub.jpg">
+				</section>
+
+				<section>
+					<h2>What problems does it solve?</h2>
+					<ol>
+						<li>Setup development environments in minutes</li>
+						<li>Have identical environment in production and development</li>
+						<li>Freedom to try new things without worrying about infrastructure</li>
+					</ol>
+				</section>
+
+
+
+
+
+				<section>
+					<h1>Key terms</h1>
+					<ul>
+						<li>Container</li>
+						<li>Image</li>
+						<li>Image registry</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Container</h3>
+					<p>Container is an isolated and secure application platform, that holds everything that is needed for an application to run</p>
+					<img style="width:50%" src="_resources/container.jpg">
+				</section>
+				<section>
+					<h3>Image</h3>
+					<p>A Docker image is a read-only template used to create Docker containers</p>
+					<img src="_resources/cd.png">
+				</section>
+				<section>
+					<h3>Image registry</h3>
+					<p>Docker registries hold images.<br>
+					The public Docker registry is called Docker Hub.</p>
+					<img style="width:70%" src="_resources/docker_hub.png">
+				</section>
+
+				<section>
+					<h2>Architecture overview</h2>
+					<img src="_resources/architecture.svg">
+				</section>
+
+
+				<section data-background="black">
+					<h1>Join the session now!</h1>
+					<p>Stuff to expect:</p>
+					<ul>
+						<li>Install the thing</li>
+						<li>Learn the basic usage</li>
+						<li>Going to production</li>
+						<li>And much more!</li>
+					</ul>
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<section data-background="black">
+					<h1>...where we left off</h1>
+					<p>Agenda:</p>
+					<ul>
+						<li>Installation</li>
+						<li>Managing data in containers</li>
+						<li>Orchestration with Docker Compose</li>
+						<li>Going to production</li>
+					</ul>
+				</section>
+
+				<section data-background="#0296C9"><h1>Getting started</h1></section>
+
+				<section>
+					<h2>Installation on Linux</h2>
+					It just works.
+					<pre><code contenteditable>wget -qO- https://get.docker.com/ | sh</code></pre>
+				</section>
+
+				<section>
+					<h2>Installation on Mac/Windows</h2>
+					<div><q>&ldquo;All hope abandon ye who enter here&rdquo;<br>~Dante Alighieri, 1321AD</q></div>
+					<br>
+					<div style="float:left"><img src="_resources/mac_docker_host.svg"></div>
+					<ul>
+						<li>You need boot2docker VM</li>
+						<li>Use OSX or Windows installer</li>
+						<li>Try without host volumes first</li>
+						<li>Be ready for trouble!</li>
+					</ul>
+					<br>
+					<a href="http://files.t3dd15.typo3.org/files/Resources/">http://files.t3dd15.typo3.org/</a>
+				</section>
+
+				<section>
+					<h2>Create and start a container</h2>
+					<pre><code>docker run -i -t busybox sh</code></pre>
+				</section>
+
+
+
+
+
+				<section data-background="#0296C9">
+					<h1>Managing data in containers</h1>
+				</section>
+				<section>
+					<h2>Layered filesystem</h2>
+					The versioned filesystem in Docker is based on layers. They're like git commits or changesets for filesystems.
+					<img style="width:42%" src="_resources/copy-on-write.png">
+				</section>
+				<section>
+					<h2>Data volumes</h2>
+					Filesystem mounts outside of UFS. Can even be mounted from host OS.
+					<pre><code contenteditable>/var/lib/docker/volumes/fe04a94dfaad3d9efa99c81bd79a42b383b55171...</code></pre>
+				</section>
+				<section>
+					<h2>Data-only containers</h2>
+					You should use volumes mounted from data-only containers for portability
+				</section>
+
+				<section data-background="#0296C9">
+					<h1>Docker Compose</h1>
+				</section>
+				<section>
+				<h3>Data-only containers in practice</h3>
+				<pre><code>
+dbdata:
+  image: busybox:latest
+  command: echo dbdata
+  volumes:
+    - /var/lib/mysql
+
+webdata:
+  image: busybox:latest
+  command: echo webdata
+  volumes:
+    - data:/data
+      </code></pre>
+				</section>
+				<section>
+				<h3>Good old mySQL database</h3>
+				<pre><code>
+db:
+  image: million12/mariadb:latest
+  ports:
+    - 3306
+  volumes_from:
+    - dbdata
+  environment:
+    MARIADB_PASS: pass
+  restart: always
+    </code></pre>
+				</section>
+				<section>
+				<h3>Web container with Neos demo site</h3>
+				<pre><code>
+web:
+  image: million12/typo3-neos
+  ports:
+    - '80'
+  links:
+    - db:db
+  volumes_from:
+    - webdata
+  environment:
+    VIRTUAL_HOST: 'neosm.dev,dev.neosm.dev'
+    T3APP_NAME: 'neosm.dev'
+    T3APP_NEOS_SITE_PACKAGE: 'TYPO3.NeosDemoTypo3Org'
+  restart: always
+    </code></pre>
+				</section>
+				<section>
+				<h3>SSH container</h3>
+				<pre><code>
+ssh:
+  image: million12/php-app-ssh
+  ports:
+    - '22'
+  links:
+    - db:db
+    - web:web
+  volumes_from:
+    - webdata
+    - dbdata
+  environment:
+    IMPORT_GITHUB_PUB_KEYS: dimaip
+  restart: always
+  </code></pre>
+				</section>
+				<section>
+					<h3>Redis in a few lines of code</h3>
+					<pre><code>
+redis:
+  image: redis
+					</code></pre>
+					<img style="width:70%" src="_resources/docker_hub.png">
+				</section>
+
+
+
+				<section data-background="#0296C9">
+					<h1>To Production!</h1>
+				</section>
+				<section>
+					<h2>Nginx reverse proxy</h2>
+					<img style="width:80%" src="_resources/nginx-reverse.svg">
+				</section>
+				<section>
+					<h2>docker-gen</h2>
+					<a href="github.com/jwilder/docker-gen">https://github.com/jwilder/docker-gen</a>
+					<p>Generate any sorts of configs based on data from running docker containers</p>
+					<ul>
+						<li>Reverse-proxy configs</li>
+						<li>SSH config file</li>
+						<li>Whatever you like!</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Deploying containers</h2>
+					<ol>
+						<li>Merge change to master branch on Github</li>
+						<li>Image is automatically rebuilt on Docker Hub</li>
+						<li>Pull new image, run it in parallel with the old one, test</li>
+						<li>Redirect traffic to new container, stop the old one</li>
+						<li>Rollback if things go wrong</li>
+					</ol>
+					<p><em>Great for big infrastructure changes,<br>but slow for code-only deploys</em></p>
+				</section>
+				<section>
+					<h2>Hybrid deploy</h2>
+					<div style="text-align:left">
+						<p><em>For small code changes:</em></p>
+						<ol>
+							<li>Merge change to master branch on Github</li>
+							<li>CI tool of choice tests the build</li>
+							<li>Surf deploys code changes via SSH container</li>
+						</ol>
+						<p><em>And for big ones do full container re-deploy</em></p>
+					</div>
+				</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

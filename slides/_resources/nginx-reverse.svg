@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="25cm" height="17cm" viewBox="250 285 484 328" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <path style="fill: #ffffff" d="M 544.426 305.317 C 534.743,305.09 515.964,309.859 518.605,320.076 C 521.246,330.294 533.863,332.565 539.145,329.613 C 544.426,326.661 530.929,343.918 556.75,348.459 C 582.572,353 595.776,345.734 591.962,340.512 C 588.147,335.289 614.555,352.773 626.879,342.782 C 639.203,332.792 614.262,323.255 619.544,324.618 C 624.825,325.98 640.964,324.163 635.682,307.134 C 630.401,290.104 582.865,303.274 588.147,300.776 C 593.429,298.278 580.224,285.79 563.793,288.288 C 547.361,290.785 546.195,295.318 544.435,305.308 L 544.426,305.317z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 544.426 305.317 C 534.743,305.09 515.964,309.859 518.605,320.076 C 521.246,330.294 533.863,332.565 539.145,329.613 C 544.426,326.661 530.929,343.918 556.75,348.459 C 582.572,353 595.776,345.734 591.962,340.512 C 588.147,335.289 614.555,352.773 626.879,342.782 C 639.203,332.792 614.262,323.255 619.544,324.618 C 624.825,325.98 640.964,324.163 635.682,307.134 C 630.401,290.104 582.865,303.274 588.147,300.776 C 593.429,298.278 580.224,285.79 563.793,288.288 C 547.361,290.785 546.195,295.318 544.435,305.308 L 544.426,305.317"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="581.815" y="324.58">
+      <tspan x="581.815" y="324.58">Internet</tspan>
+    </text>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="436" y="338">
+    <tspan x="436" y="338">Users</tspan>
+  </text>
+  <g>
+    <polygon style="fill: #ffffff" points="252,412.1 262,402.1 733.135,402.1 733.135,602.1 723.135,612.1 252,612.1 252,412.1 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="252,412.1 262,402.1 733.135,402.1 733.135,602.1 723.135,612.1 252,612.1 252,412.1 "/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="252" y1="412.1" x2="723.135" y2="412.1"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="723.135" y1="412.1" x2="733.135" y2="402.1"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="723.135" y1="412.1" x2="723.135" y2="612.1"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="262" y="434">
+      <tspan x="262" y="434">Host machine</tspan>
+    </text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="262" y1="437" x2="350.2" y2="437"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="590.264" y="368.642">
+    <tspan x="590.264" y="368.642">LISTEN 0.0.0.0:80</tspan>
+  </text>
+  <g>
+    <polygon style="fill: #ffffff" points="517.762,400.1 527.762,390.1 649.462,390.1 649.462,426.1 639.462,436.1 517.762,436.1 517.762,400.1 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="517.762,400.1 527.762,390.1 649.462,390.1 649.462,426.1 639.462,436.1 517.762,436.1 517.762,400.1 "/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="517.762" y1="400.1" x2="639.462" y2="400.1"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="639.462" y1="400.1" x2="649.462" y2="390.1"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="639.462" y1="400.1" x2="639.462" y2="436.1"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="527.762" y="422">
+      <tspan x="527.762" y="422">Reverse proxy</tspan>
+    </text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="527.762" y1="425" x2="629.462" y2="425"/>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="488.914,480.1 498.914,470.1 678.43,470.1 678.43,580.1 668.43,590.1 488.914,590.1 488.914,480.1 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="488.914,480.1 498.914,470.1 678.43,470.1 678.43,580.1 668.43,590.1 488.914,590.1 488.914,480.1 "/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="488.914" y1="480.1" x2="668.43" y2="480.1"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="668.43" y1="480.1" x2="678.43" y2="470.1"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="668.43" y1="480.1" x2="668.43" y2="590.1"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="498.914" y="502">
+      <tspan x="498.914" y="502">Web container</tspan>
+    </text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="498.914" y1="505" x2="595.014" y2="505"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="578.558,350.477 578.558,366.1 578.571,366.1 578.581,379.361 "/>
+    <polygon style="fill: #000000" points="578.587,386.861 573.579,376.865 578.581,379.361 583.579,376.858 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="578.587,386.861 573.579,376.865 578.581,379.361 583.579,376.858 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="434,321.1 434,319.15 507.819,319.149 "/>
+    <polygon style="fill: #000000" points="515.319,319.149 505.319,324.149 507.819,319.149 505.319,314.149 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="515.319,319.149 505.319,324.149 507.819,319.149 505.319,314.149 "/>
+  </g>
+  <g>
+    <g>
+      <polygon style="fill: #ffffff" points="271.878,479 281.878,469 416.728,469 416.728,581.1 406.728,591.1 271.878,591.1 271.878,479 "/>
+      <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="271.878,479 281.878,469 416.728,469 416.728,581.1 406.728,591.1 271.878,591.1 271.878,479 "/>
+      <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="271.878" y1="479" x2="406.728" y2="479"/>
+      <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="406.728" y1="479" x2="416.728" y2="469"/>
+      <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="406.728" y1="479" x2="406.728" y2="591.1"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="281.878" y="500.9">
+        <tspan x="281.878" y="500.9">Storage container</tspan>
+      </text>
+      <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="281.878" y1="503.9" x2="396.728" y2="503.9"/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="323.348" y="528" width="34" height="30"/>
+      <ellipse style="fill: #ffffff" cx="340.348" cy="558" rx="17" ry="5"/>
+      <ellipse style="fill: #ffffff" cx="340.348" cy="528" rx="17" ry="5"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="340.348" cy="528" rx="17" ry="5"/>
+      <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 357.348 528 L 357.348,558 C 357.348,560.761 349.737,563 340.348,563 C 330.959,563 323.348,560.761 323.348,558 L 323.348,528"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="340.348" y="575">
+        <tspan x="340.348" y="575">MySQL</tspan>
+      </text>
+    </g>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="488.914,535.1 447.821,535.1 447.821,535.05 416.464,535.05 "/>
+    <polygon style="fill: #000000" points="408.964,535.05 418.964,530.05 416.464,535.05 418.964,540.05 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="408.964,535.05 418.964,530.05 416.464,535.05 418.964,540.05 "/>
+  </g>
+  <g>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="500.238" y="529.126">
+      <tspan x="500.238" y="529.126">Nginx</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="500.238" y="545.196">
+      <tspan x="500.238" y="545.196">php-fpm</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="500.238" y="561.266">
+      <tspan x="500.238" y="561.266">Neos</tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="578.591,437.069 578.572,453.482 578.672,453.482 578.672,470.364 "/>
+    <polygon style="fill: #000000" points="578.672,477.864 573.672,467.864 578.672,470.364 583.672,467.864 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="578.672,477.864 573.672,467.864 578.672,470.364 583.672,467.864 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.624" y="457.03">
+    <tspan x="505.624" y="457.03">proxypass</tspan>
+  </text>
+</svg>
