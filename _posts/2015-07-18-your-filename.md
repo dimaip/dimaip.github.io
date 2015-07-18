@@ -1,5 +1,8 @@
 ---
-published: false
+layout: post
+title:  "A week with the most awesome open source community in the world"
+tags: neos cms t3dd15
+comments: true
 ---
 
 Sitting in the Nurnberg airport and waiting for boarding is a good moment to look back at this awesome week. In short I had a chance to join another [Neos](http://neos.io) code sprint and for the first time participate in [TYPO3 Developer Days](http://t3dd15.typo3.org).
