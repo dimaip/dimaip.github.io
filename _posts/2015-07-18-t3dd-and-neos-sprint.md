@@ -47,9 +47,9 @@ By the way, here are the slides:
 
 In the last day of my stay I met Eugene, a very bright and inspiring person, TYPO3 developer and a real christian. We dicussed a topic that is very important for me personally: how to be a great developer, but at the same time not making technology your god (or idol?). There are quite some challenges a christian person faces when working in tech, and discussed that it could be interesting to form some kind of group of christians in our communities. Christianity is anything but a private matter, and Kasper Skårhøj showed it very well in the early days of TYPO3 community.
 
+**I really want thank our SFI.ru for sending me to the sprint and all those who wanted to help me pay my travel expenses, without you my participation would not have been possible!**
+
+
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">I love my city <a href="https://twitter.com/hashtag/t3dd15?src=hash">#t3dd15</a> <a href="http://t.co/v78QfJAkDs">pic.twitter.com/v78QfJAkDs</a></p>&mdash; Thomas Maroschik (@tom_noise) <a href="https://twitter.com/tom_noise/status/622357219548483585">July 18, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-I really want thank our SFI.ru for sending me to the sprint and all those who wanted to help me pay my travel expenses, without you my participation would not have been possible!
-
 
