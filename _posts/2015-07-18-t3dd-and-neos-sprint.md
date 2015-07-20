@@ -43,8 +43,8 @@ I had handed out two session proposals for developer days, lying at oposing pole
 
 By the way, here are the slides:
 
-* [Docker 101: from Development to Production and back](dimaip.github.io/slides/docker101.html)
-* [Your CSS Code Needs an Architect](dimaip.github.io/slides/cssarchitecture.html)
+* [Docker 101: from Development to Production and back](http://dimaip.github.io/slides/docker101.html)
+* [Your CSS Code Needs an Architect](http://dimaip.github.io/slides/cssarchitecture.html)
 
 In the last day of my stay I met Eugene, a very bright and inspiring person, TYPO3 developer and a real christian. We dicussed a topic that is very important for me personally: how to be a great developer, but at the same time not making technology your god (or idol?). There are quite some challenges a christian person faces when working in tech, and we discussed that it could be interesting to form some kind of group of christians in our communities. Christianity is anything but a private matter, and Kasper Skårhøj showed it very well in the early days of TYPO3 community.
 
