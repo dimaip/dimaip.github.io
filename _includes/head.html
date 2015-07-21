@@ -8,4 +8,12 @@
 	<!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/css/my.css" | prepend: site.baseurl }}">
 
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@dimaip">
+<meta name="twitter:creator" content="@dimaip">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.description }}">
+{% if page.image %}<meta name="twitter:image" content="{{ page.image }}">{% endif %}
+
+
 </head>
