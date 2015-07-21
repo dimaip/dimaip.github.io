@@ -29,7 +29,7 @@ But Neos has changed quite a few things in that picture...
 
 So I thank God for bringing a bit of love even to my tech career and looking forward to the challenges He still has in store for me next year ;)
 
-### Appendix. Our castels
+### Appendix. "Our" castels
 !["Our" castle](/assets/castle.jpg)
 ![Courtesy of www.lacisoft.com](http://www.lacisoft.com/blog/wp-content/uploads/2015/07/2015-07-19-12.00.43-1024x576.jpg)
 </div>
