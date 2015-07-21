@@ -32,6 +32,9 @@ $Gray--Dark: #111;
 $Gray: #666;
 $Gray--Light: #aaa;
 $Gray--Line: #ccc;
+$Blue: #336699;
+
+$color-primary: $Blue;
 
 
 /*Resets*/
@@ -101,7 +104,8 @@ $u: 12px;
 }
 
 .Link {
-    text-decoration: underline;
+    text-decoration: none;
+    color: $color-primary;
     &:hover {
     	color: $Gray--Light;
     }
