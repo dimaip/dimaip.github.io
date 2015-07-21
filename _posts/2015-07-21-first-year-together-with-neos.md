@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Celebrate with me: My First Neos Anniversary!"
+description: "This day marks exactly one year since I had first installed Neos CMS"
 tags: neos cms personal
 comments: true
 ---
