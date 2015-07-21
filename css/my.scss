@@ -141,6 +141,7 @@ $u: 12px;
     @extend .H3;
     font-weight: bold;
     line-height: 1;
+    color: $color-primary;
 }
 .SiteTitle-Moto{
     @extend .H6;
@@ -152,6 +153,9 @@ $u: 12px;
 
 .Nav{
     float: right;
+}
+.Nav-Link {
+	color: $color-primary;
 }
 
 .Media{
