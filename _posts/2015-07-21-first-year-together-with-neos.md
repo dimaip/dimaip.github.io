@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Celebrate with me: First Neos Anniversary!"
+title:  "Celebrate with me: My First Neos Anniversary!"
 tags: neos cms personal
 comments: true
 ---
