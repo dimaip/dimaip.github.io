@@ -15,5 +15,12 @@
 <meta name="twitter:description" content="{{ page.description }}">
 {% if page.image %}<meta name="twitter:image" content="{{ page.image }}">{% endif %}
 
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+{% if page.image %}<meta property="og:image" content="{{ page.image }}" />{% endif %}
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="{{ site.title }}"/>
+
 
 </head>
