@@ -32,4 +32,3 @@ So I thank God for bringing a bit of love even to my tech career and looking for
 ### Appendix. "Our" castles
 !["Our" castle](/assets/castle.jpg)
 ![Courtesy of www.lacisoft.com](http://www.lacisoft.com/blog/wp-content/uploads/2015/07/2015-07-19-12.00.43-1024x576.jpg)
-</div>
