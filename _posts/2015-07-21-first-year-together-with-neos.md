@@ -7,8 +7,8 @@ comments: true
 
 *Warning: This is just a small personal note that doesn't carry any objective value.*
 
-This day marks exactly one year since I had first installed [Neos CMS](http://neos.io).
-Without any exaggeration I can testify that this event had truly changed my professional life.
+**This day marks exactly one year since I had first installed [Neos CMS](http://neos.io).
+Without any exaggeration I can testify that this event had truly changed my professional life.**
 
 I had been doing web development since 2005, got to stick with [TYPO3](http://typo3.org) since 2006, but for the recent years nothing has really been pushing me forward: I was using TYPO3 to build and maintain our corporate websites, just doing my job without much of inspiration, a regular website integrator on his duties.
 But Neos has changed quite a few things in that picture...
