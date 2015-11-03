@@ -2,7 +2,7 @@
 layout: post
 title:  "My adventures at Yandex Interface Coding School"
 description: "What a developer can learn from Yandex"
-image: "https://github.com/dimaip/dimaip.github.io/raw/master/assets/castle.jpg"
+image: "http://hsto.org/storage2/97f/ecb/f2d/97fecbf2d58d55411159a5d5896d24de.jpg"
 tags: yandex frontend
 comments: true
 ---
