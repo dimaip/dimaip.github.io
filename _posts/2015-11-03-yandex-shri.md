@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "My adventures at Yandex Interface Coding School!"
+title:  "My adventures at Yandex Interface Coding School"
 description: "What a developer can learn from Yandex"
 image: "https://github.com/dimaip/dimaip.github.io/raw/master/assets/castle.jpg"
 tags: yandex frontend
