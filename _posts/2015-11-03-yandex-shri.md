@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "My adventures at Yandex Interface Coding School"
+title:  "My adventures at Yandex Interface Development School"
 description: "What a developer can learn from Yandex"
 image: "http://hsto.org/storage2/97f/ecb/f2d/97fecbf2d58d55411159a5d5896d24de.jpg"
 tags: yandex frontend
 comments: true
 ---
 
-It's been a while since I had last written to my blog, and there's a good reason: for last three month I was caught in a crazy adventure. Just for fun I tried to enroll to [Yandex Interface Developer School](https://academy.yandex.ru/events/shri/). To those who don't know, Yandex is a Russian search engine giant, largest IT company in Europe, in other words these guys have quite some experience in frontend development. Every year they organize a free intensive frontend coding course with strong team work and practical side. Their motivation to host such coding schools is to improve quality of ecosystem of Russian internet by training better developers, which is a very noble goal indeed.
+It's been a while since I had last written to my blog, and there's a good reason: for last three month I was caught in a crazy adventure. Just for fun I tried to enroll to [Yandex Interface Development School](https://academy.yandex.ru/events/shri/). To those who don't know, Yandex is a Russian search engine giant, largest IT company in Europe, in other words these guys have quite some experience in frontend development. Every year they organize a free intensive frontend coding course with strong team work and practical side. Their motivation to host such coding schools is to improve quality of ecosystem of Russian internet by training better developers, which is a very noble goal indeed.
 
 I had heard about this school before, but didn't seriously think I would be able to get through the competition. One evening I roughly sketched the solutions to three test tasks ([fix some broken JS code](https://gist.github.com/dimaip/28e478f7c2783405d405), [write audio player with Web Audio API](https://gist.github.com/dimaip/e8acf0b1b87c3083bbe9) and make a [CSS flight table](https://gist.github.com/dimaip/c1c4bbb99532fd6c1bce)) and a month later, to my utter surprise, I got a positive response. In total, there were 36 of us who made it.
 
@@ -35,4 +35,4 @@ But the most valuable takeaway of all is all those 36 amazing guys and girls tha
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">As an ending to our great adventure <a href="https://twitter.com/yandex">@yandex</a>, we were given a late night tour around all of their headquarters <a href="https://twitter.com/hashtag/%D0%A8%D0%A0%D0%98?src=hash">#ШРИ</a> <a href="https://t.co/NQNJW0dDFZ">pic.twitter.com/NQNJW0dDFZ</a></p>&mdash; Dmitri Pisarev (@dimaip) <a href="https://twitter.com/dimaip/status/661813961243934721">November 4, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Late night after the graduation party we were offered a guided tour around all of the Yandex headquarters. They provide 4000 workplaces in Moscow, so it took quite some time to walk around all the floors. These quys make quite some effort to make a developers feel like at home, and indeed many people stay working up until late night or even go to work on holidays... It would have been tempting for me to work at such place had not my heart already been taking by my current job at [St Philaret’s Orthodox Christian Institute](http://sfi.ru). We have very similar attitude towards work here, maybe that's why I'm at my workplace right now on a national holiday :)
+Late night after the graduation party we were offered a guided tour around all of the Yandex headquarters. They provide 4000 workplaces only in Moscow, so it took quite some time to walk around all the floors. These quys make quite some effort to make a developers feel like at home, and indeed many people stay working up until late night or even go to work on holidays... It would have been tempting for me to work at such place had not my heart already been taking by my current job at [St Philaret’s Orthodox Christian Institute](http://sfi.ru). We have very similar attitude towards work here, maybe that's why I'm at my workplace right now on a national holiday :)
