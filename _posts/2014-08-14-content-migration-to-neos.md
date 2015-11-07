@@ -153,7 +153,7 @@ private function importFile($filename){
 ###Adding properties in different content dimensions
 
 At first create the context for the different content dimensions. 
-Create the context before iterating  you data.
+Create the context before iterating  your data.
 
 {% highlight php %}
 $contextEN = $this->contextFactory->create(
