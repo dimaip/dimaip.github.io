@@ -46,6 +46,7 @@ The simple properties were easy to nail:
 
 {% highlight php %}
 $this->context = $this->contextFactory->create(array('workspaceName' => 'live'));
+
 //This is where the news records would go
 $infoCollectionNode = $this->context->getNode('/sites/sfi/news/info');
 
@@ -150,6 +151,30 @@ private function importFile($filename){
 }
 {% endhighlight %}
 
+##Adding properties in different content dimensions
+
+At first create the context for the different content dimensions. 
+Create the context before iterating  your nodes.
+
+{% highlight php %}
+$contextEN = $this->contextFactory->create(
+	array(
+		'workspaceName' => 'live',
+		'currentDateTime' => new \TYPO3\Flow\Utility\Now(),
+		'dimensions' => array('language' => array('en', 'de')),
+		'targetDimensions' => array('language' => 'en'),
+		'invisibleContentShown' => FALSE,
+		'removedContentShown' => FALSE,
+		'inaccessibleContentShown' => FALSE
+	)
+	
+While iterating your nodes, adopt the newly generated node into the differnt context.
+Be sure to do this after setting all the properties you want to keep in the new context.
+
+{% highlight php %}
+$infoCollectionNodeEn = $contextEN->adoptNode($infoCollectionNode);
+$infoCollectionNodeEn->setProperty('title',$newsItem['titleEN']);
+{% endhighlight %}
 
 ##Result
 
