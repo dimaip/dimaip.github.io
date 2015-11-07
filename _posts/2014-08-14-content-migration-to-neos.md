@@ -46,7 +46,6 @@ The simple properties were easy to nail:
 
 {% highlight php %}
 $this->context = $this->contextFactory->create(array('workspaceName' => 'live'));
-
 //This is where the news records would go
 $infoCollectionNode = $this->context->getNode('/sites/sfi/news/info');
 
@@ -167,6 +166,7 @@ $contextEN = $this->contextFactory->create(
 		'removedContentShown' => FALSE,
 		'inaccessibleContentShown' => FALSE
 	)
+{% endhighlight %}
 	
 While iterating your nodes, adopt the newly generated node into the differnt context.
 Be sure to do this after setting all the properties you want to keep in the new context.
