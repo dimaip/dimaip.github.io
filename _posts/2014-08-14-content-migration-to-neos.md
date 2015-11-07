@@ -150,10 +150,10 @@ private function importFile($filename){
 }
 {% endhighlight %}
 
-##Adding properties in different content dimensions
+###Adding properties in different content dimensions
 
 At first create the context for the different content dimensions. 
-Create the context before iterating  your nodes.
+Create the context before iterating  your data.
 
 {% highlight php %}
 $contextEN = $this->contextFactory->create(
@@ -168,7 +168,7 @@ $contextEN = $this->contextFactory->create(
 	)
 {% endhighlight %}
 	
-While iterating your nodes, adopt the newly generated node into the context of the other content dimension.
+While iterating your data, adopt the newly generated node into the context of the other content dimension.
 Be sure to do this after setting all the properties you want to keep in the new context.
 
 {% highlight php %}
