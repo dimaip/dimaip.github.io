@@ -168,7 +168,7 @@ $contextEN = $this->contextFactory->create(
 	)
 {% endhighlight %}
 	
-While iterating your nodes, adopt the newly generated node into the differnt context.
+While iterating your nodes, adopt the newly generated node into the context of the other content dimension.
 Be sure to do this after setting all the properties you want to keep in the new context.
 
 {% highlight php %}
