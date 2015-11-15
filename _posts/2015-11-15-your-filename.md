@@ -1,0 +1,10 @@
+---
+published: false
+---
+
+Rendering HTML just on server side feels so akward in 2015. Universal apps gain popularity at a rapid rate, and it feels like people start using React even for almost static landing pages, not talking about stateful dynamic apps.
+In this landscape, traditional server-side frameworks like Ruby start to feel a little dizzy. I had my own share of shivers down my spine, being a developer of a PHP CMS: how relevant what we do to this hipster React/Node/Mongo world?
+
+Two month ago we at SFI agreed to help our friends with a little semi-scientific religious study project: build a simple worldview test. The idea is simple: you have a list of questions, every question is answered by represententives of different worldviews, and you have to make a blind choice based on what they said. So I took Neos CMS, the tool that I knew best, and in a couple of days finished the backend part for editing content and voting. Then I started adding some frontend code, some jQuery, added two-step voting UI, and then I realised that the whole frontend part is turning into a real mess, and it's just not how stuff is done in 2015.
+I knew something had to change, so I decided to give ReactJS a try. It took me a couple of days to learn the basics and build a working UI prototype with React, and I really liked the experience. Now I needed to store content somewhere and let editors modify it.
+Naturally I started to look for a fitting nodejs API generator tool. At first sight I really loved KeystoneJS, simple, lean and easy to get started with. I create a Question and Answer models, and started feeling in some sample data. Entering data was quick and flawless, until I realised one hard truth: there was no way to group Answers by Questions, i.e. I could get a list of all answers and search for a needed answer, but there was no way to see at a glance which answers belong to a certain question. This was unacceptable, so I trashed by KeystoneJS experiment, and started looking for other tools. To my surprise they all suffered from the same weakness: no easy way to edit hierarchical data. That came as a big suripse to me
