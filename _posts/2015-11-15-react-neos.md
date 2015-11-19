@@ -70,6 +70,8 @@ But fetching content is not all that we can achieve with Neos, we can also defin
 
 Flow, the underlying framework of Neos, packs a lot of other cool stuff like DDD, Doctrine ORM, DI, routing, configuration management and many more, so be assured you'll have some power under the hood when your API would need it.
 
+For more advanced examples of building full JSON-API complaint APIs with Flow and without TypoScript see [this package](https://github.com/ttreeagency/JsonApi).
+
 ![Technology stack overview](/assets/izm-stack.svg)
 <br>*Technology stack overview*
 
@@ -97,7 +99,7 @@ So the idea of combining the best from two worlds, solid content management with
 
 The whole thing is running pretty fast on a 5$ Digital Ocean plan. I get about 120ms response from Neos API and 350ms TTFB for the whole app. The app feels very responsive thanks to server-side rendering: it does not have to wait for JS code to load, and time to paint is under 2s.
 
-Would I would have done differently when designing an API, is planing it so that the data that changes frequently would be fetched separately from the main content. It would allow nodejs part of the app to quickly serve initial html, while the frontend would fetch the vote count and other changing missing pieces already after the page loads.
+What I would have done differently when designing an API, is planing it so that the data that changes frequently would be fetched separately from the main content. It would allow nodejs part of the app to quickly serve initial html, while the frontend would fetch the vote count and other changing missing pieces already after the page loads.
 
 So React part was fun, but the thing that makes my heart most warm every time I integrate Neos in a project, is contemplating the editors happiness, and I'm really glad that I can retain this experience even in a cold single page application world =)
 
