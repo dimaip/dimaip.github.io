@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Building Rich Content API with Neos for your React App"
+title:  "Building a Rich Content API with Neos for your React App"
 description: "Integrating Neos with React in one project to provide editor happiness"
 image: "http://dimaip.github.io/assets/react-neos.png"
 tags: neos react api
@@ -78,7 +78,7 @@ Flow, the underlying framework of Neos, packs a lot of other cool stuff like DDD
 At first I was reluctant to use two completely different stacks on the server (PHP and NodeJS). Instinctively I felt that it might turn into a hosting and deployment hell.
 But none of my fears turned true. On the contrary, decoupling frontend from backend appeared to give a lot more flexiability and freedom to the whole hosting system.
 
-To ease the pain of setting up all of the infrastructure, I decided to use Docker conainers for each service: nodejs app would just get a container of its own, not interfering with Neos PHP container in any way.
+To ease the pain of setting up all of the infrastructure, I decided to [use Docker](http://dimaip.github.io/2015/03/03/hybrid-deploy-with-docker-and-surf/) conainers for each service: nodejs app would just get a container of its own, not interfering with Neos PHP container in any way.
 
 All the infrastructure is descibed in a declarative way in a [docker-compose.yml](https://github.com/sfi-ru/EncultDistr/blob/master/docker/docker-compose.yml) file.
 As you can see have to pack quite a lot there: mysql, php+nginx, redis, nodejs and a few other service containers. Managing and deploying it by hand would turn into a nightmare quite quickly.
