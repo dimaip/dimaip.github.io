@@ -103,3 +103,5 @@ So React part was fun, but the thing that makes my heart most warm every time I 
 - Editors love Neos
 - React is great even for static websites, and you should really dive into the world of universal apps by now
 - Don't be afraid of having a zoo of technology stacks on your project. Docker has your back covered!
+
+**Many thanks to Gerhard Boden for proof-reading and reviewing this article**
