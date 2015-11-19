@@ -21,13 +21,14 @@ But as the project UI requirements grew, I quickly realised that the amount of r
 
 It took me a few days to build a working UI prototype, and I really liked the taste of developer experience with React. Then I needed to store content somewhere and let editors modify it.
 
-I started looking for a fitting nodejs API generator tool. At first sight I really liked KeystoneJS: simple, lean and easy to get started with. I created the Question, Answer and Worldivew models, and started filling in some sample data. KeystoneJS was living up to me expectations, until I realised one usability detail: there was no way to group Answers by Questions, i.e. I could get a list of all answers and search for a needed answer, but there was no way to see at a glance which answers belong to a certain question.
+I started looking for a fitting nodejs API generator tool. At first sight I really liked [KeystoneJS](http://keystonejs.com/): simple, lean and easy to get started with. I created the Question, Answer and Worldivew models, and started filling in some sample data. KeystoneJS was living up to me expectations, until I realised one usability detail: there was no way to group Answers by Questions, i.e. I could get a list of all answers and search for a needed answer, but there was no way to see at a glance which answers belong to a certain question.
 This was made working with a long list of answers really unsatisfying, so I trashed my KeystoneJS experiment, and started looking for other soulutions. To my surprise everything I had found at nodejs land suffered from the same weakness: no easy way to edit hierarchical data.
 
 That came as a big suripse to me, but I couldn't find anything suiting my rather simple requirements. Even big giants of content APIs like Contentful would still give me simple lists of records, and no hierarchical grouping.
 And that's where I decided to do something at that time I thought crazy: use PHP CMS to provide content for NodeJS/React app.
 
 ![Neos editing interface](/assets/izm-neos-backend.png)
+<br>*Neos editing interface*
 
 ## Neos
 
@@ -68,6 +69,9 @@ All we have left is to [point our React/Redux app to relevant API urls](https://
 But fetching content is not all that we can achive with Neos, we can also define a classic MVC controller for handling actions that require data manipulation. In this case we needed [an action to vote for a certain answer](https://github.com/sfi-ru/EncultDistr/blob/master/Packages/Sites/Sfi.Encult/Classes/Sfi/Encult/Controller/VoteController.php#L48).
 
 Flow, the underlying framework of Neos, packs a lot of other cool stuff like DDD, Doctrine ORM, DI, routing, configuratin management and many more, so be assured you'll have some power under the hood when your API would need it.
+
+![Technology stack overview](/assets/izm-stack.svg)
+<br>*Technology stack overview*
 
 ### Docker containerization
 
