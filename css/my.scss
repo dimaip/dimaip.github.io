@@ -114,7 +114,11 @@ $u: 12px;
 .List {
     list-style-type: disc;
     padding-left: 2*$u;
-}   
+}
+.List-item {
+    font-size: 18px;
+    line-height: 1.6;
+}
 
 
 .MarkDown{
@@ -127,6 +131,7 @@ $u: 12px;
     p{@extend .Paragraph;}
     a{@extend .Link;}
 	ul{@extend .List;}
+    li{@extend .List-item;}
     hr{
         border: solid 1px $Gray--Line;
         border-bottom: none;
