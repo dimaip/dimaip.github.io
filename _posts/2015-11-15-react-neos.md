@@ -70,7 +70,7 @@ But fetching content is not all that we can achieve with Neos, we can also defin
 
 Flow, the underlying framework of Neos, packs a lot of other cool stuff like DDD, Doctrine ORM, DI, routing, configuration management and many more, so be assured you'll have some power under the hood when your API would need it.
 
-For more advanced examples of building full JSON-API complaint APIs with Flow and without TypoScript see [this package](https://github.com/ttreeagency/JsonApi).
+For more advanced examples of building full JSON-API compliant APIs with Flow and without TypoScript see [this package](https://github.com/ttreeagency/JsonApi).
 
 ![Technology stack overview](/assets/izm-stack.svg)
 <br>*Technology stack overview*
@@ -82,12 +82,12 @@ But none of my fears turned true. On the contrary, decoupling frontend from back
 
 To ease the pain of setting up all of the infrastructure, I decided to [use Docker](http://dimaip.github.io/2015/03/03/hybrid-deploy-with-docker-and-surf/) conainers for each service: nodejs app would just get a container of its own, not interfering with Neos PHP container in any way.
 
-All the infrastructure is descibed in a declarative way in a [docker-compose.yml](https://github.com/sfi-ru/EncultDistr/blob/master/docker/docker-compose.yml) file.
-As you can see have to pack quite a lot there: mysql, php+nginx, redis, nodejs and a few other service containers. Managing and deploying it by hand would turn into a nightmare quite quickly.
+All the infrastructure is described in a declarative way in a [docker-compose.yml](https://github.com/sfi-ru/EncultDistr/blob/master/docker/docker-compose.yml) file.
+As you can see I had to pack quite a lot there: mysql, php+nginx, redis, nodejs and a few other service containers. Managing and deploying it by hand would turn into a nightmare quite quickly.
 
 In practice, separating the frontend from the backend greatly simplified deployment: while I could do big infrastructure deployments with Docker, smaller frontend code changes could go without Neos even noticing it. That's so cool, when the part of the code that is changing the most is actually completely stateless: database lives in its own container, and you can scale node containers freely, without caring about the backend.
 
-API quickly stabilized, so I could focus my attention on developing the frontend React part, while letting editors already to start feeling in the content, even before the whole project was ready.
+API quickly stabilized, so I could focus my attention on developing the frontend React part, while letting editors already start filling in the content, even before the whole project was ready.
 
 ![Izm.io website](/assets/izm.png)
 
@@ -95,11 +95,11 @@ API quickly stabilized, so I could focus my attention on developing the frontend
 
 The [Izm](http://izm.io) project went live. Hooray!
 
-So the idea of combining the best from two worlds, solid content management with modern web apps, really payed off. We met met the deadlines, despite it being my first React project.
+So the idea of combining the best from two worlds, solid content management with modern web apps, really payed off. We met the deadlines, despite it being my first React project.
 
 The whole thing is running pretty fast on a 5$ Digital Ocean plan. I get about 120ms response from Neos API and 350ms TTFB for the whole app. The app feels very responsive thanks to server-side rendering: it does not have to wait for JS code to load, and time to paint is under 2s.
 
-What I would have done differently when designing an API, is planing it so that the data that changes frequently would be fetched separately from the main content. It would allow nodejs part of the app to quickly serve initial html, while the frontend would fetch the vote count and other changing missing pieces already after the page loads.
+What I would have done differently when designing an API, is planning it so that the data that changes frequently would be fetched separately from the main content. It would allow nodejs part of the app to quickly serve initial html, while the frontend would fetch the vote count and other volatile pieces already while the page loads.
 
 So React part was fun, but the thing that makes my heart most warm every time I integrate Neos in a project, is contemplating the editors happiness, and I'm really glad that I can retain this experience even in a cold single page application world =)
 
