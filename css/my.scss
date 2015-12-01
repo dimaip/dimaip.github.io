@@ -69,10 +69,12 @@ img {
     height: auto;
 }
 figure {
-	margin: $u -100px;
-	img {
-	    width: 100%;
-	}
+    @media (min-width: 1024px) {
+        margin: $u -100px;
+	    img {
+	        width: 100%;
+	    }
+    }
 }
 code {
     overflow-wrap: break-word;
