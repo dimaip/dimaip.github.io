@@ -36,10 +36,15 @@ $Blue: #69b8d6;
 
 $color-primary: $Blue;
 
+$sans: 'Fira Sans', sans-serif;
+$serif: 'Goergia', serif;
+
+$base-font-size: 19px;
+$base-line-height: 1.5;
 
 /*Resets*/
 body{
-  font-family: 'Fira Sans', sans-serif;
+  font-family: $sans;
   text-rendering: optimizeLegibility;
   font-size: 100%;
   margin: 0;
@@ -98,9 +103,9 @@ $u: 12px;
 .H6 {font-size: 14px;}
 
 .Paragraph {
-    font-family: 'Georgia', serif;
-    font-size: 19px;
-    line-height: 1.5;
+    font-family: $serif;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
     margin: $u 0;
 }
 .LeadParagraph {
@@ -122,8 +127,9 @@ $u: 12px;
     padding-left: 2*$u;
 }
 .List-item {
-    font-size: 18px;
-    line-height: 1.6;
+    font-family: $serif;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
 }
 
 
