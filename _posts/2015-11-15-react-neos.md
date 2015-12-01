@@ -7,7 +7,9 @@ tags: neos react api
 comments: true
 ---
 
-<figure markdown="1">![React + Neos](/assets/react-neos.png)</figure>
+<figure markdown="1">
+  ![React + Neos](/assets/react-neos.png)
+</figure>
 
 <p class="LeadParagraph">Rendering HTML just on server side feels so awkward in 2015. Universal apps quickly gain popularity, and some people start using React even for mostly static landing pages, not talking about rich web apps.
 In this landscape, traditional server-side frameworks like Ruby on Rails start to fret. I had shivers down my spine myself, being a developer of a PHP CMS: how relevant is what we do to this hipster React/Node/Mongo world?</p>
