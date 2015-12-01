@@ -130,9 +130,9 @@ code {
 }
 .LeadParagraph {
     @extend .Paragraph;
-    font-size: 21px;
+    font-size: 21px !important;
     @media (min-width: 1024px) {
-        font-size: 28px;
+        font-size: 28px !important;
     }
     line-height: 1.35;
 }
