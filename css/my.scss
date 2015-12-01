@@ -41,31 +41,37 @@ $serif: 'Goergia', serif;
 
 
 /*Resets*/
-body{
+body {
   font-family: $sans;
   text-rendering: optimizeLegibility;
   font-size: 100%;
   margin: 0;
 }
 
-p,h1,h2,h3,h4,h5,h6{
+p,h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
     line-height: 1;
     margin: 0;
 }
-ul{
+ul {
     list-style-type: none;
     padding: 0;
 }
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
-img{
+img {
     max-width: 100%;
     height: auto;
 }
-code{
+figure {
+	margin: $u -100px;
+	img {
+	    width: 100%;
+	}
+}
+code {
     overflow-wrap: break-word;
     white-space: pre;
     color: $Gray--Light;
