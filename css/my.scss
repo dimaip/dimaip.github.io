@@ -39,8 +39,6 @@ $color-primary: $Blue;
 $sans: 'Fira Sans', sans-serif;
 $serif: 'Goergia', serif;
 
-$base-font-size: 19px;
-$base-line-height: 1.5;
 
 /*Resets*/
 body{
@@ -92,26 +90,42 @@ $u: 12px;
     margin-top: 1.5em;
     margin-bottom: $u;
 }
-.H1 {font-size: 60px;
+.H1 {
+    font-size: 37px;
+    @media (min-width: 1024px) {
+        font-size: 50px;
+    }
     font-weight: bold;
 }
-.H2 {font-size: 46px;}
-.H3 {font-size: 29px;}
-/* We don't use these*/
-.H4 {font-size: 21px;}
-.H5 {font-size: 18px;}
-.H6 {font-size: 14px;}
+.H2 {
+    font-size: 28px;
+    @media (min-width: 1024px) {
+        font-size: 37px;
+    }
+}
+.H3 {
+    font-size: 21px;
+    @media (min-width: 1024px) {
+        font-size: 28px;
+    }
+}
 
 .Paragraph {
     font-family: $serif;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
+    font-size: 16px;
+    @media (min-width: 1024px) {
+        font-size: 21px;
+    }
+    line-height: 1.5;
     margin: $u 0;
 }
 .LeadParagraph {
     @extend .Paragraph;
-    font-size: 26px;
-    line-height: 1.4;
+    font-size: 21px;
+    @media (min-width: 1024px) {
+        font-size: 28px;
+    }
+    line-height: 1.35;
 }
 
 .Link {
@@ -127,9 +141,8 @@ $u: 12px;
     padding-left: 2*$u;
 }
 .List-item {
-    font-family: $serif;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
+    @extend .Paragraph;
+    margin: 0;
 }
 
 
