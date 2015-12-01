@@ -29,8 +29,10 @@ This was made working with a long list of answers really unsatisfying, so I tras
 That came as a big surprise to me, but I couldn't find anything suiting my rather simple requirements. Even big giants of content APIs like Contentful would still give me simple lists of records, and no hierarchical grouping.
 And that's where I decided to do something at that time I thought crazy: use PHP CMS to provide content for NodeJS/React app.
 
-![Neos editing interface](/assets/izm-neos-backend.png)
-<br>*Neos editing interface*
+<figure markdown="1">
+  ![Neos editing interface](/assets/izm-neos-backend.png)
+  <br>*Neos editing interface*
+</figure>
 
 ## Neos
 
@@ -74,8 +76,10 @@ Flow, the underlying framework of Neos, packs a lot of other cool stuff like DDD
 
 For more advanced examples of building full JSON-API compliant APIs with Flow and without TypoScript see [this package](https://github.com/ttreeagency/JsonApi).
 
-![Technology stack overview](/assets/izm-stack.svg)
-<br>*Technology stack overview*
+<figure markdown="1">
+  ![Technology stack overview](/assets/izm-stack.svg)
+  <br>*Technology stack overview*
+</figure>
 
 ### Docker containerization
 
@@ -91,7 +95,9 @@ In practice, separating the frontend from the backend greatly simplified deploym
 
 API quickly stabilized, so I could focus my attention on developing the frontend React part, while letting editors already start filling in the content, even before the whole project was ready.
 
-![Izm.io website](/assets/izm.png)
+<figure markdown="1">
+  ![Izm.io website](/assets/izm.png)
+</figure>
 
 ## Results
 
