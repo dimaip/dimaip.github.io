@@ -3,6 +3,9 @@
 # only Main files contain this front matter, not partials.
 ---
 
+/*Settings*/
+$u: 12px;
+
 @import "highlight";
 
 @font-face {
@@ -80,8 +83,6 @@ code {
     color: initial;
 }
 
-/*Settings*/
-$u: 12px;
 
 /*Utility classes*/
 .FixedWidth{
