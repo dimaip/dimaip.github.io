@@ -32,7 +32,7 @@ $Gray--Dark: #111;
 $Gray: #666;
 $Gray--Light: #aaa;
 $Gray--Line: #ccc;
-$Blue: #336699;
+$Blue: #69b8d6;
 
 $color-primary: $Blue;
 
@@ -98,9 +98,15 @@ $u: 12px;
 .H6 {font-size: 14px;}
 
 .Paragraph {
-    font-size: 18px;
-    line-height: 1.6;
+    font-family: 'Georgia', serif;
+    font-size: 19px;
+    line-height: 1.5;
     margin: $u 0;
+}
+.LeadParagraph {
+    @extend .Paragraph;
+    font-size: 26px;
+    line-height: 1.4;
 }
 
 .Link {
@@ -129,6 +135,9 @@ $u: 12px;
     h5{@extend .H5;}
     h6{@extend .H6;}
     p{@extend .Paragraph;}
+    & > p:first-child {
+    	@extend .LeadParagraph;
+    }
     a{@extend .Link;}
 	ul{@extend .List;}
     li{@extend .List-item;}
