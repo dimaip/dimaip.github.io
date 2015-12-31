@@ -44,4 +44,4 @@ Looking at the upcoming year technology-wise, I say that I really do not know wh
 - Read more books!
 - Focus more on work ethics, not working up until late in night and improving life-work balance. I have quite some things to fix here!
 
-But the key tune always remains the same for me throughout my professional life: "making technology the servant to people, not vice versa". It is so easy to get entangled in the world of new fashionable libraries and tools, in personal career growth and self-improvement, that shifts your priorities away from the people to whom you are supposed to be serving with all these technical gifts.
+But the key tune always remains the same for me throughout my professional life: *making technology the servant to people, not vice versa*. It is so easy to get entangled in the world of new fashionable libraries and tools, in personal career growth and self-improvement, that shifts your priorities away from the people to whom you are supposed to be serving with all these technical gifts.
