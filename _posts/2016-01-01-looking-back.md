@@ -35,7 +35,7 @@ Also during December I [greatly simplified our CI process on top Ansible](https:
 
 Looking at the upcoming year technology-wise, I say that I really do not know what to expect. So many things that need fixing, so many new things I want to learn. Here is a very random lists of work-related things that come to my mind:
 
-- Do more React or maybe even React-native projects!
+- Do more React or maybe even React-native projects
 - Try to invest into making our websites more testable and reliable: start using [Gemini](http://gemini-testing.github.io/gemini/) for CSS regressions testing, test crucial TypoScript parts, test contaieners and deployment scripts and so on.
 - Build a little Docker cloud to remove single points of failure and not depend on our bare metal so much.
 - Invest a lot of time into Neos project itself. All of our key websites depend on it now, and I plan to spend most effort on user experience and snappiness of user interface of Neos, basically anything that makes our editors happy and solves our goals.
