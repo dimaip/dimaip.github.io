@@ -1,20 +1,20 @@
 ---
 layout: post
-title:  "Building a Rich Content API with Neos for your React App"
-description: "Integrating Neos with React in one project to provide editor happiness"
+title:  "Looking Back and Looking Forward"
+description: "Personal reflections on the past year and some naive New Year's resolutions"
 image: "http://dimaip.github.io/assets/looking-back.jpg"
 tags: neos
 comments: true
 ---
 
 <figure markdown="1">
-  ![React + Neos](/assets/looking-back.jpg)
+  ![Image credit: http://chindeepinlife.com/2015/01/](/assets/looking-back.jpg)
 </figure>
 
 <p class="LeadParagraph">Having celebrated the New Year with family and friends, and now that everyone around is asleep, it is time to write one of those personal New Year's resolution posts no one reads and except yourself a year later.<br/>
 Technology world is pacing so fast, that it is impossible to predict where one will end up in a year from now. Literally no wishes/predictions I made last year were fulfilled, and that makes it even more funny to make new guesses again.</p>
 
-## Looking behind
+## Looking back
 
 But first a quick glance back at my professional year.
 
@@ -30,7 +30,7 @@ It was the fun time, but maybe it was a bit too much for me, which resulted in a
 
 Also during December I [greatly simplified our CI process on top Ansible](https://github.com/sfi-ru/ansible-deploy/blob/master/deploy.yml) and moved to [new php7 containers](https://github.com/sfi-ru/docker-neos-bare). A small effort that brings a good feeling to my developer mind.
 
-## Looking ahead
+## Looking forward
 
 Looking at the upcoming year technology-wise, I say that I really do not know what to expect. So many things that need fixing, so many new things I want to learn. Here is a very random lists of work-related things that come to my mind:
 
