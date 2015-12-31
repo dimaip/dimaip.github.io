@@ -11,8 +11,9 @@ comments: true
   ![Image credit: http://chindeepinlife.com/2015/01/](/assets/looking-back.jpg)
 </figure>
 
-<p class="LeadParagraph">Having celebrated the New Year with family and friends, and now that everyone around is asleep, it is time to write one of those personal New Year's resolution posts no one reads and except yourself a year later.<br/>
-Technology world is pacing so fast, that it is impossible to predict where one will end up in a year from now. Literally no wishes/predictions I made last year were fulfilled, and that makes it even more funny to make new guesses again.</p>
+<p class="LeadParagraph">Having celebrated the New Year with family and friends, and now that everyone around is asleep, it is time to write one of those personal New Year's resolution posts no one reads and except yourself a year later.</p>
+
+Technology world is pacing so fast, that it is impossible to predict where one will end up in a year from now. Literally no wishes/predictions I made last year were fulfilled, and that makes it even more funny to make new guesses again.
 
 ## Looking back
 
