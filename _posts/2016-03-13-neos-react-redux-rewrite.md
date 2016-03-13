@@ -28,12 +28,12 @@ Last week we had a code sprint in Dresden where more developers joined the rewri
 
 I will try to make code walkthrough look more like a tutorial. As a kind of tutorial assignment, I will be using the feature on which I was working during last week. **Our task would be to create a dialog for creating nodes** (i.e. pages or content elements in Neos), that will provide you with a choice of all possible page types that are allowed to be created in the given place, and that would finally send the command to the server API, creating a new node of the chosen type. Let’s call it `AddNodeModal`.
 
-<aside class="Aside Warning" markdown="1">Warning! This walkthrough presupposes you know some React and Redux essentials and will not help you getting started from zero groud.
+<aside class="Callout Warning" markdown="1">Warning! This walkthrough presupposes you know some React and Redux essentials and will not help you getting started from zero groud.
 </aside>
 
 ### React Components
 
-<aside class="Aside" markdown="1">All of our React components are divided into two types: **presentational components** and **container components**. Presentational components are small reusable pieces of the interface like Buttons, Modals, Icons or even Trees.
+<aside class="Callout Info" markdown="1">All of our React components are divided into two types: **presentational components** and **container components**. Presentational components are small reusable pieces of the interface like Buttons, Modals, Icons or even Trees.
 presentational components are encapsulated into container components, that provide more dedicated app logic, that is generally not meant to be reusable. Containers may connect to app state via [react-redux](https://github.com/reactjs/react-redux) @connect decorator. Usually they don’t render data directly, but pass it down to presentational components.
 </aside>
 
@@ -43,7 +43,7 @@ So to render our AddNodeModal we would need a couple of components: Dialog, Butt
 
 ### State
 
-<aside class="Aside" markdown="1">
+<aside class="Callout Info" markdown="1">
 The main reason for the switch to this new stack was the desire to give more predictability and integrity to the UI. You see, our case is slightly complicated by the fact that we have the same data distributed across multiple places: the navigation tree, inline editing etc. Before we did not have a unified data model, and all of this modules functioned independently, carefully glued together by some state syncing code. Yes, that was kind of a nightmare.
 That is why here from the start we for having all data clearly normalised and stored in the state. But that includes not only the content data, but also the state of the UI itself: all trees, panels, user preferences and so on now have a dedicated place in the application state.
 </aside>
@@ -54,7 +54,7 @@ Our dialog will show up when we put some node into `referenceNode`, and disappea
 
 ### Reducers
 
-<aside class="Aside" markdown="1">The idea behind Redux is to join app state into one single state tree, and manipulate it via a side-effect free function, that takes previous state and returns the new state, based on an action that describes the manipulations that we want to apply to it. The reducer may be split into multiple reducers, for the sake of modularity. The state itself is kept in the store and not in the reducer, the reducer is just a simple function, remember?
+<aside class="Callout Info" markdown="1">The idea behind Redux is to join app state into one single state tree, and manipulate it via a side-effect free function, that takes previous state and returns the new state, based on an action that describes the manipulations that we want to apply to it. The reducer may be split into multiple reducers, for the sake of modularity. The state itself is kept in the store and not in the reducer, the reducer is just a simple function, remember?
 Actions that manipulate the state may be likened to C (Command) in CQRS (Command-Query Responsibility Segregation). You may record and later replay actions to get a kind of Event Sourcing.
 
 To manipulate state efficiently we use our own library called plow-js, which has that scent of functional programming to it. Check it out, it is really cool!
@@ -67,7 +67,7 @@ So to manipulate the state we would need to create a reducer handling two action
 
 ### Selectors
 
-<aside class="Aside" markdown="1">It is a general recommendation to keep data in the state normalised, just like in a relational database. This way it is easier to manipulate it, without worrying that some parts of data get out of sync. But often you need to have data gathered from multiple places in the state, and that is when selectors come to the rescue. Selectors are functions that take the state and return the needed part of it. We use a very nice selector library called reselect. It helps you to create more complex selectors by combining simple selectors, and also helps to make them more performant by automatic memoization.
+<aside class="Callout Info" markdown="1">It is a general recommendation to keep data in the state normalised, just like in a relational database. This way it is easier to manipulate it, without worrying that some parts of data get out of sync. But often you need to have data gathered from multiple places in the state, and that is when selectors come to the rescue. Selectors are functions that take the state and return the needed part of it. We use a very nice selector library called reselect. It helps you to create more complex selectors by combining simple selectors, and also helps to make them more performant by automatic memoization.
 </aside>
 
 We had no difficulty in getting `referenceNode` and `mode` from the state, but now we have a bigger challenge coming. We need to get a list of allowed nodetypes for the reference node and mode. For that we need to combine data from multiple places across the state: nodeType data, nodeType constraints, referenceNode, mode, parent and grandparent node to given referenceNode and so on. But that’s not all, now we need to group allowed node types and sort them in the right order. You see, quite a complex logic that is comprised of multiple simple selectors, each of which needs independant testing and performance optimization.
@@ -78,7 +78,7 @@ So we got the list of allowed node types, nicely grouped and sorted. Now it is t
 
 ### Side-effects
 
-<aside class="Aside" markdown="1">Redux architecture mainly focuses on the client state and does not consider effects, such as asynchronous requests to the server. There is no consensus on the best practices here, but for our case we chose redux-saga library. It uses generators and looks really fancy at first sight, but we found most freedom in using it. Basically it watches for one of your actions to happen and then executes some code, which may be asynchronous and as effect trigger other actions.
+<aside class="Callout Info" markdown="1">Redux architecture mainly focuses on the client state and does not consider effects, such as asynchronous requests to the server. There is no consensus on the best practices here, but for our case we chose redux-saga library. It uses generators and looks really fancy at first sight, but we found most freedom in using it. Basically it watches for one of your actions to happen and then executes some code, which may be asynchronous and as effect trigger other actions.
 </aside>
 
 We have a fancy new server API to describe the desired actions we want to perform on the server. Any action we want to take is encoded as a change object, e.g. `Create`, `Move`, `Property` and so on. For our task of creating nodes, we need to choose between actions `Create`, `CreateAfter` and `CreateBefore` actions based on `mode` state. After we construct correct change object, we need to send it as a parameter to `Changes.add` action creator, and it would be transparently picked up by the changes saga and sent to the correct API endpoint on the server. On success saga fires a `FINISH` action, on failure `FAIL`.
