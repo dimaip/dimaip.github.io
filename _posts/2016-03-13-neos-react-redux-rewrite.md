@@ -91,4 +91,10 @@ It should go without saying that we must cover at least critical parts of our co
 To write assertions in behavioural style we use chai. To run them in real browsers we use Karma. For acceptance tests we use Selenium.
 I have yet to finish writing acceptance tests for this feature, so I will update this article once I have some code to show.
 
-## More about the sprint & call to action
+So I hope this gives you some insights into how we apply core React & Redux architecture principles to our app. Feel free to browse the rest of the codebase, I am sure you will find a lot of interesting stuff there.
+
+## The Neos Family
+
+If you stayed with me this far, you may be interested in the project itself, and not only the technology we use. As some very clever people [put it to words](https://blog.engineyard.com/2014/open-source-software-contribution), open source project is nothing without people behind it. And we are truly blessed here, we are not just some nerds scaterred all around the globe, neither are we emploeeys payed by some businesses to do coding. We are a community of friends, almost a family. [We organise code sprints](http://dimaip.github.io/2014/10/05/the-code-sprint/) regularily to not only code together, but as well share all the good things we are given in this life, be it a walk across the Elba river in the night or game of laser tag.
+
+**So if you like our code, come join us!** We have a lot of code to write together, but in the end it does not have to end there, lets be friends!
