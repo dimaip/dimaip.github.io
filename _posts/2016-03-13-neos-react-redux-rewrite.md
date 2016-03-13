@@ -9,8 +9,6 @@ comments: true
 
 # If you accidently see this, the post is not yet finished!
 
-## Intro
-
 Neos is a modern content management system, known for its flexibility and ease of use. Behind the project we have 19 active team members spread across 3 agile teams, and 85 contributors to the project in total, and if you ever visit a Neos event or a code sprint, you will soon find out that we are more like a family, than a corporation. In fact Neos is a rare case when large open source project is not being backed by any commercial company.
 But don’t worry, I won’t spend the rest of the article worshiping our product or describing all of its features (even though it totally deserves it). 
 
@@ -20,7 +18,7 @@ The web is full of Redux tutorials and great learning materials, but it is much 
 
 ## The Decision
 
-Undertaking a complete UI rewrite was not an easy decision to make. You see, by now we have one of the most intuitive UIs in the content management world, mostly stable and complete. It was written in EmberJS 1.x and for its time was pretty neatly built. But with time things started to get out of hand, the complexity of it multiplied and development of new interface features started to cost more and more. Touching one piece of it could backfire in other least places, we had no interface tests so refactoring it was not easy too, and the whole thing just didn’t feel predictable and fun to work with any longer. The last drop was difficulty of upgrading it to Ember 2.x, too many things had changed during the time and we wanted to rethink multiple things anyways. To evaluate the decision, two amazing coreteam developers, Wilhelm Behncke and Tyll Weiß, had spend a few days under cover to built a proof-of-concept prototype, which was able to convince the rest of the team that we should go for it.
+Undertaking a complete UI rewrite was not an easy decision to make. You see, by now we have one of the most intuitive UIs in the content management world, mostly stable and complete. It was written in EmberJS 1.x and for its time was pretty neatly built. But with time things started to get out of hand, the complexity of it multiplied and development of new interface features started to cost more and more. Touching one piece of it could backfire in other least places, we had no interface tests so refactoring it was not easy too, and the whole thing just didn’t feel predictable and fun to work with any longer. The last drop was difficulty of upgrading it to Ember 2.x, too many things had changed during the time and we wanted to rethink multiple things anyways. To evaluate the decision, two amazing coreteam developers, [Wilhelm Behncke](https://twitter.com/WilhelmBehncke) and [Tyll Weiß](https://twitter.com/inkdpixels), had spend a few days under cover to built a proof-of-concept prototype, which was able to convince the rest of the team that we should go for it.
 Last week we had a code sprint in Dresden where more developers joined the rewrite effort, and now we have 5 people actively working on it and about 5 more feeling intrigued and wanting to try out too.
 
 ## Lets Pretend This is a Tutorial...
@@ -37,7 +35,7 @@ So to render our AddNodeModal we would need a couple of components: Dialog, Butt
 
 https://github.com/PackageFactory/PackageFactory.Guevara/blob/9e06fdd96c1627a262c42b8405c1f128de972fa4/Resources/Private/JavaScript/Host/Containers/AddNodeModal/index.js
 
-### The State
+### State
 
 <aside class=”Aside” markdown="1">The main reason for the switch to this new stack was the desire to give more predictability and integrity to the UI. You see, our case is slightly complicated by the fact that we have the same data distributed across multiple places: the navigation tree, inline editing etc. Before we did not have a unified data model, and all of this modules functioned independently, carefully glued together by some state syncing code. Yes, that was kind of a nightmare.
 That is why here from the start we for having all data clearly normalised and stored in the state. But that includes not only the content data, but also the state of the UI itself: all trees, panels, user preferences and so on now have a dedicated place in the application state.
@@ -47,7 +45,7 @@ For our AddNodeModal we would need two things stored in the state: reference nod
 Our dialog will show up when we put some node into `referenceNode`, and disappear once we clear that value.
 
 
-### Reducer
+### Reducers
 
 <aside class=”Aside” markdown="1">The idea behind Redux is to join app state into one single state tree, and manipulate it via a side-effect free function, that takes previous state and returns the new state, based on an action that describes the manipulations that we want to apply to it. The reducer may be split into multiple reducers, for the sake of modularity. The state itself is kept in the store and not in the reducer, the reducer is just a simple function, remember?
 Actions that manipulate the state may be likened to C (Command) in CQRS (Command-Query Responsibility Segregation). You may record and later replay actions to get a kind of Event Sourcing.
