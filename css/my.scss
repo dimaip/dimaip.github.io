@@ -37,8 +37,8 @@ $Gray--Light: #aaa;
 $Gray--Line: #ccc;
 $Gray--bg: #fafafa;
 $Blue: #69b8d6;
-$Color-warning: ##fce6e2;
 
+$color-warning: #fce6e2;
 $color-primary: $Blue;
 
 $sans: 'Fira Sans', sans-serif;
@@ -184,7 +184,7 @@ code {
     font-size: 14px;	
 }
 .Callout.Warning {
-    background-color: $Color-warning;
+    background-color: $color-warning;
 }
 
 .MarkDown{
