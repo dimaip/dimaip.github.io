@@ -150,9 +150,10 @@ code {
     text-decoration: none;
     display: inline-block;
     padding: $u/4 $u/2;
-    color: white;
+    color: white !important;
+    font-family: $sans;
     background-color: $color-primary;
-    transition: all 0.2s;
+    transition: all 0.4s;
     &:hover {
     	background-color: darken($color-primary, 20%);
     }
