@@ -71,7 +71,7 @@ We had no difficulty in getting `referenceNode` and `mode` from the state, but n
 
 So we got the list of allowed node types, nicely grouped and sorted. Now it is time to add some behavior to them that would actually create nodes.
 
-<a target="_blank" class="Button" href="https://github.com/PackageFactory/PackageFactory.Guevara/blob/9e06fdd96c1627a262c42b8405c1f128de972fa4/Resources/Private/JavaScript/Host/Selectors/UI/AddNodeModal/index.js">UI.AddNodeModal selectors</a>
+<a target="_blank" class="Button" href="https://github.com/PackageFactory/PackageFactory.Guevara/blob/9e06fdd96c1627a262c42b8405c1f128de972fa4/Resources/Private/JavaScript/Host/Selectors/CR/Constraints/index.js">Constraints selectors</a>
 
 ### Side-effects
 
