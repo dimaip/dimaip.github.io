@@ -30,11 +30,11 @@ I will try to make code walkthrough look more like a tutorial. As a kind of tuto
 
 ### React Components
 
-<aside class="Aside" markdown="1">All of our React components are divided into two types: **Components** and **Containers**. Components are small reusable pieces of the interface like Buttons, Modals, Icons or even Trees.
-Components are encapsulated into Containers, that provide more dedicated app logic, that is generally not meant to be reusable. Containers may connect to app state via [react-redux](https://github.com/reactjs/react-redux) @connect decorator. Usually they don’t render data directly, but pass it down to Components.
+<aside class="Aside" markdown="1">All of our React components are divided into two types: **presentational components** and **container components**. Presentational components are small reusable pieces of the interface like Buttons, Modals, Icons or even Trees.
+presentational components are encapsulated into container components, that provide more dedicated app logic, that is generally not meant to be reusable. Containers may connect to app state via [react-redux](https://github.com/reactjs/react-redux) @connect decorator. Usually they don’t render data directly, but pass it down to presentational components.
 </aside>
 
-So to render our AddNodeModal we would need a couple of components: Dialog, Button, Icon, Headline and Grid (to nicely layout buttons into multiple rows). Luckily all of the needed Components were already created by somebody else, so we can just play a bit of Lego composing our piece of UI out of existing components.
+So to render our AddNodeModal we would need a couple of components: Dialog, Button, Icon, Headline and Grid (to nicely layout buttons into multiple rows). Luckily all of the needed components were already created by somebody else, so we can just play a bit of Lego composing our piece of UI out of existing components.
 
 <a target="_blank" class="Button" href="https://github.com/PackageFactory/PackageFactory.Guevara/blob/9e06fdd96c1627a262c42b8405c1f128de972fa4/Resources/Private/JavaScript/Host/Containers/AddNodeModal/index.js">AddNodeModal container component</a>
 
