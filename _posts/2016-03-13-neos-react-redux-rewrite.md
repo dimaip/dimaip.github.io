@@ -94,6 +94,44 @@ So I hope this gives you some insights into how we apply core React & Redux arch
 
 ## The Neos Family
 
-If you stayed with me this far, you may be interested in the project itself, and not only the technology we use. As some very clever people [put it to words](https://blog.engineyard.com/2014/open-source-software-contribution), open source project is nothing without people behind it. And we are truly blessed here, we are not just some nerds scaterred all around the globe, neither are we emploeeys payed by some businesses to do coding. We are a community of friends, almost a family. [We organise code sprints](http://dimaip.github.io/2014/10/05/the-code-sprint/) regularily to not only code together, but as well share all the good things we are given in this life, be it a walk across the Elba river in the night or game of laser tag.
+If you stayed with me this far, you may be interested in the project itself, and not only the technology we use. As some very clever people [put it to words](https://blog.engineyard.com/2014/open-source-software-contribution), **open source product is nothing without people behind it**. And we are truly blessed here: we are not just some nerds scaterred all around the globe, neither are we emploeeys payed by some businesses to do coding. We are a community of friends, almost a family. [We organise code sprints](http://dimaip.github.io/2014/10/05/the-code-sprint/) regularily to not only code together, but as well share all the good things we are given in this life, be it a walk across the Elba river in the night or game of laser tag.
 
 **So if you like our code, come join us!** We have a lot of code to write together, but in the end it does not have to end there, lets be friends!
+
+And now some tweet-media to prove my words!
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">React.js Workshop sponsored by <a href="https://twitter.com/sitegeist_de">@sitegeist_de</a> at the <a href="https://twitter.com/hashtag/neoscms?src=hash">#neoscms</a> code sprint. Go, <a href="https://twitter.com/inkdpixels">@inkdpixels</a>! <a href="https://t.co/NSKWdu3BeD">pic.twitter.com/NSKWdu3BeD</a></p>&mdash; Wilhelm Behncke (@WilhelmBehncke) <a href="https://twitter.com/WilhelmBehncke/status/706817768499318784">March 7, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Florian took the sprint participants on a cool tour around Dresden - coding and education go very well together! ~tg <a href="https://t.co/rTyvlUu715">pic.twitter.com/rTyvlUu715</a></p>&mdash; The Neos Project (@neoscms) <a href="https://twitter.com/neoscms/status/707342534704558080">March 8, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The early birds are already at work! It&#39;s a pleasure having all of you here in Dresden :D <a href="https://twitter.com/hashtag/NeosCMS?src=hash">#NeosCMS</a> <a href="https://t.co/HAoq26GebQ">pic.twitter.com/HAoq26GebQ</a></p>&mdash; Sandstorm (@sandstormmedia) <a href="https://twitter.com/sandstormmedia/status/707484157056667648">March 9, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Day 3 on the <a href="https://twitter.com/hashtag/NeosCMS?src=hash">#NeosCMS</a> codesprint. Awesome stuff with awesome people! Let&#39;s get it on! :) <a href="https://twitter.com/hashtag/oss?src=hash">#oss</a> <a href="https://t.co/r1erZYQsV8">pic.twitter.com/r1erZYQsV8</a></p>&mdash; inkdpixels (@inkdpixels) <a href="https://twitter.com/inkdpixels/status/707506151030693888">March 9, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Exciting to see so many (new) developers working on the new <a href="https://twitter.com/hashtag/neoscms?src=hash">#neoscms</a> UI technology stack ... it&#39;s taking shape! <a href="https://t.co/9POKUXrDPT">pic.twitter.com/9POKUXrDPT</a></p>&mdash; Robert Lemke (@robertlemke) <a href="https://twitter.com/robertlemke/status/707519911388643328">March 9, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Sunny hacking in a nice location sponsored and organized by <a href="https://twitter.com/sandstormmedia">@sandstormmedia</a> - thank you guys! <a href="https://twitter.com/hashtag/neoscms?src=hash">#neoscms</a> <a href="https://t.co/1U16FlSqyi">pic.twitter.com/1U16FlSqyi</a></p>&mdash; Robert Lemke (@robertlemke) <a href="https://twitter.com/robertlemke/status/707570179564249088">March 9, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Had an awesome evening playing Lasertag with the team! This <a href="https://twitter.com/hashtag/NeosCMS?src=hash">#NeosCMS</a> sprint rocks! ~tg <a href="https://t.co/0avtjTSx0z">pic.twitter.com/0avtjTSx0z</a></p>&mdash; The Neos Project (@neoscms) <a href="https://twitter.com/neoscms/status/707691612688814081">March 9, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The retro is in full swing, with three team members joining remotely. Pretty inspiring for me so far. <a href="https://twitter.com/hashtag/neoscms?src=hash">#neoscms</a> <a href="https://t.co/nHjOtrWgvW">pic.twitter.com/nHjOtrWgvW</a></p>&mdash; Robert Lemke (@robertlemke) <a href="https://twitter.com/robertlemke/status/707870782651817984">March 10, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Lots of good things happened since our last retro <a href="https://twitter.com/hashtag/neoscms?src=hash">#neoscms</a> <a href="https://t.co/GFPnVFPjZK">pic.twitter.com/GFPnVFPjZK</a></p>&mdash; Robert Lemke (@robertlemke) <a href="https://twitter.com/robertlemke/status/707871782481567745">March 10, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Very nice <a href="https://twitter.com/hashtag/neoscms?src=hash">#neoscms</a> retrospective here - I like it a lot! <a href="https://t.co/Nh4BRrA8lr">pic.twitter.com/Nh4BRrA8lr</a></p>&mdash; Sebastian Kurfürst (@skurfuerst) <a href="https://twitter.com/skurfuerst/status/707880951083352064">March 10, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/sandstorm_tobi">@sandstorm_tobi</a> sharing our thoughts on <a href="https://twitter.com/hashtag/neoscms?src=hash">#neoscms</a> vision! <a href="https://twitter.com/hashtag/codesprint?src=hash">#codesprint</a> <a href="https://t.co/BhsUMIXtoU">pic.twitter.com/BhsUMIXtoU</a></p>&mdash; Sebastian Kurfürst (@skurfuerst) <a href="https://twitter.com/skurfuerst/status/707953618603941889">March 10, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-video" data-lang="en"><p lang="en" dir="ltr">Thanks everybody who was at the <a href="https://twitter.com/hashtag/neoscms?src=hash">#neoscms</a> sprint, have a safe trip home. <a href="https://twitter.com/hashtag/neosFamily?src=hash">#neosFamily</a> <a href="https://twitter.com/hashtag/spirit?src=hash">#spirit</a> <a href="https://t.co/pWKp8OeHjV">pic.twitter.com/pWKp8OeHjV</a></p>&mdash; Sebastian Kurfürst (@skurfuerst) <a href="https://twitter.com/skurfuerst/status/708277258042130432">March 11, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
