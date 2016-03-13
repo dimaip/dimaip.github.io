@@ -37,6 +37,7 @@ $Gray--Light: #aaa;
 $Gray--Line: #ccc;
 $Gray--bg: #fafafa;
 $Blue: #69b8d6;
+$Color-warning: ##fce6e2;
 
 $color-primary: $Blue;
 
@@ -170,17 +171,21 @@ code {
     margin: 0;
 }
 
-.Aside {
+.Callout {
 	background-color: $Gray--bg;
 	padding: 1px $u;
 	border-radius: $u;
 }
-.Aside p{
+.Callout p{
     font-family: $sans;
     color: $Gray;
-    font-size: 14px;
 }
-
+.Callout.Info p {
+    font-size: 14px;	
+}
+.Callout.Warning {
+    background-color: $Color-warning;
+}
 
 .MarkDown{
     h1{@extend .H1;}
