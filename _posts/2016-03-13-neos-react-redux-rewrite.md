@@ -40,10 +40,10 @@ https://github.com/PackageFactory/PackageFactory.Guevara/blob/9e06fdd96c1627a262
 
 ### State
 
-<aside class=”Aside” markdown="1">
+<div class=”Aside” markdown="1">
 The main reason for the switch to this new stack was the desire to give more predictability and integrity to the UI. You see, our case is slightly complicated by the fact that we have the same data distributed across multiple places: the navigation tree, inline editing etc. Before we did not have a unified data model, and all of this modules functioned independently, carefully glued together by some state syncing code. Yes, that was kind of a nightmare.
 That is why here from the start we for having all data clearly normalised and stored in the state. But that includes not only the content data, but also the state of the UI itself: all trees, panels, user preferences and so on now have a dedicated place in the application state.
-</aside>
+</div>
 
 For our AddNodeModal we would need two things stored in the state: reference node, relative to which the new node would be created, and an insertion mode (inside, before, after). Lets store these two values at `UI.AddNodeModal.referenceNode` and `UI.AddNodeModal.mode` inside the state.
 Our dialog will show up when we put some node into `referenceNode`, and disappear once we clear that value.
