@@ -149,9 +149,10 @@ code {
 .Button {
     text-decoration: none;
     display: inline-block;
-    padding: $u/4 $u/2;
+    padding: $u/4 $u;
     color: white !important;
     font-family: $sans;
+    border-radius: 6px;
     background-color: $color-primary;
     transition: all 0.4s;
     &:hover {
