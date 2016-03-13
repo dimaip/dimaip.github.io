@@ -36,7 +36,7 @@ Components are encapsulated into Containers, that provide more dedicated app log
 
 So to render our AddNodeModal we would need a couple of components: Dialog, Button, Icon, Headline and Grid (to nicely layout buttons into multiple rows). Luckily all of the needed Components were already created by somebody else, so we can just play a bit of Lego composing our piece of UI out of existing components.
 
-<a class="Button" href="https://github.com/PackageFactory/PackageFactory.Guevara/blob/9e06fdd96c1627a262c42b8405c1f128de972fa4/Resources/Private/JavaScript/Host/Containers/AddNodeModal/index.js">AddNodeModal container component</a>
+<a target="_blank" class="Button" href="https://github.com/PackageFactory/PackageFactory.Guevara/blob/9e06fdd96c1627a262c42b8405c1f128de972fa4/Resources/Private/JavaScript/Host/Containers/AddNodeModal/index.js">AddNodeModal container component</a>
 
 ### State
 
@@ -60,7 +60,7 @@ You might have noticed that we do not use the usual switch statement block in th
 
 So to manipulate the state we would need to create a reducer handling two actions: OPEN and CLOSE. OPEN would set `referenceNode` and `mode` to provided values, CLOSE would clear the value of `referenceNode`, closing the dialog. Nothing difficult so far, right?
 
-<a class="Button" href="https://github.com/PackageFactory/PackageFactory.Guevara/blob/9e06fdd96c1627a262c42b8405c1f128de972fa4/Resources/Private/JavaScript/Host/Redux/UI/AddNodeModal/index.js">UI.AddNodeModal reducer</a>
+<a target="_blank" target="_blank" class="Button" href="https://github.com/PackageFactory/PackageFactory.Guevara/blob/9e06fdd96c1627a262c42b8405c1f128de972fa4/Resources/Private/JavaScript/Host/Redux/UI/AddNodeModal/index.js">UI.AddNodeModal reducer</a>
 
 ### Selectors
 
@@ -71,7 +71,7 @@ We had no difficulty in getting `referenceNode` and `mode` from the state, but n
 
 So we got the list of allowed node types, nicely grouped and sorted. Now it is time to add some behavior to them that would actually create nodes.
 
-<a class="Button" href="https://github.com/PackageFactory/PackageFactory.Guevara/blob/9e06fdd96c1627a262c42b8405c1f128de972fa4/Resources/Private/JavaScript/Host/Selectors/UI/AddNodeModal/index.js">UI.AddNodeModal selectors</a>
+<a target="_blank" class="Button" href="https://github.com/PackageFactory/PackageFactory.Guevara/blob/9e06fdd96c1627a262c42b8405c1f128de972fa4/Resources/Private/JavaScript/Host/Selectors/UI/AddNodeModal/index.js">UI.AddNodeModal selectors</a>
 
 ### Side-effects
 
@@ -80,7 +80,7 @@ So we got the list of allowed node types, nicely grouped and sorted. Now it is t
 
 We have a fancy new server API to describe the desired actions we want to perform on the server. Any action we want to take is encoded as a change object, e.g. `Create`, `Move`, `Property` and so on. For our task of creating nodes, we need to choose between actions `Create`, `CreateAfter` and `CreateBefore` actions based on `mode` state. After we construct correct change object, we need to send it as a parameter to `Changes.add` action creator, and it would be transparently picked up by the changes saga and sent to the correct API endpoint on the server. On success saga fires a `FINISH` action, on failure `FAIL`.
 
-<a class="Button" href="https://github.com/PackageFactory/PackageFactory.Guevara/blob/9e06fdd96c1627a262c42b8405c1f128de972fa4/Resources/Private/JavaScript/Host/Redux/Sagas/Changes/index.js">Changes saga</a>
+<a target="_blank" class="Button" href="https://github.com/PackageFactory/PackageFactory.Guevara/blob/9e06fdd96c1627a262c42b8405c1f128de972fa4/Resources/Private/JavaScript/Host/Redux/Sagas/Changes/index.js">Changes saga</a>
 
 ### Testing
 
