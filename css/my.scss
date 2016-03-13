@@ -146,6 +146,18 @@ code {
     }
 }
 
+.Button {
+    text-decoration: none;
+    display: inline-block;
+    padding: $u/4 $u/2;
+    color: white;
+    background-color: $color-primary;
+    transition: all 0.2s;
+    &:hover {
+    	background-color: darken($color-primary, 20%);
+    }
+}
+
 .List {
     list-style-type: disc;
     padding-left: 2*$u;
