@@ -14,7 +14,7 @@ But don’t worry, I won’t spend the rest of the article worshiping our produc
 
 I have some other story to tell you, namely **how we approached the rewrite of Neos UI with React, Redux, and the rest of modern and shiny JS stack of 2016**.
 
-The web is full of Redux tutorials and great learning materials, but **it is much harder to find real open source projects of our scale to be written with modern JS stack**. In this writeup I will try to do two things at once: give you a brief walkthrough of our codebase, alongside some theory behind the parts of the stack that we have chosen.
+The web is full of Redux tutorials and great learning materials, but **it is much harder to find real open source projects of our scale to be written with modern JS stack**. In this writeup I will try to do two things at once: give you a brief walkthrough of our codebase, alongside some theory behind the parts of the stack that we have chosen. Be warned though, **we are currently in the very begininng of the rewrite, so the code that you will see is pretty much WORK IN PROGRESS**.
 
 ## The Decision
 
@@ -27,6 +27,9 @@ Last week we had a code sprint in Dresden where more developers joined the rewri
 ## Lets Pretend This is a Tutorial...
 
 I will try to make code walkthrough look more like a tutorial. As a kind of tutorial assignment, I will be using the feature on which I was working during last week. **Our task would be to create a dialog for creating nodes** (i.e. pages or content elements in Neos), that will provide you with a choice of all possible page types that are allowed to be created in the given place, and that would finally send the command to the server API, creating a new node of the chosen type. Let’s call it `AddNodeModal`.
+
+<aside class="Aside Warning" markdown="1">Warning! This walkthrough presupposes you know some React and Redux essentials and will not help you getting started from zero groud.
+</aside>
 
 ### React Components
 
