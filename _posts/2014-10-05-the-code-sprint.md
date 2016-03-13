@@ -10,7 +10,7 @@ After a six hour walk around Copenhagen, one of the best cities on earth, I have
 !["Our" castle](/assets/castle.jpg)
 <br>*"Our" castle*
 
-##Where I've been to last week
+## Where I've been to last week
 
 It is not so simple to explain. It was not a vacation. But I would not call it work either... It was not a conference, nor was it a tutition or a school.
 Bunch of people, literally from all over the world, come together to share a common passion: building a content management system (CMS) that does not suck. We call it a code sprint.
@@ -21,7 +21,7 @@ To summarize: bunch of geeks living in a XVth century castle, building best CMS 
 ![A kickoff meeting to start the sprint](/assets/kickoff.jpg)
 <br>*A kickoff meeting to start the sprint*
 
-##What I have learnt
+## What I have learnt
 
 Going to the sprint I knew I would probably learn a few things... You see, I'm at peers with computers since '95, since '05 doing professional web development, so I had hoped that I would have learnt a few things by then. But compared with the guys that were at the sprint, my knowledge in all areas was an absolute zero. And that is such a cool and humbling experience!
 
@@ -46,7 +46,7 @@ As a result:
 ![Dining with style...](/assets/dine.jpg)
 <br>*Dining with style...*
 
-##What was done
+## What was done
 
 But, of course, the sprint is not a programming school, and we came together to contribute, not just to learn.
 
@@ -58,12 +58,12 @@ Also I managed to add a few features like TypoScript inclussion globbing, TypoSc
 ![My typical workplace](/assets/workplace.jpg)
 <br>*My typical workplace*
 
-##Wraping up
+## Wraping up
 
 Contributing to Open Source projects is a win-win solution for both agencies and freelancers alike. You get the tool that really fits your needs like a glove, that you learn throughout and can fix yourself, in case things go wrong. But also you contribute to something bigger than yourself and your bussiness interests, something that adds real value to life of editors and developers throughout the world. This is the spirit Kasper Skaarhoj has put into our community from the start, and I really care we will be able to keep it breathing among us.
 
 
-##A few personal things
+## A few personal things
 
 Cooking and cleaning up together, conversasions during long walks, morning runs: everything was so natural and welcoming, that I could barelly remember that it was my first event in TYPO3 community. I'm especially grateful to Aske Ertmann, who took all of the bitter organizational tasks for himself. No doubt 1.2 will be a very solid release, with such a release manager!
 
