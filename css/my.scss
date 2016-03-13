@@ -35,6 +35,7 @@ $Gray--Dark: #111;
 $Gray: #666;
 $Gray--Light: #aaa;
 $Gray--Line: #ccc;
+$Gray--bg: #fafafa;
 $Blue: #69b8d6;
 
 $color-primary: $Blue;
@@ -152,6 +153,17 @@ code {
 .List-item {
     @extend .Paragraph;
     margin: 0;
+}
+
+.Aside {
+	background-color: $Gray--bg;
+	padding: 1px $u;
+	border-radius: $u;
+}
+.Aside p{
+    font-family: $sans;
+    color: $Gray;
+    font-size: 14px;
 }
 
 
