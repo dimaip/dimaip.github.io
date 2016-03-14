@@ -98,7 +98,9 @@ If you stayed with me this far, you may be interested in the project itself, and
 
 **So if you like our code, come join us!** We have a lot of code to write together, but, in the end, it does not have to stop there, let's be friends!
 
-And now some tweet-media to prove my words!
+<a target="_blank" class="Button" href="https://www.neos.io/join/contribute.html">Join the project!</a>
+
+*And now some tweet-media to prove my words!*
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">React.js Workshop sponsored by <a href="https://twitter.com/sitegeist_de">@sitegeist_de</a> at the <a href="https://twitter.com/hashtag/neoscms?src=hash">#neoscms</a> code sprint. Go, <a href="https://twitter.com/inkdpixels">@inkdpixels</a>! <a href="https://t.co/NSKWdu3BeD">pic.twitter.com/NSKWdu3BeD</a></p>&mdash; Wilhelm Behncke (@WilhelmBehncke) <a href="https://twitter.com/WilhelmBehncke/status/706817768499318784">March 7, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
