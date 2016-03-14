@@ -13,7 +13,7 @@ But don’t worry, I won’t spend the rest of the article worshiping our produc
 
 I have some other story to tell you, namely **how we approached the rewrite of Neos UI with React, Redux, and the rest of modern and shiny JS stack of 2016**.
 
-The web is full of Redux tutorials and great learning materials, but **it is much harder to find real open source projects of our scale to be written with modern JS stack**. In this write-up I will try to do two things at once: give you a brief walkthrough of our codebase, alongside some theory behind the parts of the stack that we have chosen. Be warned though, **we are currently in the very beginning of the rewrite, so the code that you will see is pretty much WORK IN PROGRESS**.
+The web is full of Redux tutorials and great learning materials, but **it is much harder to find real open source projects of our scale to be written with modern JS stack** (oh, I have overlooked that [Calypso](https://github.com/Automattic/wp-calypso) also uses Redux, thought it had flux). In this write-up I will try to do two things at once: give you a brief walkthrough of our codebase, alongside some theory behind the parts of the stack that we have chosen. Be warned though, **we are currently in the very beginning of the rewrite, so the code that you will see is pretty much WORK IN PROGRESS**.
 
 ## The Decision
 
