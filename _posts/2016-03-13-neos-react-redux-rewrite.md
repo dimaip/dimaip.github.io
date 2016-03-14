@@ -9,6 +9,10 @@ comments: true
 
 <p class="LeadParagraph" markdown="1">[Neos](https://neos.io) is a modern content management system, known for its flexibility and ease of use. Behind the project we have 19 active team members spread across 3 agile teams, and 85 contributors to the project in total, and if you ever visit a Neos event or a code sprint, you will soon find out that we are more like a family, than a corporation. In fact Neos is a rare case when large open source project is not being backed by any commercial company.</p>
 
+<figure markdown="1">
+  ![Current Neos UI](/assets/neos-ui.png)
+</figure>
+
 But don’t worry, I won’t spend the rest of the article worshiping our product or describing all of its features (even though it totally deserves it). 
 
 I have some other story to tell you, namely **how we approached the rewrite of Neos UI with React, Redux, and the rest of modern and shiny JS stack of 2016**.
