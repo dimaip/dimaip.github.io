@@ -11,6 +11,7 @@ comments: true
 
 <figure markdown="1">
   ![Current Neos UI](/assets/neos-ui.png)
+  *Curren UI of Neos*
 </figure>
 
 But don’t worry, I won’t spend the rest of the article worshiping our product or describing all of its features (even though it totally deserves it). 
@@ -29,7 +30,7 @@ Last week we had a code sprint in Dresden where more developers joined the rewri
 
 ## Lets Pretend This is a Tutorial...
 
-![The AddNodeModal dialog that we are going to implement](/assets/modal.png)
+![The AddNodeModal dialog that we are going to implement](/assets/modal.png)<br>*The AddNodeModal dialog that we are going to implement*
 
 I will try to make code walkthrough look more like a tutorial. As a kind of tutorial assignment, I will be using the feature on which I was working during last week. **Our task would be to create a dialog for creating nodes** (i.e. pages or content elements in Neos), that will provide you with a choice of all possible page types that are allowed to be created in the given place, and that would finally send the command to the server API, creating a new node of the chosen type. Let’s call it `AddNodeModal`.
 
