@@ -107,7 +107,12 @@ If you stayed with me this far, you may be interested in the project itself, and
 
 <a target="_blank" class="Button" href="https://www.neos.io/join/contribute.html">Join the project!</a>
 
-*And now some tweet-media to prove my words!*
+**Please RT this stuff**, if you have friends who may be interested in this as well:
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/neoscms">@neoscms</a> goes for full <a href="https://twitter.com/hashtag/reactjs?src=hash">#reactjs</a>/<a href="https://twitter.com/hashtag/redux?src=hash">#redux</a> UI rewrite, and you may take something away from it too! <a href="https://t.co/UiSEW7tH5e">https://t.co/UiSEW7tH5e</a></p>&mdash; Dmitri Pisarev (@dimaip) <a href="https://twitter.com/dimaip/status/709265663328702464">March 14, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+*And now some tweet-media to prove my words all of this is real! =)*
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">React.js Workshop sponsored by <a href="https://twitter.com/sitegeist_de">@sitegeist_de</a> at the <a href="https://twitter.com/hashtag/neoscms?src=hash">#neoscms</a> code sprint. Go, <a href="https://twitter.com/inkdpixels">@inkdpixels</a>! <a href="https://t.co/NSKWdu3BeD">pic.twitter.com/NSKWdu3BeD</a></p>&mdash; Wilhelm Behncke (@WilhelmBehncke) <a href="https://twitter.com/WilhelmBehncke/status/706817768499318784">March 7, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
