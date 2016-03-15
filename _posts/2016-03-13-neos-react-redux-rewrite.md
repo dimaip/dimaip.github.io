@@ -26,7 +26,7 @@ Undertaking a complete UI rewrite was not an easy decision to make. You see, by 
 
 To evaluate the decision, two amazing core team developers, [Wilhelm Behncke](https://twitter.com/WilhelmBehncke) and [Tyll Weiß](https://twitter.com/inkdpixels), had spent a few days under cover to built a proof-of-concept prototype, which was able to convince the rest of the team that we should go for it.
 
-Last week we had a code sprint in Dresden where more developers joined the rewrite effort, and now we have 5 people ([@WilhelmBehncke](https://twitter.com/WilhelmBehncke), [@inkdpixels](https://twitter.com/inkdpixels), [@DerGerDner](https://twitter.com/DerGerDner), [@skurfuerst](https://twitter.com/skurfuerst) and [me](https://twitter.com/dimaip)) actively working on it and about 5 more feeling intrigued and wanting to join our efforts too.
+Last week we had a code sprint in Dresden where more developers joined the rewrite effort, and now we have 6 people ([@WilhelmBehncke](https://twitter.com/WilhelmBehncke), [@inkdpixels](https://twitter.com/inkdpixels), [@DerGerDner](https://twitter.com/DerGerDner), [@skurfuerst](https://twitter.com/skurfuerst), [@MarkusGoldbeck](https://twitter.com/MarkusGoldbeck) and [me](https://twitter.com/dimaip)) actively working on it and about 5 more feeling intrigued and wanting to join our efforts too.
 
 ## Lets Pretend This is a Tutorial...
 
