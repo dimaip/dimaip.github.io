@@ -7,7 +7,7 @@ comments: true
 
 This week I finally learned how caching mechanisms work in [Neos](http://neos.typo3.org). Time to share!
 
-##Basic concepts
+## Basic concepts
 
 A quick summary of what we know from the [official documentation](http://docs.typo3.org/neos/TYPO3NeosDocumentation/IntegratorGuide/ContentCache.html).
 
@@ -16,20 +16,20 @@ A quick summary of what we know from the [official documentation](http://docs.ty
 - For configuration of type `uncached` you must not forget to fill the `context` configuration with all of the context variables needed for rendering given path (like `node` or `documentNode`).
 
 
-##Some examples
+## Some examples
 
 So in most cases you don't need to touch the cache configuration at all. Usually you would define new cache entries for the sake of flushing the cache for content that is comming from other pages, so the `entryTags` configuration would be closely related to the FlowQuery you use to pull in your content. There are three main options you have for configuring entry Tags: `NodeType_[My.Package:NodeTypeName]`, `Node_[Identifier]` and `DescendantOf_[Identifier]`.
 
 Here are a few examples from our in-house news package:
 
 
-###Flush the cache when a child of a certain node changes
+### Flush the cache when a child of a certain node changes
 
 With this FlowQuery I pull in news from a certain, dynamically configured node: `collection = ${q(rootNode).children('[instanceof Sfi.News:Listable]').get()}`
 
 And here's the corresponding entryTag: `${'DescendantOf_' + rootNode.identifier}`.
 
-###Flush the cache when a node of a certain type changes
+### Flush the cache when a node of a certain type changes
 
 With this FlowQuery we pull-in only inportant news of a special type to the carousel on the main page: `collection = ${q(site).find('[instanceof Sfi.News:ImportantMixin]').filter('[important = TRUE]').get()}`
 
@@ -38,9 +38,9 @@ And here's the corresponding entryTag: `${'NodeType_Sfi.News:ImportantMixin'}`
 So far things look really easy, but wait, there are a few nuances that would make you scratch your head.
 
 
-##Gotchas
+## Gotchas
 
-###ContentCollection inside of Content
+### ContentCollection inside of Content
 
 Neos has this little piece of configuration that caused me a lot of trouble:
 
@@ -64,7 +64,7 @@ prototype(TYPO3.Neos:Content).prototype(TYPO3.Neos:ContentCollection).@cache.mod
 {% endhighlight %}
 
 
-###Pagination
+### Pagination
 
 When using the typo3cr pagination widget, the state of the page is defined not only by the TypoScript path, but also by the pagination argument in request, so the `entryIdentifier` must include: `pagination = ${request.pluginArguments.YOUR_PAGINATION_WIDGET_ID.currentPage}`. Actually this is one of the rare cases where you need to add something non-standard to `entryIdentifier`. However, guess what, this config wouldn't work! The reason is given in the small note in the documentation, and it's easy to miss:
 
@@ -81,7 +81,7 @@ root.@cache.entryIdentifier.pagination = ${request.pluginArguments.YOUR_PAGINATI
 So the rule is, _if you add something non-standard to an entryIdentifier, you must also include it in all parent cache defintions_.
 
 
-###Caching time-dependant nodes (maximumLifetime)
+### Caching time-dependant nodes (maximumLifetime)
 
 Now there's a `maximumLifetime` setting, it lets you define a lifetime of a cache entry. At first I used to just set maximumLifetime to smaller value, but that never really pleased me. But you can use the full power of EEL in caching configuration, so why not try do something a bit more clever?
 
@@ -89,11 +89,11 @@ First of all, there's a [`cacheLifetime` FlowQuery operation](http://docs.typo3.
 
 But I was unfortunate enough to be using custom date property to calculate the visibility of my announcements, so here's how I calculated the correct lifetime value myself: `maximumLifetime = ${q(collection).get(0).properties.date.timestamp - Date.now().timestamp}`. See [here for details](https://github.com/sfi-ru/Sfi.News/commit/f376bcf15abd6a6d7feceb9d47ec0a15ee4f1bd7).
 
-##Use faster caching backends
+## Use faster caching backends
 
 In Flow you can use alternative type of caching backend for every type of cache. By default Flow and Neos use FileBackend, and it's supper slow with flushing tagged caches. For production sites it's an absolute must to use more advanced caching backends like Redis for tagged caches. It only takes a few minutes to adjust the configuration (you [do use Docker](http://dimaip.github.io/2015/03/03/hybrid-deploy-with-docker-and-surf/), right?) Here's how the [Caches.yaml](https://github.com/sfi-ru/SfiDistr/blob/master/Configuration/Production/Caches.yaml) should look. 
 
-##More cool stuff coming
+## More cool stuff coming
 
 In the Neos 2.0 release there'll be a [very useful addition called GlobalCacheIdentifiers](https://review.typo3.org/#/c/36210/). Basically it stores all global things which influnce the rendering of a node, acting as default value for a nodeIdentifier: by default `format` and `baseUri`, but you can add more things there. So in Neos 2.0 we would no longer need to specify `entryIdentifier` in most of the cases.
 
