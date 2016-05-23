@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://dev.inspiringcon.skilldisplay.org/pacman.html -->
+<html class="gr__dev_inspiringcon_skilldisplay_org"><!--
+	This website is powered by Neos, the Open Source Content Application Platform licensed under the GNU/GPL.
+	Neos is based on Flow, a powerful PHP application framework licensed under the MIT license.
+
+	More information and contribution opportunities at https://www.neos.io
+--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Pacman</title>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link rel="stylesheet" href="./Pacman_files/reveal.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="./Pacman_files/zenburn.css">
+	
+    <link rel="stylesheet" href="./Pacman_files/bootstrap.min.css" media="all">
+<style>/**
+ * Black theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: #111;
+  background-color: #111; }
+
+.reveal {
+  font-family: "Press Start 2P", "Open Sans", sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  color: #fff; }
+
+::selection {
+  color: #fff;
+  background: #e7ad52;
+  text-shadow: none; }
+
+.reveal .slides > section,
+.reveal .slides > section > section {
+  line-height: 1.3;
+  font-weight: inherit; }
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #eee;
+  font-family: "Share Tech Mono", "Montserrat", Impact, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: none;
+  text-shadow: none;
+  word-wrap: break-word; }
+
+.reveal h1 {
+  font-size: 3.77em; }
+
+.reveal h2 {
+  font-size: 2.11em; }
+
+.reveal h3 {
+  font-size: 1.55em; }
+
+.reveal h4 {
+  font-size: 1em; }
+
+.reveal h1 {
+  text-shadow: none; }
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: 20px 0;
+  line-height: 1.3; }
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%; }
+
+.reveal strong,
+.reveal b {
+  font-weight: bold; }
+
+.reveal em {
+  font-style: italic; }
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em; }
+
+.reveal ol {
+  list-style-type: decimal; }
+
+.reveal ul {
+  list-style-type: disc; }
+
+.reveal ul ul {
+  list-style-type: square; }
+
+.reveal ul ul ul {
+  list-style-type: circle; }
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px; }
+
+.reveal dt {
+  font-weight: bold; }
+
+.reveal dd {
+  margin-left: 40px; }
+
+.reveal q,
+.reveal blockquote {
+  quotes: none; }
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: 20px auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block; }
+
+.reveal q {
+  font-style: italic; }
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+
+.reveal code {
+  font-family: monospace; }
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal; }
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.reveal table th {
+  font-weight: bold; }
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid; }
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+  text-align: center; }
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+  text-align: right; }
+
+.reveal table tr:last-child td {
+  border-bottom: none; }
+
+.reveal sup {
+  vertical-align: super; }
+
+.reveal sub {
+  vertical-align: sub; }
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top; }
+
+.reveal small * {
+  vertical-align: top; }
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #e7ad52;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
+
+.reveal a:hover {
+  color: #f3d7ac;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #d08a1d; }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+
+.reveal section img.plain {
+  border: 0;
+  box-shadow: none; }
+
+.reveal a img {
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #e7ad52;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #e7ad52; }
+
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #e7ad52; }
+
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #e7ad52; }
+
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #e7ad52; }
+
+.reveal .controls .navigate-left.enabled:hover {
+  border-right-color: #f3d7ac; }
+
+.reveal .controls .navigate-right.enabled:hover {
+  border-left-color: #f3d7ac; }
+
+.reveal .controls .navigate-up.enabled:hover {
+  border-bottom-color: #f3d7ac; }
+
+.reveal .controls .navigate-down.enabled:hover {
+  border-top-color: #f3d7ac; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2); }
+
+.reveal .progress span {
+  background: #e7ad52;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #3d72ff, 0 0 70px #3d72ff, 0 0 80px #3D72FF, 0 0 100px #3D72FF, 0 0 150px #3D72FF;
+  color: #fff; }
+</style><style type="text/css"></style></head><body class="" data-gr-c-s-loaded="true" style="transition: -webkit-transform 0.8s ease;"><div class="reveal slide center" role="application" data-transition-speed="default" data-background-transition="fade">
+    <div class="slides" style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.829286);">
+        <section class="present" style="top: 165px; display: block;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><h1>PRESS START<br>TO PLAY</h1></div>
+</div></div></section><section class="future" style="top: 164px; display: block;" hidden="" aria-hidden="true"><div class="neos-contentcollection">
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-50 neos-contentcollection"></div><div class="col-sm-50 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h1>PAC-MAN</h1></div>
+</div>
+<div class=" typo3-neos-nodetypes-text">
+	<div><p>Best practices for building Neos and Flow packages</p><p></p></div>
+</div><div class=" typo3-neos-nodetypes-html">
+	<br>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 67px; display: block;"><div class="neos-contentcollection">
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-6 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/flo_8bit.png" width="768" height="768">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-6 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><p><span>Florian Weiss</span></p><p>@WeissheitenWien</p><p><br></p><p>Weissheiten</p><p>SkillDisplay<br></p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 67px; display: none;"><div class="neos-contentcollection">
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-6 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/dmitri_8bit.png" width="768" height="768">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-6 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><p>Dmitri Pisarev</p><p>@dimaip</p><p><br></p><p>SFI.ru</p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-4 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" title="Billy Mitchell" src="./Pacman_files/Billy_Mitchell_on_December_19,_2007.jpg" width="1536" height="2048">
+				
+		
+	
+		<figcaption>
+			<div><p>Billy Mitchell</p></div>
+		</figcaption>
+	
+</figure>
+    </div>
+</div><div class="col-sm-8 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><h2><br></h2><h2><br>3.333.360 points<br></h2><p></p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-4 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" title="Sebastian Kurfürst" src="./Pacman_files/sebastian.jpg" width="460" height="460">
+				
+		
+	
+		<figcaption>
+			<div><p>Sebastian<br>Kurfürst</p></div>
+		</figcaption>
+	
+</figure>
+    </div>
+</div><div class="col-sm-8 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><h2><br></h2><h2>neoszillion lines of awesome code<br></h2><p></p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-4 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/Pac-Man_split-screen_kill_screen.png" width="224" height="288">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-8 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><h2><br></h2><h2>We can't<br>win Pac-Man<br></h2><p></p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-4 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure class="typo3-neos-alignment-center">
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/NeosLogo.png" width="209" height="232">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-8 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><h2>We can't<br>write "perfect" Neos packages<br></h2><p></p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><h2>But we can optimize them</h2></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h1>HOW TO PLAY</h1></div>
+</div>
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-2 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/cherry.png" width="338" height="360">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-10 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: left;">&nbsp;Increase your package &nbsp;score</p></div>
+</div></div>
+</div>
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-2 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/ghost1.png" width="340" height="351">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-10 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: left;">&nbsp;Be aware that this could &nbsp;put a ghost in the &nbsp;machine</p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Level 1</h2><h2>What are packages<br>and who builds them?</h2></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>"Classic" package definition</h2></div>
+</div>
+<div class=" typo3-neos-nodetypes-text">
+	<div><p>One size fits all</p></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/4461998438_9bd18d20b8_o.jpg" width="571" height="515">
+				
+		
+	
+</figure>
+    </div>
+</div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><h2>Package Design</h2><p><br></p><p></p></div>
+</div>
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-2 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/ghost1.png" width="340" height="351">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-10 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: left;">&nbsp;<br>&nbsp;Ready to use extensions<br>&nbsp;can be twisted to fit</p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/buildingbrick.png" width="960" height="677">
+				
+		
+	
+</figure>
+    </div>
+</div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><h2>Package Design</h2><p><br></p><p></p></div>
+</div>
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-2 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/cherry.png" width="338" height="360">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-10 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: left;">&nbsp;"Building bricks" instead &nbsp;of "ready to use" &nbsp;extensions</p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><h2>Over 400 Neos packages</h2><p></p></div>
+</div>
+<div class=" typo3-neos-nodetypes-text">
+	<div><p><a target="_blank" href="https://www.neos.io/download-and-extend/packages.html">https://www.neos.io/download-and-extend/packages.html</a></p></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Who builds those packages?</h2></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-2 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/cherry.png" width="338" height="360">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-10 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><h2 style="text-align: left;">&nbsp;You<br>&nbsp;(You are awesome!)</h2><p></p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-50 neos-contentcollection"></div><div class="col-sm-50 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><h2>You don't need to be a<br>PHP Wizard</h2><p></p></div>
+</div>
+<div class=" typo3-neos-nodetypes-text">
+	<div><p>Embrace the power of TS2</p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><h2>Progress</h2><p></p></div>
+</div>
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-2 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/cherry.png" width="338" height="360">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-10 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: left;">&nbsp;Step 1: Site Package with &nbsp;TS2 Basics and NodeTypes<br></p></div>
+</div></div>
+</div>
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-2 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/cherry.png" width="338" height="360">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-10 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: left;">&nbsp;Step 2: Custom TypoScript &nbsp;Objects, Eel Helpers, &nbsp;etc</p><p style="text-align: left;">&nbsp;<a target="_blank" href="https://speakerdeck.com/skurfuerst/hacking-neos-how-to-extend-and-customize-neos-and-flow-inspiringcon-2016">Extensibility Talk</a>&nbsp;<br></p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><h2>Error #112 in Integrator,<br>do you want to continue?<br></h2><p></p></div>
+</div>
+<div class=" typo3-neos-nodetypes-text">
+	<div><p><br></p><p>YES / NO</p></div>
+</div>
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-50 neos-contentcollection"></div><div class="col-sm-50 neos-contentcollection"></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><h2>Keep the spirit up</h2><p></p></div>
+</div>
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: left;"><a target="_blank" href="http://discuss.neos.io/">Discuss Neos</a></p><p style="text-align: left;"><a target="_blank" href="http://slack.neos.io/">Slack</a></p><p style="text-align: left;"><span><a target="_blank" href="https://neos.readthedocs.org/en/stable/">Readthedocs</a></span></p><p style="text-align: left;">Packages from others</p><p style="text-align: left;"><a target="_blank" href="https://github.com/neos">The Source Code</a></p></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><h2>What is the reason<br>for using packages?</h2><p><br></p><p></p></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><h2>Be able to reuse a specific thing your packages does well</h2><p></p></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Level 2<br>Modularity</h2></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div>Tailored fit</div>
+</div>
+<div class=" typo3-neos-nodetypes-image">
+	
+
+<figure>
+	
+			
+					<img src="./Pacman_files/tailored-fit.jpeg" width="375" height="500">
+				
+		
+	
+</figure>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Monolithic</h2></div>
+</div>
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-2 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/ghost1.png" width="340" height="351">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-10 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: left;">The pain grows with complexity.</p><p style="text-align: left;">Hard to "become all things to all people" [1Cor 9:22]<br></p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Modular</h2></div>
+</div>
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-2 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/cherry.png" width="338" height="360">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-10 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: left;">Works great when clear intent is defined.</p><p style="text-align: left;">Dangerous without thinking!</p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Small modules fever</h2></div>
+</div>
+<div class=" typo3-neos-nodetypes-image">
+	
+
+<figure class="typo3-neos-alignment-center">
+	
+			
+					<img alt="http://www.modulecounts.com/" src="./Pacman_files/smallmodulemadness.png" width="604" height="423">
+				
+		
+	
+</figure>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Risks</h2></div>
+</div>
+<div class=" typo3-neos-nodetypes-image">
+	
+
+<figure class="typo3-neos-alignment-center">
+	
+			
+					<img alt="http://www.modulecounts.com/" src="./Pacman_files/left-pad.png" width="645" height="448">
+				
+		
+	
+</figure>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Progressive modularisation</h2></div>
+</div>
+<div class=" typo3-neos-nodetypes-image">
+	
+
+<figure>
+	
+			
+					<img src="./Pacman_files/balance.jpg" width="600" height="337">
+				
+		
+	
+</figure>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Grow your packages</h2></div>
+</div>
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-2 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/cherry.png" width="338" height="360">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-10 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: left;">&nbsp;Extract single- &nbsp;responsibility pieces of &nbsp;code -&gt; ship them as &nbsp;seperate packages</p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div>Do we need a news package?</div>
+</div>
+<div class=" typo3-neos-nodetypes-image">
+	
+
+<figure>
+	
+			
+					<img src="./Pacman_files/blog.png" width="788" height="521">
+				
+		
+	
+</figure>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div>Not really.</div>
+</div><div class=" typo3-neos-nodetypes-html">
+	<code><pre>prototype(Neos.NeosIo:PostArchive) &lt; prototype(Flowpack.Listable:Listable) {
+    @context.listClass = 'u-resetList siteWrapper siteWrapper--small'
+    @context.itemClass = 'u-mb1/1'
+    @context.sortProperty = '_index'
+    @context.sortOrder = 'ASC'
+    @context.itemsPerPage = 15
+    collection = ${q(site).find('[instanceof Neos.NeosIo:Post]').get()}
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${node}
+        }
+        entryTags {
+            1 = ${'NodeType_Neos.NeosIo:Post'}
+            2 = ${'Node_' + node.identifier}
+        }
+        maximumLifetime = 3600
+    }
+}</pre></code>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Do one thing - and do it well</h2></div>
+</div>
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-2 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/ghost1.png" width="340" height="351">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-10 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: left;">&nbsp;"Provide a package with &nbsp; &nbsp; all NodeTypes that I &nbsp; &nbsp; &nbsp; consider useful"</p></div>
+</div></div>
+</div>
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-2 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/cherry.png" width="338" height="360">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-10 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: left;">&nbsp;"Provide a package with &nbsp; &nbsp; all NodeTypes related to &nbsp; Zurb Foundation" &nbsp;</p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Level 3<br>TypoScript best practices</h2></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Declarative Templating</h2><p>vs</p><h2>Imperative Templating</h2></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Imperative Templating</h2></div>
+</div><div class=" typo3-neos-nodetypes-html">
+	<pre style="font-size:16pt"><code data-trim="" data-noescape="" class="hljs groovy">&lt;<span class="hljs-string">f:</span><span class="hljs-keyword">for</span> each=<span class="hljs-string">"{0:1, 1:2, 2:3, 3:4}"</span> <span class="hljs-keyword">as</span>=<span class="hljs-string">"foo"</span>&gt;
+    {foo}
+&lt;/<span class="hljs-string">f:</span><span class="hljs-keyword">for</span>&gt;</code></pre>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Declarative Templating</h2></div>
+</div><div class=" typo3-neos-nodetypes-html">
+	<pre style="font-size:16pt"><code data-trim="" data-noescape="" class="hljs ruby">myCollection = <span class="hljs-constant">TYPO3</span>.<span class="hljs-constant">TypoScript</span><span class="hljs-symbol">:Collection</span> {
+        collection = <span class="hljs-variable">${</span>[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]}
+        itemName = <span class="hljs-string">'element'</span>
+        itemRenderer = <span class="hljs-constant">My</span>.<span class="hljs-constant">Package</span><span class="hljs-symbol">:IntegerRenderer</span>
+}</code></pre>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-2 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/ghost1.png" width="340" height="351">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-10 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: left;">&nbsp;Avoid putting too much</p><p style="text-align: left;">&nbsp;logic into Fluid</p><p></p><p></p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Inheritance Chains</h2><p>vs</p><h2>Mixins</h2></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Inheritance Chains</h2></div>
+</div>
+<div class="row typo3-neos-nodetypes-threecolumn">
+	<div class="col-sm-4 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/ghost1.png" width="340" height="351">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-4 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/cat-149211_1280.png" width="1280" height="1274">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-4 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/white-46415_1280.png" width="798" height="1280">
+				
+		
+	
+</figure>
+    </div>
+</div>
+</div>
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: center;">&nbsp;Avoid many levels<br> of inheritance</p></div>
+</div>
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-2 neos-contentcollection"></div><div class="col-sm-10 neos-contentcollection"></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Inheritance Chains</h2></div>
+</div><div class=" typo3-neos-nodetypes-html">
+	<pre style="font-size:16pt"><code data-trim="" data-noescape="" class="hljs vhdl"><span class="hljs-attribute">'My</span>.<span class="hljs-keyword">Package</span>:SpecialPage':
+  superTypes:
+    <span class="hljs-attribute">'TYPO3</span>.Neos.NodeTypes:Page':
+  properties:
+    metaDescription:
+      <span class="hljs-keyword">type</span>: <span class="hljs-attribute">'string</span>'
+      defaultValue: <span class="hljs-attribute">'My</span> important text'
+	  
+<span class="hljs-attribute">'My</span>.<span class="hljs-keyword">Package</span>:ExtraSpecialPage':
+  superTypes:
+    <span class="hljs-attribute">'My</span>.<span class="hljs-keyword">Package</span>:SpecialPage'
+  properties:
+    twitterCardType:
+      <span class="hljs-keyword">type</span>: <span class="hljs-attribute">'string</span>'
+      defaultValue: <span class="hljs-attribute">'Extra</span> important text'</code></pre>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Mixins</h2></div>
+</div>
+<div class="row typo3-neos-nodetypes-twocolumn">
+	<div class="col-sm-2 neos-contentcollection">
+    <div class=" weissheiten-neos-bootstrap-responsiveimage">
+        
+
+<figure>
+    
+			
+					<img class=" img-responsive" src="./Pacman_files/cherry.png" width="338" height="360">
+				
+		
+	
+</figure>
+    </div>
+</div><div class="col-sm-10 neos-contentcollection">
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: left;"><br>&nbsp;Use mixins over &nbsp;inheritance chaining</p></div>
+</div></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Mixins</h2></div>
+</div><div class=" typo3-neos-nodetypes-html">
+	<pre style="font-size:16pt"><code data-trim="" data-noescape="" class="hljs typescript"><span class="hljs-string">'TYPO3.Neos.Seo:SeoMetaTagsMixin'</span>:
+  <span class="hljs-keyword">abstract</span>: TRUE
+  properties:
+    metaDescription:
+      <span class="hljs-keyword">type</span>: <span class="hljs-built_in">string</span></code></pre>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Level 4<br>Get to know Flow</h2></div>
+</div>
+<div class=" typo3-neos-nodetypes-text">
+	<div><p>Spoiler:<br>It's a great and<br>state of the art<br>DDD PHP framework</p></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Level 5<br>Testing</h2></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div>The fixture</div>
+</div><div class=" typo3-neos-nodetypes-html">
+	<pre><code class="hljs http"><span class="hljs-attribute">include</span>: <span class="hljs-string">resource://TYPO3.TypoScript/Private/TypoScript/Root.ts2</span>
+<span class="hljs-attribute">include</span>: <span class="hljs-string">resource://TYPO3.Neos/Private/TypoScript/Root.ts2</span>
+<span class="hljs-attribute">include</span>: <span class="hljs-string">resource://Flowpack.Listable/Private/TypoScript/Root.ts2</span>
+
+<span class="crmsh">listable.basicListing = Flowpack.Listable:Listable {
+	itemRenderer = ${<span class="hljs-keyword">node</span>.<span class="hljs-identifier"></span><span class="hljs-title">properties</span>.title}
+	collection = ${collection}
+}</span></code></pre>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div>The test</div>
+</div><div class=" typo3-neos-nodetypes-html">
+	<pre><code class="hljs xquery"><span class="hljs-variable">$newNode1</span> = <span class="hljs-variable">$this-</span>&gt;getMockBuilder(NodeInterface::class)-&gt;getMock();
+<span class="hljs-variable">$newNode1-</span>&gt;method(<span class="hljs-string">'getProperties'</span>)-&gt;willReturn(<span class="hljs-keyword">array</span>(<span class="hljs-string">'title'</span> =&gt; <span class="hljs-string">'Hello world'</span>));
+<span class="hljs-variable">$newNode2</span> = <span class="hljs-variable">$this-</span>&gt;getMockBuilder(NodeInterface::class)-&gt;getMock();
+<span class="hljs-variable">$newNode2-</span>&gt;method(<span class="hljs-string">'getProperties'</span>)-&gt;willReturn(<span class="hljs-keyword">array</span>(<span class="hljs-string">'title'</span> =&gt; <span class="hljs-string">'Another hello world!'</span>));
+
+<span class="hljs-variable">$view</span> = <span class="hljs-variable">$this-</span>&gt;buildView();
+<span class="hljs-variable">$view-</span>&gt;setTypoScriptPath(<span class="hljs-string">'listable/basicListing'</span>);
+<span class="hljs-variable">$view-</span>&gt;assign(<span class="hljs-string">'collection'</span>, <span class="hljs-keyword">array</span>(<span class="hljs-variable">$newNode1</span>, <span class="hljs-variable">$newNode2</span>));
+<span class="hljs-variable">$this-</span>&gt;assertXmlStringEqualsXmlString(
+	<span class="hljs-string">'&lt;ul&gt;
+		&lt;li&gt;Hello world&lt;/li&gt;
+		&lt;li&gt;Another hello world!&lt;/li&gt;
+	&lt;/ul&gt;'</span>,
+	<span class="hljs-variable">$view-</span>&gt;render()
+);</code></pre>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Level 6<br>Maintenance</h2></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Fill out composer<br>and packagist info</h2></div>
+</div><div class=" typo3-neos-nodetypes-html">
+	<pre style="font-size:16pt"><code data-trim="" data-noescape="" class="hljs stylus">php composer<span class="hljs-class">.phar</span> init</code></pre>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Semantic versioning</h2></div>
+</div>
+<div class=" typo3-neos-nodetypes-text">
+	<div><p><a target="_blank" href="http://semver.org/">http://semver.org/</a></p></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Package Naming</h2></div>
+</div><div class=" typo3-neos-nodetypes-html">
+	<pre style="font-size:16pt"><code data-trim="" data-noescape="" class="hljs stylus">Vendor<span class="hljs-class">.Context</span><span class="hljs-class">.Purpose</span></code></pre>
+</div>
+<div class=" typo3-neos-nodetypes-text">
+	<div><p>Example</p></div>
+</div><div class=" typo3-neos-nodetypes-html">
+	<pre style="font-size:16pt"><code data-trim="" data-noescape="" class="hljs stylus">Flowpack<span class="hljs-class">.Neos</span><span class="hljs-class">.Frontendlogin</span></code></pre>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Coding Guidelines</h2></div>
+</div>
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: center;"><a target="_blank" href="http://flowframework.readthedocs.org/en/stable/_downloads/TYPO3_Flow_Coding_Guidelines_on_one_page.pdf">Flow Coding Guidelines<br></a>(one page!)<br></p><p></p></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>NOT PSR-2</h2></div>
+</div><div class=" typo3-neos-nodetypes-html">
+	<pre style="font-size:16pt"><code data-trim="" data-noescape="" class="hljs bash"><span class="hljs-keyword">if</span> (<span class="hljs-number">1</span> === <span class="hljs-number">1</span>)
+  <span class="hljs-built_in">echo</span> <span class="hljs-string">"hello"</span>;
+<span class="hljs-keyword">else</span>
+  <span class="hljs-built_in">echo</span> <span class="hljs-string">"not hello"</span>;</code></pre>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>PSR-2</h2></div>
+</div><div class=" typo3-neos-nodetypes-html">
+	<pre style="font-size:16pt"><code data-trim="" data-noescape="" class="hljs bash"><span class="hljs-keyword">if</span> (<span class="hljs-number">1</span> === <span class="hljs-number">1</span>) {
+  <span class="hljs-built_in">echo</span> <span class="hljs-string">"hello"</span>;
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-built_in">echo</span> <span class="hljs-string">"not hello"</span>;
+}</code></pre>
+</div>
+<div class=" typo3-neos-nodetypes-text">
+	<div><p>Strg + Shift + Alt + L</p></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Documentation and Interaction</h2></div>
+</div>
+<div class=" typo3-neos-nodetypes-text">
+	<div><p style="text-align: left;">Provide a readme</p><p style="text-align: left;">Don't ignore GitHub responses</p><p style="text-align: left;">Try to maintain your package</p><p></p></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Level 7<br>Wrapup</h2></div>
+</div>
+<div class=" typo3-neos-nodetypes-text">
+	<div><p>Namespaces</p><p>Flowpack / Community</p><p></p></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Make your work visible</h2></div>
+</div></div></section><section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><div class="neos-contentcollection">
+<div class=" typo3-neos-nodetypes-headline">
+	<div><h2>Nothing is impossible!</h2></div>
+</div></div></section>
+    </div>
+<div class="backgrounds"><div class="slide-background present" data-loaded="true" style="display: block;"></div><div class="slide-background future" data-loaded="true" style="display: block;"></div><div class="slide-background future" data-loaded="true" style="display: block;"></div><div class="slide-background future" style="display: none;" data-loaded="true"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div></div><div class="progress" style="display: block;"><span style="width: 0px;"></span></div><aside class="controls" style="display: none;"><button class="navigate-left" aria-label="previous slide"></button><button class="navigate-right enabled" aria-label="next slide"></button><button class="navigate-up" aria-label="above slide"></button><button class="navigate-down" aria-label="below slide"></button></aside><div class="slide-number" style="display: none;"></div><div class="speaker-notes" data-prevent-swipe=""></div><div class="pause-overlay"></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px);">
+
+	PRESS STARTTO PLAY
+</div></div>
+
+	    	<script src="./Pacman_files/head.min.js"></script>
+	    	<script src="./Pacman_files/reveal.js"></script>
+
+	    	<script>
+	    		// Full list of configuration options available at:
+	    		// https://github.com/hakimel/reveal.js#configuration
+				function initReveal() {
+		    		Reveal.initialize({
+		    			controls: false,
+		    			progress: true,
+		    			history: false,
+		    			center: true,
+		    			transition: 'slide', // none/fade/slide/convex/concave/zoom
+		    			// Optional reveal.js plugins
+		    			dependencies: [
+		    				{ src: '/_Resources/Static/Packages/Psmb.Reveal/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+		    				{ src: '/_Resources/Static/Packages/Psmb.Reveal/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		    				{ src: '/_Resources/Static/Packages/Psmb.Reveal/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		    				{ src: '/_Resources/Static/Packages/Psmb.Reveal/revealjs/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+		    				{ src: '/_Resources/Static/Packages/Psmb.Reveal/revealjs/plugin/zoom-js/zoom.js', async: true },
+		    				{ src: '/_Resources/Static/Packages/Psmb.Reveal/revealjs/plugin/notes/notes.js', async: true }
+		    			]
+		    		});
+				}
+				initReveal();
+				if (typeof document.addEventListener === 'function') {
+					document.addEventListener('Neos.PageLoaded', function(event) {
+						initReveal();
+					}, false);
+				}
+
+	    	</script><script type="text/javascript" src="./Pacman_files/highlight.js"></script><script type="text/javascript" src="./Pacman_files/zoom.js"></script><script type="text/javascript" src="./Pacman_files/notes.js"></script>
+	
+    <script src="./Pacman_files/jquery-1.10.1.min.js"></script>
+    <script src="./Pacman_files/bootstrap.min.js"></script>
+<script data-neos-node="/sites/site/node-57042402bec68@live" src="./Pacman_files/LastVisitedNode.js"></script></body></html>
