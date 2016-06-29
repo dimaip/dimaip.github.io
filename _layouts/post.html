@@ -11,7 +11,12 @@ layout: default
 	<article class="PostContent MarkDown">
 	{{ content }}
 	</article>
-  
+
+	<aside class="Callout Warning" style="margin-bottom: 24px">
+		<h3 class="H3" style="margin-top: 24px">Like the stuff you are reading?</h3>
+		<p class="Paragraph">You might as well <a class="Link" href="{{ '/hire' | prepend: site.baseurl }}">hire me</a> ;-)</p>
+	</aside>
+
 	{% if page.comments %}
 	<div id="disqus_thread"></div>
     <script type="text/javascript">

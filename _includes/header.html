@@ -6,9 +6,7 @@
         <div class="SiteTitle-Moto" href="{{ site.baseurl }}/">{{ site.moto }}</div>
     </div>
     <nav class="Nav">
-        {% for page in site.pages %}
-          {% if page.title %}<a class="Nav-Link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
-        {% endfor %}
+        {% unless page.url == '/hire/'%}<a class="Button" href="/hire/">Hire Me</a>{% endunless %}
     </nav>
 
   </div>
