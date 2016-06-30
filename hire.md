@@ -32,7 +32,7 @@ I have been [participating](https://github.com/neos/neos-development-collection/
 
 ### Neos CMS Training and Consulting
 
-Sharing knowledge would be the thing I like to do the most, so I can help your developers to get started with Neos from ground level, or help them advance quickly without making typical mistakes. I have successfully launched projects of various scale with Neos, so I have something to share in this regard.
+Sharing knowledge would be the thing I like to do the most, so I can help your developers get started with Neos from ground level and help them advance quickly, avoiding typical mistakes. I have successfully launched projects of various scale with Neos, so I have something to share in this regard.
 
 I can help your agency set up proper integration and deployment pipelines, move development and production environments to Docker and modernise the whole technology stack.
 
@@ -42,15 +42,15 @@ If nothing above is interesting for you, I can just build things for you with Ne
 
 ### JavaScript Development (Vanilla, React, Redux...)
 
-I have experience participating in a couple of React/Redux JS app development projects, and can both consult and develop in this area.
+I have experience participating in a couple of React/Redux JS app development projects, and can both consult and develop in this area. I am acutely aware, that there is a JavaScript world outside jQuery plugins and popular frameworks ;-)
 
 ### CSS Architecture Consulting and Development
 
-If you think that CSS is not really code and it does not need as much attention, but eventually end up with an unmaintainable spaghetti, there is a wonderful world of modern CSS architecture waiting for you to discover: I can audit your code and help you bring it to standard with modern architectural patterns (BEM, OOCSS, Atomic design, functional CSS and what not), or help you get started from the start the right way.
+If you think that CSS is not really code and it does not need as much attention, but eventually end up with an unmaintainable spaghetti, there is a wonderful world of modern CSS architecture waiting for you to discover: I can audit your code and help you bring it to standard with modern architectural patterns (BEM, OOCSS, Atomic design, functional CSS and what not), or help you get started the right way.
 
 ## What I CAN NOT Do
 
-1. Taking on huge projects that would require a full-time effort. I have my day-time job.
+1. Taking on huge projects as a developer, that would require a full-time effort. I have my day-time job.
 2. Do low-quality work for cheap. Life is too short.
 
 ## Let's do it
