@@ -48,7 +48,7 @@ I have experience participating in a couple of React/Redux JS app development pr
 
 If you think that CSS is not really code and it does not need as much attention, but eventually end up with an unmaintainable spaghetti, there is a wonderful world of modern CSS architecture waiting for you to discover: I can audit your code and help you bring it to standard with modern architectural patterns (BEM, OOCSS, Atomic design, functional CSS and what not), or help you get started from the start the right way.
 
-## What I CAN NOT Help You With
+## What I CAN NOT Do
 
 1. Taking on huge projects that would require a full-time effort. I have my day-time job.
 2. Do low-quality work for cheap. Life is too short.
