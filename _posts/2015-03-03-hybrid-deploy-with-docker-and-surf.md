@@ -16,7 +16,7 @@ Who shall be our saviour from this dependency hell of old infrastructure? -- The
 
 In this tutorial we will learn how to do simple multi-website hosting on one server, where each site will be running in an isolated container, and code deployments will be performed via Surf. Let's get started!
 
-###1. Master the power of Docker
+### 1. Master the power of Docker
 
 Read something about Docker, [docs](https://docs.docker.com/) is the good place to get started. Two main concepts to grasp: image and container.
 
@@ -30,13 +30,13 @@ Once the image is built, you can spin up a container from it with `docker run -d
 
 All the services your project requires like mysql or Redis should be run in separate containers, and started before your main app container. It's called a single responsibility principle -- each container should only run one service.
 
-###2. Describe project environment with docker-compose
+### 2. Describe project environment with docker-compose
 
 Spining all containers from command line and linking them together by hand is very boring and error prone, that's why I began using tool called [docker-compose](https://docs.docker.com/compose/) right from the start (originally called fig).
 
 It allows you to describe  in a single file (`docker-compose.yml`) all of your containers needed for the project to work, and then run them all together with one command (`docker-compose up -d`).
 
-###3. Things get cloudy -- Deploying docker containers from Docker Hub
+### 3. Things get cloudy -- Deploying docker containers from Docker Hub
 
 Docker provides a very cool service for hosting your images in the cloud -- [Docker Hub](hub.docker.com).
 
@@ -44,7 +44,7 @@ It links to your code repository, where your Dockerfile is stored, and [automati
 
 This way the only thing you need to start up the project is your `docker-compose.yml` -- copy it to new server, spin it up and Docker would automatically pull the latest image from the cloud on first start. It's a kind of magic.
 
-###4. Hybrid deployment with Surf+Docker
+### 4. Hybrid deployment with Surf+Docker
 
 By this moment we already have a pretty neat deployment workflow: 
 
@@ -60,12 +60,12 @@ For Surf to deploy code to our container, we must provide it with an ssh access.
 
 From Docker image we need to prepare directory structure for Surf on initial deployment, and then let Surf do its job. You can have a look at [my modification of M12's image](https://github.com/dimaip/docker-typo3-flow-neos-abstract) specificaly for this purpose.
 
-###5. Routing
+### 5. Routing
 
 If we plan to run more then one app on the server, we should redirect a traffic based on host name to a particular container. There are many tools that allow you to automate it, but I decided to go with somethings really simple -- [docker-gen](https://github.com/jwilder/docker-gen). It reads information from running docker containers and creates any config files you need based on a template.
 So let's put Nginx reverse proxy in front of our containers and let docker-gen [automatically configure Nginx](https://github.com/jwilder/nginx-proxy) for domain to internal container port mapping, based on DOMAIN context variable in each container.
 
-###Summary
+### Summary
 
 So this is how things work now:
 
@@ -76,7 +76,7 @@ So this is how things work now:
 5. Point your Surf deployment task (running on integration server like CircleCI or Jenkins) to your ssh container and do code-only deployments with Surf. If you need to re-configure the infrastructure, do full Docker deployment.
 6. Setup things like auto container start on system startup, monitoring, regular backups etc.
 
-###Next steps
+### Next steps
 
 There still remain a few things we haven't take care of.
 The most important one is that we'll have about a minute of downtime when redeploying docker containers. If we are going to do mostly Surf deployments, and do container restart ones in a few months, a minute of downtime is probably OK. But still it's best take care of it. The steps to resolve it would be to start new container while the old one is still running, do a smoke-test on it and then stop and remove the old container. Not hard to do, just needs a bit of practice and automation.
