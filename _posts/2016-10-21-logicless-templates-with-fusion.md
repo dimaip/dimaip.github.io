@@ -77,14 +77,14 @@ Your.ts2:
 
 ```
 {
-inBackendOrTeaserSet = ${node.context.inBackend || String.stripTags(q(node).property(‘teaser’)) ? true : false}
+shouldDisplayTeaser = ${node.context.inBackend || String.stripTags(q(node).property(‘teaser’)) ? true : false}
 }
 ```
 
 Your.html:
 
 ```
-<f:if condition="{inBackendOrTeaserSet}">
+<f:if condition="{shouldDisplayTeaser}">
     <div class="Teaser">{teaser -> f:format.raw()}</div>
 </f:if>
 ```
