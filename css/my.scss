@@ -37,6 +37,7 @@ $Gray--Light: #aaa;
 $Gray--Line: #ccc;
 $Gray--bg: #fafafa;
 $Blue: #69b8d6;
+$Red: #e00000;
 
 $color-warning: #fce6e2;
 $color-primary: $Blue;
@@ -48,7 +49,7 @@ $serif: 'Georgia', serif;
 	color: $color-primary;
 }
 .color-warning {
-	color: $color-warning;
+	color: $Red;
 }
 
 
