@@ -17,7 +17,7 @@ That’s a conceptual mess, and I’m sure we can do better with some clear guid
 
 Fluid templates are great for storing your HTML markup, as long as they are not bloated with logic. Fusion is much better for encapsulating logic, as it’s more declarative, better for unplanned extensibility and is definitely more powerful. Let’s examine how to move most logic from Fluid to your Fusion objects.
 
-## f:for -> TypoScript:Collection
+### f:for -> TypoScript:Collection
 
 Let’s render a list of blog posts.
 
@@ -191,7 +191,7 @@ prototype(Your.NameSpace:Page) < prototype(Your.NameSpace:Layout) {
 ```
 So the effect of this would be the same as using a Fluid layout, and I believe semantically it’s pretty clear as well.
 
-## Inline editing
+### Inline editing
 
 Inline editing viewhelper add a lot to template pollution, let’s move them to Fusion too.
 
@@ -211,7 +211,7 @@ And in template:
 {title -> f:format.raw()}
 ```
 
-## Other ViewHelpers
+### Other ViewHelpers
 
 Now you are probably using `m:media`, `neos:link.node`, `f:format.date` and maybe some other viewhelpers. The good news, most of them are implemented as either Fusion objects (`NodeUri`, `ImageUri`) or as Eel helpers (`Date.format`). If there’s some stuff missing, create an issue or even submit a pull request yourself: creating Eel helpers is no rocket science!
 
