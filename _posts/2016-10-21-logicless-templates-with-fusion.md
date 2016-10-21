@@ -37,7 +37,7 @@ Simple, huh? It is, but it's not very componentized and declarative. Imagine you
 <h4 class="color-primary">Fluid way:</h4>
 
 {% highlight html%}
-#BlogPost.html:
+#BlogPost.html
 <div class="BlogPost">
     <h2>{blogPost.title}</h2>
     <div>{blogPost.teaser}</div>
@@ -45,7 +45,7 @@ Simple, huh? It is, but it's not very componentized and declarative. Imagine you
 {% endhighlight %}
 
 {% highlight bash%}
-#BlogPost.ts2:
+#BlogPost.ts2
 prototype(Your.NameSpace:BlogPost) < prototype(TYPO3.TypoScript:Template) {
     templatePath = 'resource://Your.NameSpace/.../BlogPost.html'
     blogPost = ${node}
@@ -104,7 +104,7 @@ Fluid has a powerful partial mechanism with `f:section` and `f:render`. It's hel
 
 <h4 class="color-primary">Fusion way:</h4>
 
-{% highlight bash%}
+{% highlight html%}
 #Header.html
 <header><h1>My cool website</h1></header>
 {% endhighlight %}
