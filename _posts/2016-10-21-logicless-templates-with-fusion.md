@@ -270,4 +270,10 @@ If Fluid is responsible for only holding HTML markup, and all the rest of the re
 2. The templates are not coupled with any external partials or layouts, all of their data dependencies are going through the Fusion object, so that makes it easy to just grab some code from some old project, without worrying about side-effects.
 3. It's easier to understand templates for designers: they become just plain HTML with placeholders. The rendering process is even more modular, functional and declarative now. It will scale like crazy!
 
+Checkout some real-world examples of this approach:
+
+<a target="_blank" class="Button" href="https://github.com/psmb/BoilerplateDistr">Boilerplate distribution for starting new projects</a>
+
+<a target="_blank" class="Button" href="https://github.com/psmb/PsmbDistr/tree/master/Packages/Sites/Sfi.Site/Resources/Private/TypoScript">Psmb.ru website distribution</a>
+
 **My appreciation to [Bastian Waidelich](https://twitter.com/bwaidelich) for reviewing the article!**
