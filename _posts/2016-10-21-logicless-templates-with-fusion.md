@@ -218,8 +218,8 @@ Inline editing viewhelper add a lot to template pollution, let's move them to Fu
 {% highlight bash%}
 #YourObject.ts2
 prototype(Your.NameSpace:SomeObject)  {
-title = T:Tag {
-        content = ${q(node).property(title)}
+    title = T:Tag {
+        content = ${q(node).property('title')}
         @process.editable = ContentElementEditable {
             property = 'title'
         }
