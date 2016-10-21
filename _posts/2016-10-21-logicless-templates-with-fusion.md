@@ -23,14 +23,14 @@ Let’s render a list of blog posts.
 
 The way to do it in Fluid would be:
 
-```
+{% highlight html%}
 <f:for each="{blogPosts}" as="{blogPost}">
     <div class="BlogPost">
         <h2>{blogPost.title}</h2>
         <div>{blogPost.teaser}</div>
     </div>
 </f:for>
-```
+{% endhighlight %}
 
 Simple, huh? It is, but it’s not very componentized and declarative. Imagine you’d want to render the latest blog post in a sidebar with the same design? Such template would need a refactoring, perhaps to using partials, but more on that later.
 
@@ -38,16 +38,16 @@ Now the same logic with Fusion:
 
 BlogPost.html:
 
-```
+{% highlight html%}
 <div class="BlogPost">
     <h2>{blogPost.title}</h2>
     <div>{blogPost.teaser}</div>
 </div>
-```
+{% endhighlight %}
 
 BlogPost.ts2:
 
-```
+{% highlight bash%}
 prototype(Your.NameSpace:BlogPost) < prototype(TYPO3.TypoScript:Template) {
     templatePath = ‘resource://Your.NameSpace/.../BlogPost.html’
     blogPost = ${node}
@@ -57,7 +57,7 @@ prototype(Your.NameSpace:BlogPostsList) < prototype(TYPO3.TypoScript:Collection)
     itemName = ‘node’
     itemRenderer = Your.NameSpace:BlogPost
 }
-```
+{% endhighlight %}
 
 At first sight, this looks a lot more cryptic and verbose, but also it’s much more functional and modular: each object does one specific purpose, we clearly map the array of blog posts to the rendering object (yes, it’s exactly how we use `.map()` in React).
 
@@ -66,28 +66,28 @@ At first sight, this looks a lot more cryptic and verbose, but also it’s much 
 Fluid conditions are notoriously hard to understand and get right. Eel to the rescue!
 If you want to disable rendering of some TypoScript path based on a condition, you should use `@if`:
 
-```
+{% highlight bash%}
 renderMeOnlyInBackend = ‘Secret stuff for logged in folk!’
 renderMeOnlyInBackend.@if.onlyInBackend = ${node.context.inBackend}
-```
+{% endhighlight %}
 
 Sometimes it’s just more comfortable to use `f:if` viewhelper in Fluid, but if you don’t want to mess with its weird condition rules, you can map the condition to a template variable, and do all of the hard stuff in Eel. E.g.:
 
 Your.ts2:
 
-```
+{% highlight bash%}
 {
 shouldDisplayTeaser = ${node.context.inBackend || String.stripTags(q(node).property(‘teaser’)) ? true : false}
 }
-```
+{% endhighlight %}
 
 Your.html:
 
-```
+{% highlight html%}
 <f:if condition="{shouldDisplayTeaser}">
     <div class="Teaser">{teaser -> f:format.raw()}</div>
 </f:if>
-```
+{% endhighlight %}
 
 ### f:section -> Fusion object
 
@@ -97,46 +97,46 @@ The Fluid way:
 
 Header.html:
 
-```
+{% highlight html%}
 <header><h1>My cool website</h1></header>
-```
+{% endhighlight %}
 
 Page.html:
 
-```
+{% highlight html%}
 <f:render partial="Header"/>
 <div>Website content</div>
-```
+{% endhighlight %}
 
 
 Header.html:
 
-```
+{% highlight bash%}
 <header><h1>My cool website</h1></header>
-```
+{% endhighlight %}
 
 Header.ts2
 
-```
+{% highlight bash%}
 prototype(Your.NameSpace:Header) {
     templatePath = .../Header.html
 }
-```
+{% endhighlight %}
 
 Page.ts2:
 
-```
+{% highlight bash%}
 {
     header = Your.NameSpace:Header
 }
-```
+{% endhighlight %}
 
 Page.html:
 
-```
+{% highlight html%}
 {header -> f:format.raw()}
 <div>Website content</div>
-```
+{% endhighlight %}
 
 Yet again, in this case, Fusion example looks more verbose, but now it’s much easier to separate data dependencies needed to render the Header in its own Fusion object, so your code becomes less convoluted. And the main benefit is consistency: every piece of reusable code is now a Fusion object, you know where to look for it, you know how to reason about it.
 
@@ -148,78 +148,78 @@ Take this Fluid example:
 
 Layout.html:
 
-```
+{% highlight html%}
 <div class="Wrapper"><f:render section="main"/></div>
-```
+{% endhighlight %}
 
 Page.html:
 
-```
+{% highlight html%}
 <f:layout name="Layout"/>
 <f:section name="main">
 <div class="Content">The content</div>
 </f:section>
-```
+{% endhighlight %}
 
 With layout mechanism in fluid we have a kind of inversion of control: template declares itself with what to wrap it.
 
 Let’s try to do the same thing in Fusion without the help of Fluid:
 
-```
+{% highlight bash%}
 prototype(Your.NameSpace:Layout) < prototype(TYPO3.TypoScript:Template) {
     templatePath = .../Layout.html
     value = ${value}
 }
-```
+{% endhighlight %}
 
 Layout.html:
 
-```
+{% highlight html%}
 <div class="Wrapper">{value -> f:format.raw()}</div>
-```
+{% endhighlight %}
 
 Page.ts2:
 
-```
+{% highlight bash%}
 prototype(Your.NameSpace:Page) {
     templatePath = .../Page.html
     @process.layout = Your.NameSpace:Layout
 }
-```
+{% endhighlight %}
 
 Page.html:
 
-```
+{% highlight html%}
 <div class="Content">The content</div>
-```
+{% endhighlight %}
 
 Here we use Fusion’s `@process` mechanism to wrap our Page object with layout tags. I would argue that it’s just as readable as our Fluid example.
 
 In cases when you need multiple sections in a layout, you can do it like this:
 
-```
+{% highlight bash%}
 prototype(Your.NameSpace:Layout) < prototype(TYPO3.TypoScript:Template) {
     templatePath = .../Layout.html
     main = ${main}
     sidebar = ${sidebar}
 }
-```
+{% endhighlight %}
 
 Layout.html:
 
-```
+{% highlight html%}
 <div class="Wrapper">{main -> f:format.raw()}</div>
 <div class="Sidebar">{sidebar -> f:format.raw()}</div>
-```
+{% endhighlight %}
 
 Page.ts2:
 
-```
+{% highlight bash%}
 prototype(Your.NameSpace:Page) < prototype(Your.NameSpace:Layout) {
     main = ‘Main content’
     sidebar = ‘Sidebar content’
 }
-```
+{% endhighlight %}
 
 So the effect of this would be the same as using a Fluid layout, and I believe semantically it’s pretty clear as well.
 
@@ -227,7 +227,7 @@ So the effect of this would be the same as using a Fluid layout, and I believe s
 
 Inline editing viewhelper add a lot to template pollution, let’s move them to Fusion too.
 
-```
+{% highlight bash%}
 prototype(Your.NameSpace:SomeObject)  {
 title = T:Tag {
         content = ${q(node).property(title)}
@@ -237,13 +237,13 @@ title = T:Tag {
     }
     @process.editable = ContentElementWrapping
 }
-```
+{% endhighlight %}
 
 And in the template:
 
-```
+{% highlight html%}
 {title -> f:format.raw()}
-```
+{% endhighlight %}
 
 ### Other ViewHelpers
 
