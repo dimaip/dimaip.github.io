@@ -74,7 +74,7 @@ Sometimes it's just more comfortable to use `f:if` viewhelper in Fluid, but if y
 {% highlight bash%}
 #Your.ts2
 {
-shouldDisplayTeaser = ${node.context.inBackend || String.stripTags(q(node).property('teaser')) ? true : false}
+shouldDisplayTeaser = ${node.context.inBackend || String.stripTags(q(node).property('teaser'))}
 }
 {% endhighlight %}
 
