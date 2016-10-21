@@ -21,9 +21,8 @@ Fluid templates are great for storing your HTML markup, as long as they are not 
 
 Let's render a list of blog posts.
 
-The way to do it in Fluid would be:
+<h4 "style=color:red">Fluid way:</h4>
 
-<aside class="Callout Warning">
 {% highlight html%}
 <f:for each="{blogPosts}" as="{blogPost}">
     <div class="BlogPost">
@@ -32,11 +31,10 @@ The way to do it in Fluid would be:
     </div>
 </f:for>
 {% endhighlight %}
-</aside>
 
 Simple, huh? It is, but it's not very componentized and declarative. Imagine you'd want to render the latest blog post in a sidebar with the same design? Such template would need a refactoring, perhaps to using partials, but more on that later.
 
-Now the same logic with Fusion:
+<h4 "style=color:red">Fusion way:</h4>
 
 BlogPost.html:
 
