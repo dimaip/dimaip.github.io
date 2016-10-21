@@ -262,7 +262,6 @@ I always prefer flat to nested so it's easier to find things, so I divide my Fus
 
 If Fluid is responsible for only holding HTML markup, and all the rest of the rendering logic is encapsulated in Fusion, that gives you a lot of benefits.
 
-Less mental overload. The rendering process becomes transparent and predictable, you always know where to look for your objects.
-The templates are not coupled with any external partials or layouts, all of their data dependencies are going through the Fusion object, so that makes it easy to just grab some code from some old project, without worrying about side-effects.
-It's easier to understand templates for designers: they become just plain HTML with placeholders.
-The rendering process is even more modular, functional and declarative now. It will scale like crazy!
+1. Less mental overload. The rendering process becomes transparent and predictable, you always know where to look for your objects.
+2. The templates are not coupled with any external partials or layouts, all of their data dependencies are going through the Fusion object, so that makes it easy to just grab some code from some old project, without worrying about side-effects.
+3. It's easier to understand templates for designers: they become just plain HTML with placeholders. The rendering process is even more modular, functional and declarative now. It will scale like crazy!
