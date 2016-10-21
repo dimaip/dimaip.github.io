@@ -34,7 +34,7 @@ Let's render a list of blog posts.
 
 Simple, huh? It is, but it's not very componentized and declarative. Imagine you'd want to render the latest blog post in a sidebar with the same design? Such template would need a refactoring, perhaps to using partials, but more on that later.
 
-<h4 "style=color:red">Fusion way:</h4>
+<h4 "style=color:green">Fusion way:</h4>
 
 BlogPost.html:
 
