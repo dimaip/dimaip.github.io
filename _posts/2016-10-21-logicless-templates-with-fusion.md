@@ -78,9 +78,8 @@ shouldDisplayTeaser = ${node.context.inBackend || String.stripTags(q(node).prope
 }
 {% endhighlight %}
 
-Your.html:
-
 {% highlight html%}
+#Your.html
 <f:if condition="{shouldDisplayTeaser}">
     <div class="Teaser">{teaser -> f:format.raw()}</div>
 </f:if>
@@ -156,6 +155,7 @@ With layout mechanism in fluid we have a kind of inversion of control: template 
 <h4 class="color-primary">Fusion way:</h4>
 
 {% highlight bash%}
+#Layout.ts2
 prototype(Your.NameSpace:Layout) < prototype(TYPO3.TypoScript:Template) {
     templatePath = .../Layout.html
     value = ${value}
@@ -185,6 +185,7 @@ Here we use Fusion's `@process` mechanism to wrap our Page object with layout ta
 In cases when you need multiple sections in a layout, you can do it like this:
 
 {% highlight bash%}
+#Layout.ts2
 prototype(Your.NameSpace:Layout) < prototype(TYPO3.TypoScript:Template) {
     templatePath = .../Layout.html
     main = ${main}
@@ -213,6 +214,7 @@ So the effect of this would be the same as using a Fluid layout, and I believe s
 Inline editing viewhelper add a lot to template pollution, let's move them to Fusion too.
 
 {% highlight bash%}
+#YourObject.ts2
 prototype(Your.NameSpace:SomeObject)  {
 title = T:Tag {
         content = ${q(node).property(title)}
@@ -224,9 +226,8 @@ title = T:Tag {
 }
 {% endhighlight %}
 
-And in the template:
-
 {% highlight html%}
+#YourTemplate
 {title -> f:format.raw()}
 {% endhighlight %}
 
