@@ -242,18 +242,18 @@ Now since for almost every object we have a combination of two files now (`.ts2`
 So here is my basic filesystem layout:
 
 ```
-Packages/Sites/Sfi.Site/Resources/Private/TypoScript/Root.ts2
-Packages/Sites/Sfi.Site/Resources/Private/TypoScript/NodeTypes/MainPage.ts2
-Packages/Sites/Sfi.Site/Resources/Private/TypoScript/NodeTypes/MainPage.html
-Packages/Sites/Sfi.Site/Resources/Private/TypoScript/NodeTypes/BlogPost.ts2
-Packages/Sites/Sfi.Site/Resources/Private/TypoScript/NodeTypes/BlogPost.html
-Packages/Sites/Sfi.Site/Resources/Private/TypoScript/NodeTypes/Teaser.ts2
-Packages/Sites/Sfi.Site/Resources/Private/TypoScript/NodeTypes/Teaser.html
-Packages/Sites/Sfi.Site/Resources/Private/TypoScript/NodeTypes/...
-Packages/Sites/Sfi.Site/Resources/Private/TypoScript/Objects/Footer.ts2
-Packages/Sites/Sfi.Site/Resources/Private/TypoScript/Objects/Footer.html
-Packages/Sites/Sfi.Site/Resources/Private/TypoScript/Objects/BlogPostsList.ts2
-Packages/Sites/Sfi.Site/Resources/Private/TypoScript/Objects/...
+/Resources/Private/TypoScript/Root.ts2
+/Resources/Private/TypoScript/NodeTypes/MainPage.ts2
+/Resources/Private/TypoScript/NodeTypes/MainPage.html
+/Resources/Private/TypoScript/NodeTypes/BlogPost.ts2
+/Resources/Private/TypoScript/NodeTypes/BlogPost.html
+/Resources/Private/TypoScript/NodeTypes/Teaser.ts2
+/Resources/Private/TypoScript/NodeTypes/Teaser.html
+/Resources/Private/TypoScript/NodeTypes/...
+/Resources/Private/TypoScript/Objects/Footer.ts2
+/Resources/Private/TypoScript/Objects/Footer.html
+/Resources/Private/TypoScript/Objects/BlogPostsList.ts2
+/Resources/Private/TypoScript/Objects/...
 ```
 
 I always prefer flat to nested so it's easier to find things, so I divide my Fusion objects only into two groups: those that are related to rendering a specific nodetype (`TypoScript/NodeTypes`) and those that are not (`TypoScript/Objects`).
