@@ -44,6 +44,13 @@ $color-primary: $Blue;
 $sans: 'Fira Sans', sans-serif;
 $serif: 'Georgia', serif;
 
+.color-primary {
+	color: $color-primary;
+}
+.color-warning {
+	color: $color-warning;
+}
+
 
 /*Resets*/
 body {
