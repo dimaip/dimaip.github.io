@@ -6,7 +6,9 @@ image: "http://dimaip.github.io/assets/Fusion-Fluid.png"
 tags: neos
 comments: true
 ---
-<div class="LeadParagraph" markdown="1">When people are starting out with [Neos](https://neos.io), the first thing they usually see is its templating engine Fluid. Those switching from TYPO3 would feel right at home, as these CMSs share the templating system since some years, but even to newcomers it looks really familiar, sharing the same concepts as other popular templating engines (Twig, Liquid that is used in this Jekyll blog & co.): partials, layouts, viewhelpers and so on. But after some time you might start to notice that Fluid is not the only thing that is relevant to content rendering in Neos, that is when you meet Fusion (a.k.a. TypoScript2).</div>
+<div class="LeadParagraph" markdown="1">
+When people are starting out with [Neos](https://neos.io), the first thing they usually see is its templating engine Fluid. Those switching from TYPO3 would feel right at home, as these CMSs share the templating system since some years, but even to newcomers it looks really familiar, sharing the same concepts as other popular templating engines (Twig, Liquid that is used in this Jekyll blog & co.): partials, layouts, viewhelpers and so on. But after some time you might start to notice that Fluid is not the only thing that is relevant to content rendering in Neos, that is when you meet Fusion (a.k.a. TypoScript2).
+</div>
 
 <figure markdown="1">
   ![Current Neos UI](/assets/Fusion-Fluid.png)
