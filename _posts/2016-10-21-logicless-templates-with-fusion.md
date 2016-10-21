@@ -37,6 +37,7 @@ Simple, huh? It is, but it’s not very componentized and declarative. Imagine y
 Now the same logic with Fusion:
 
 BlogPost.html:
+
 ```
 <div class="BlogPost">
     <h2>{blogPost.title}</h2>
@@ -45,6 +46,7 @@ BlogPost.html:
 ```
 
 BlogPost.ts2:
+
 ```
 prototype(Your.NameSpace:BlogPost) < prototype(TYPO3.TypoScript:Template) {
     templatePath = ‘resource://Your.NameSpace/.../BlogPost.html’
@@ -63,6 +65,7 @@ At first sight, this looks a lot more cryptic and verbose, but also it’s much 
 
 Fluid conditions are notoriously hard to understand and get right. Eel to the rescue!
 If you want to disable rendering of some TypoScript path based on a condition, you should use `@if`:
+
 ```
 renderMeOnlyInBackend = ‘Secret stuff for logged in folk!’
 renderMeOnlyInBackend.@if.onlyInBackend = ${node.context.inBackend}
@@ -71,12 +74,15 @@ renderMeOnlyInBackend.@if.onlyInBackend = ${node.context.inBackend}
 Sometimes it’s just more comfortable to use `f:if` viewhelper in Fluid, but if you don’t want to mess with its weird condition rules, you can map the condition to a template variable, and do all of the hard stuff in Eel. E.g.:
 
 Your.ts2:
+
 ```
 {
 inBackendOrTeaserSet = ${node.context.inBackend || String.stripTags(q(node).property(‘teaser’)) ? true : false}
 }
 ```
+
 Your.html:
+
 ```
 <f:if condition="{inBackendOrTeaserSet}">
     <div class="Teaser">{teaser -> f:format.raw()}</div>
@@ -90,10 +96,13 @@ Fluid has a powerful partial mechanism with `f:section` and `f:render`. It’s h
 The Fluid way:
 
 Header.html:
+
 ```
 <header><h1>My cool website</h1></header>
 ```
+
 Page.html:
+
 ```
 <f:render partial="Header"/>
 <div>Website content</div>
@@ -101,22 +110,29 @@ Page.html:
 
 
 Header.html:
+
 ```
 <header><h1>My cool website</h1></header>
 ```
+
 Header.ts2
+
 ```
 prototype(Your.NameSpace:Header) {
     templatePath = .../Header.html
 }
 ```
+
 Page.ts2:
+
 ```
 {
     header = Your.NameSpace:Header
 }
 ```
+
 Page.html:
+
 ```
 {header -> f:format.raw()}
 <div>Website content</div>
@@ -131,37 +147,48 @@ Aha, you might say, partials are easy to replace, but what would you do about th
 Take this Fluid example:
 
 Layout.html:
+
 ```
 <div class="Wrapper"><f:render section="main"/></div>
 ```
+
 Page.html:
+
 ```
 <f:layout name="Layout"/>
 <f:section name="main">
 <div class="Content">The content</div>
 </f:section>
 ```
+
 With layout mechanism in fluid we have a kind of inversion of control: template declares itself with what to wrap it.
 
 Let’s try to do the same thing in Fusion without the help of Fluid:
+
 ```
 prototype(Your.NameSpace:Layout) < prototype(TYPO3.TypoScript:Template) {
     templatePath = .../Layout.html
     value = ${value}
 }
 ```
+
 Layout.html:
+
 ```
 <div class="Wrapper">{value -> f:format.raw()}</div>
 ```
+
 Page.ts2:
+
 ```
 prototype(Your.NameSpace:Page) {
     templatePath = .../Page.html
     @process.layout = Your.NameSpace:Layout
 }
 ```
+
 Page.html:
+
 ```
 <div class="Content">The content</div>
 ```
@@ -177,18 +204,23 @@ prototype(Your.NameSpace:Layout) < prototype(TYPO3.TypoScript:Template) {
     sidebar = ${sidebar}
 }
 ```
+
 Layout.html:
+
 ```
 <div class="Wrapper">{main -> f:format.raw()}</div>
 <div class="Sidebar">{sidebar -> f:format.raw()}</div>
 ```
+
 Page.ts2:
+
 ```
 prototype(Your.NameSpace:Page) < prototype(Your.NameSpace:Layout) {
     main = ‘Main content’
     sidebar = ‘Sidebar content’
 }
 ```
+
 So the effect of this would be the same as using a Fluid layout, and I believe semantically it’s pretty clear as well.
 
 ### Inline editing
@@ -206,7 +238,9 @@ title = T:Tag {
     @process.editable = ContentElementWrapping
 }
 ```
-And in template:
+
+And in the template:
+
 ```
 {title -> f:format.raw()}
 ```
