@@ -21,7 +21,7 @@ Fluid templates are great for storing your HTML markup, as long as they are not 
 
 Let's render a list of blog posts.
 
-<h4 "style=color:red">Fluid way:</h4>
+<h4 style="color:red">Fluid way:</h4>
 
 {% highlight html%}
 <f:for each="{blogPosts}" as="{blogPost}">
@@ -34,7 +34,7 @@ Let's render a list of blog posts.
 
 Simple, huh? It is, but it's not very componentized and declarative. Imagine you'd want to render the latest blog post in a sidebar with the same design? Such template would need a refactoring, perhaps to using partials, but more on that later.
 
-<h4 "style=color:green">Fusion way:</h4>
+<h4 style="color:green">Fusion way:</h4>
 
 BlogPost.html:
 
