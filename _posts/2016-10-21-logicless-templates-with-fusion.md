@@ -36,18 +36,16 @@ Simple, huh? It is, but it's not very componentized and declarative. Imagine you
 
 <h4 class="color-primary">Fluid way:</h4>
 
-BlogPost.html:
-
 {% highlight html%}
+#BlogPost.html:
 <div class="BlogPost">
     <h2>{blogPost.title}</h2>
     <div>{blogPost.teaser}</div>
 </div>
 {% endhighlight %}
 
-BlogPost.ts2:
-
 {% highlight bash%}
+#BlogPost.ts2:
 prototype(Your.NameSpace:BlogPost) < prototype(TYPO3.TypoScript:Template) {
     templatePath = 'resource://Your.NameSpace/.../BlogPost.html'
     blogPost = ${node}
@@ -73,9 +71,8 @@ renderMeOnlyInBackend.@if.onlyInBackend = ${node.context.inBackend}
 
 Sometimes it's just more comfortable to use `f:if` viewhelper in Fluid, but if you don't want to mess with its weird condition rules, you can map the condition to a template variable, and do all of the hard stuff in Eel. E.g.:
 
-Your.ts2:
-
 {% highlight bash%}
+#Your.ts2
 {
 shouldDisplayTeaser = ${node.context.inBackend || String.stripTags(q(node).property('teaser')) ? true : false}
 }
@@ -95,45 +92,40 @@ Fluid has a powerful partial mechanism with `f:section` and `f:render`. It's hel
 
 <h4 class="color-warning">Fluid way:</h4>
 
-Header.html:
-
 {% highlight html%}
+#Header.html
 <header><h1>My cool website</h1></header>
 {% endhighlight %}
 
-Page.html:
-
 {% highlight html%}
+#Page.html
 <f:render partial="Header"/>
 <div>Website content</div>
 {% endhighlight %}
 
 <h4 class="color-primary">Fusion way:</h4>
-Header.html:
 
 {% highlight bash%}
+#Header.html
 <header><h1>My cool website</h1></header>
 {% endhighlight %}
 
-Header.ts2
-
 {% highlight bash%}
+#Header.ts2
 prototype(Your.NameSpace:Header) {
     templatePath = .../Header.html
 }
 {% endhighlight %}
 
-Page.ts2:
-
 {% highlight bash%}
+#Page.ts2
 {
     header = Your.NameSpace:Header
 }
 {% endhighlight %}
 
-Page.html:
-
 {% highlight html%}
+#Page.html
 {header -> f:format.raw()}
 <div>Website content</div>
 {% endhighlight %}
@@ -146,15 +138,13 @@ Aha, you might say, partials are easy to replace, but what would you do about th
 
 <h4 class="color-warning">Fluid way:</h4>
 
-Layout.html:
-
 {% highlight html%}
+#Layout.html
 <div class="Wrapper"><f:render section="main"/></div>
 {% endhighlight %}
 
-Page.html:
-
 {% highlight html%}
+#Page.html
 <f:layout name="Layout"/>
 <f:section name="main">
 <div class="Content">The content</div>
@@ -172,24 +162,21 @@ prototype(Your.NameSpace:Layout) < prototype(TYPO3.TypoScript:Template) {
 }
 {% endhighlight %}
 
-Layout.html:
-
 {% highlight html%}
+#Layout.html
 <div class="Wrapper">{value -> f:format.raw()}</div>
 {% endhighlight %}
 
-Page.ts2:
-
 {% highlight bash%}
+#Page.ts2
 prototype(Your.NameSpace:Page) {
     templatePath = .../Page.html
     @process.layout = Your.NameSpace:Layout
 }
 {% endhighlight %}
 
-Page.html:
-
 {% highlight html%}
+#Page.html
 <div class="Content">The content</div>
 {% endhighlight %}
 
@@ -205,16 +192,14 @@ prototype(Your.NameSpace:Layout) < prototype(TYPO3.TypoScript:Template) {
 }
 {% endhighlight %}
 
-Layout.html:
-
 {% highlight html%}
+#Layout.html
 <div class="Wrapper">{main -> f:format.raw()}</div>
 <div class="Sidebar">{sidebar -> f:format.raw()}</div>
 {% endhighlight %}
 
-Page.ts2:
-
 {% highlight bash%}
+#Page.ts2
 prototype(Your.NameSpace:Page) < prototype(Your.NameSpace:Layout) {
     main = 'Main content'
     sidebar = 'Sidebar content'
