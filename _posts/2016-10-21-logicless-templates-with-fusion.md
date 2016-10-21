@@ -8,12 +8,12 @@ comments: true
 ---
 
 
-When people are starting out with Neos, the first thing they usually see is its templating engine Fluid. Those switching from TYPO3 would feel right at home, as these CMSs share the templating system since some years, but even to newcomers it looks really familiar, sharing the same concepts as other popular layout systems (Twig & co.): partials, layouts, viewhelpers and so on.
+When people are starting out with Neos, the first thing they usually see is its templating engine Fluid. Those switching from TYPO3 would feel right at home, as these CMSs share the templating system since some years, but even to newcomers it looks really familiar, sharing the same concepts as other popular templating engines (Twig, Liquid that is used in this Jekyll blog & co.): partials, layouts, viewhelpers and so on.
 
 But after some time you might start to notice that Fluid is not the only thing that is relevant to content rendering in Neos, that is when you meet Fusion. The concept of Fusion seems frightening at first because I’m sure it’s like nothing you’ve ever seen before. But with time you start to like it more and more and start doing more things with it. But the functionality of Fluid and Fusion overlap to great extent: Fluid helpers vs. Eel helpers, Fluid variables vs. context variables and so on, so using two things at the same time greatly increases mental complexity when reasoning about your project. Do I use a partial here or a Fusion object? Should I strip tags from this value in Eel or in Fluid?
 That’s a conceptual mess, and I’m sure we can do better with some clear guidelines!
 
-## Logicless templates, smart Fusion objects
+## Moving the logic to Fusion from Fluid
 
 Fluid templates are great for storing your HTML markup, as long as they are not bloated with logic. Fusion is much better for encapsulating logic, as it’s more declarative, better for unplanned extensibility and is definitely more powerful. Let’s examine how to move most logic from Fluid to your Fusion objects.
 
