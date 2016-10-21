@@ -17,7 +17,7 @@ That's a conceptual mess, and I'm sure we can do better with some clear guidelin
 
 ## Moving the logic to Fusion from Fluid
 
-Fluid templates are great for storing your HTML markup, as long as they are not bloated with logic. Fusion is much better for encapsulating logic, as it's more declarative, better for unplanned extensibility and is definitely more powerful. Let's examine how to move most logic from Fluid to your Fusion objects.
+Fluid templates are great for storing your HTML markup, as long as they are not bloated with logic. Fusion is much better for encapsulating logic, as it's more declarative, better for both planned and unplanned extensibility and is definitely more powerful. Let's examine how to move most logic from Fluid to your Fusion objects.
 
 ### f:for -> TypoScript:Collection
 
