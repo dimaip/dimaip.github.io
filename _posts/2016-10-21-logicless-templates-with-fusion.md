@@ -21,7 +21,7 @@ Fluid templates are great for storing your HTML markup, as long as they are not 
 
 Let's render a list of blog posts.
 
-<h4 style="color:red">Fluid way:</h4>
+<h4 class="color-warning">Fluid way:</h4>
 
 {% highlight html%}
 <f:for each="{blogPosts}" as="{blogPost}">
@@ -34,7 +34,7 @@ Let's render a list of blog posts.
 
 Simple, huh? It is, but it's not very componentized and declarative. Imagine you'd want to render the latest blog post in a sidebar with the same design? Such template would need a refactoring, perhaps to using partials, but more on that later.
 
-<h4 style="color:green">Fusion way:</h4>
+<h4 class="color-primary">Fluid way:</h4>
 
 BlogPost.html:
 
@@ -93,7 +93,7 @@ Your.html:
 
 Fluid has a powerful partial mechanism with `f:section` and `f:render`. It's helpful for reusing some blocks of functionality. But once you have some components done via partials and some via Fusion objects, it becomes hard to find things. Let's just use Fusion objects all the time instead of partials, shall we? They feel more modular and are way more powerful anyways.
 
-The Fluid way:
+<h4 class="color-warning">Fluid way:</h4>
 
 Header.html:
 
@@ -108,7 +108,7 @@ Page.html:
 <div>Website content</div>
 {% endhighlight %}
 
-
+<h4 class="color-primary">Fusion way:</h4>
 Header.html:
 
 {% highlight bash%}
@@ -144,7 +144,7 @@ Yet again, in this case, Fusion example looks more verbose, but now it's much ea
 
 Aha, you might say, partials are easy to replace, but what would you do about the layout mechanism?
 
-Take this Fluid example:
+<h4 class="color-warning">Fluid way:</h4>
 
 Layout.html:
 
@@ -163,7 +163,7 @@ Page.html:
 
 With layout mechanism in fluid we have a kind of inversion of control: template declares itself with what to wrap it.
 
-Let's try to do the same thing in Fusion without the help of Fluid:
+<h4 class="color-primary">Fusion way:</h4>
 
 {% highlight bash%}
 prototype(Your.NameSpace:Layout) < prototype(TYPO3.TypoScript:Template) {
