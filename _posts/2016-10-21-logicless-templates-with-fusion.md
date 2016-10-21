@@ -24,8 +24,8 @@ Let’s render a list of blog posts.
 The way to do it in Fluid would be:
 
 ```
-<f:for each=”{blogPosts}” as=”{blogPost}”>
-    <div class=”BlogPost”>
+<f:for each="{blogPosts}" as="{blogPost}">
+    <div class="BlogPost">
         <h2>{blogPost.title}</h2>
         <div>{blogPost.teaser}</div>
     </div>
@@ -38,7 +38,7 @@ Now the same logic with Fusion:
 
 BlogPost.html:
 ```
-<div class=”BlogPost”>
+<div class="BlogPost">
     <h2>{blogPost.title}</h2>
     <div>{blogPost.teaser}</div>
 </div>
@@ -78,8 +78,8 @@ inBackendOrTeaserSet = ${node.context.inBackend || String.stripTags(q(node).prop
 ```
 Your.html:
 ```
-<f:if condition=”{inBackendOrTeaserSet}”>
-    <div class=”Teaser”>{teaser -> f:format.raw()}</div>
+<f:if condition="{inBackendOrTeaserSet}">
+    <div class="Teaser">{teaser -> f:format.raw()}</div>
 </f:if>
 ```
 
@@ -95,7 +95,7 @@ Header.html:
 ```
 Page.html:
 ```
-<f:render partial=”Header”/>
+<f:render partial="Header"/>
 <div>Website content</div>
 ```
 
@@ -132,13 +132,13 @@ Take this Fluid example:
 
 Layout.html:
 ```
-<div class=”Wrapper”><f:render section=”main”/></div>
+<div class="Wrapper"><f:render section="main"/></div>
 ```
 Page.html:
 ```
-<f:layout name=”Layout”/>
-<f:section name=”main”>
-<div class=”Content”>The content</div>
+<f:layout name="Layout"/>
+<f:section name="main">
+<div class="Content">The content</div>
 </f:section>
 ```
 With layout mechanism in fluid we have a kind of inversion of control: template declares itself with what to wrap it.
@@ -152,7 +152,7 @@ prototype(Your.NameSpace:Layout) < prototype(TYPO3.TypoScript:Template) {
 ```
 Layout.html:
 ```
-<div class=”Wrapper”>{value -> f:format.raw()}</div>
+<div class="Wrapper">{value -> f:format.raw()}</div>
 ```
 Page.ts2:
 ```
@@ -163,7 +163,7 @@ prototype(Your.NameSpace:Page) {
 ```
 Page.html:
 ```
-<div class=”Content”>The content</div>
+<div class="Content">The content</div>
 ```
 
 Here we use Fusion’s `@process` mechanism to wrap our Page object with layout tags. I would argue that it’s just as readable as our Fluid example.
@@ -179,8 +179,8 @@ prototype(Your.NameSpace:Layout) < prototype(TYPO3.TypoScript:Template) {
 ```
 Layout.html:
 ```
-<div class=”Wrapper”>{main -> f:format.raw()}</div>
-<div class=”Sidebar”>{sidebar -> f:format.raw()}</div>
+<div class="Wrapper">{main -> f:format.raw()}</div>
+<div class="Sidebar">{sidebar -> f:format.raw()}</div>
 ```
 Page.ts2:
 ```
@@ -246,4 +246,3 @@ Less mental overload. The rendering process becomes transparent and predictable,
 The templates are not coupled with any external partials or layouts, all of their data dependencies are going through the Fusion object, so that makes it easy to just grab some code from some old project, without worrying about side-effects.
 It’s easier to understand templates for designers: they become just plain HTML with placeholders.
 The rendering process is even more modular, functional and declarative now. It will scale like crazy!
-
