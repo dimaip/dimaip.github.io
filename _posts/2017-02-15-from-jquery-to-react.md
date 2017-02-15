@@ -78,7 +78,7 @@ function setState(newState) {
   mount();
 }
 function increment() {
-  setState({state: state.counter + 1});
+  setState({counter: state.counter + 1});
 }
 function render(state) {
   return el('div', {}, [
