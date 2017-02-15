@@ -15,8 +15,8 @@ Here I'm offering you an overview of the architectural steps between a jQuery pl
 
 ![image](https://cloud.githubusercontent.com/assets/837032/22975317/5cdfd962-f397-11e6-91e3-867508639da9.png)
 
-The first thing we should do is to remember that jQuery is not a synonym of JavaScript (anymore), and that it's perfectly possible to go without it. There's a great website to prove the point: http://youmightnotneedjquery.com/
-Ah, but what about jQuery plugins, surely we can't live without them?! Well, no, actually there's almost certainly a vanilla JS plugin for every need, look up here: http://youmightnotneedjqueryplugins.com/
+The first thing we should do is to remember that jQuery is not a synonym of JavaScript (anymore), and that it's perfectly possible to go without it. There's a great website to prove the point: [youmightnotneedjquery.com](http://youmightnotneedjquery.com/)
+Ah, but what about jQuery plugins, surely we can't live without them?! Well, no, actually there's almost certainly a vanilla JS plugin for every need, look up here: [youmightnotneedjqueryplugins.com](http://youmightnotneedjqueryplugins.com/)
 
 Pros:
 
@@ -112,7 +112,7 @@ Cons:
 ![image](https://cloud.githubusercontent.com/assets/837032/22975671/9e4b3d32-f398-11e6-9118-c1d05bce3774.png)
 
 If you've been hit by one of the two cons of the previous solution, it's time to move on. All of our problems come from full re-rendering on every update, so to solve them we need a way update the DOM elements without re-creating them if not necessary. And that's what virtual DOM is for.
-Virtual DOM keeps a virtual representation of DOM nodes in addition to DOM nodes themselves. When asked to update the state, it renders the new virtual elements tree and then decides which elements in the DOM can be updated, and which need to be thrown away and recreated. It's fun to write your own virtual DOM implementation, but we are not going to do it right now. Instead, we can take one of the existing ones, e.g. http://maquettejs.org/. It does its job in return for 3KB of extra download size.
+Virtual DOM keeps a virtual representation of DOM nodes in addition to DOM nodes themselves. When asked to update the state, it renders the new virtual elements tree and then decides which elements in the DOM can be updated, and which need to be thrown away and recreated. It's fun to write your own virtual DOM implementation, but we are not going to do it right now. Instead, we can take one of the existing ones, e.g. [maquettejs.org](http://maquettejs.org). It does its job in return for 3KB of extra download size.
 
 Pros:
 
@@ -157,39 +157,6 @@ Cons:
 
 Remember, every abstraction, every dependency comes at a cost. Start from the basics, learn the low-level APIs and gradually climb up the abstraction steps.
 
-Recently I had to create a simple "[report a typo on a page[(https://github.com/psmb/typo-reporter)" widget. I had to stop at Step 4, as adding a 3KB of virtual DOM on top of 2KB of my own code was just not worth it.
+Recently I had to create a simple ["report a typo on a page"](https://github.com/psmb/typo-reporter)" widget. I had to stop at Step 4, as adding a 3KB of virtual DOM on top of 2KB of my own code was just not worth it.
 
 Even if you are developing a small 2KB widget and not a Facebook-like SPA, your code doesn't have to suck and you should not treat the decisions you take lightly.
-
-
-## The Decision
-
-Undertaking a complete UI rewrite was not an easy decision to make. You see, by now we have one of the most intuitive UIs in the content management world, mostly stable and complete. It was written in EmberJS 1.x and for its time was pretty neatly built. But with time **things started to get out of hand**, the complexity of it multiplied and development of new interface features started to cost more and more. Touching one piece of it could backfire in other least places, we had no interface tests so refactoring it was not easy too, and the whole thing just didn’t feel predictable and fun to work with any longer. The last drop was a difficulty of upgrading it to Ember 2.x, too many things had changed during the time and we wanted to rethink multiple things anyways.
-
-To evaluate the decision, two amazing core team developers, [Wilhelm Behncke](https://twitter.com/WilhelmBehncke) and [Tyll Weiß](https://twitter.com/inkdpixels), had spent a few days under cover to built a proof-of-concept prototype, which was able to convince the rest of the team that we should go for it.
-
-Last week we had a code sprint in Dresden where more developers joined the rewrite effort, and now we have 6 people ([@WilhelmBehncke](https://twitter.com/WilhelmBehncke), [@inkdpixels](https://twitter.com/inkdpixels), [@DerGerDner](https://twitter.com/DerGerDner), [@skurfuerst](https://twitter.com/skurfuerst), [@MarkusGoldbeck](https://twitter.com/MarkusGoldbeck) and [me](https://twitter.com/dimaip)) actively working on it and about 5 more feeling intrigued and wanting to join our efforts too.
-
-## Lets Pretend This is a Tutorial...
-
-![The AddNodeModal dialog that we are going to implement](/assets/modal.png)<br>*The AddNodeModal dialog that we are going to implement*
-
-I will try to make code walkthrough look more like a tutorial. As a kind of tutorial assignment, I will be using the feature on which I was working during last week. **Our task would be to create a dialog for creating nodes** (i.e. pages or content elements in Neos), that will provide you with a choice of all possible page types that are allowed to be created in the given place, and that would finally send the command to the server API, creating a new node of the chosen type. Let’s call it `AddNodeModal`.
-
-<aside class="Callout Warning" markdown="1">Warning! This walkthrough presupposes you know some React and Redux essentials and will not help you getting started from zero ground.
-</aside>
-
-### React Components
-
-<aside class="Callout Info" markdown="1">All of our React components are divided into two types: **presentational components** and **container components**. Presentational components are small reusable pieces of the interface like Buttons, Modals, Icons or even Trees.
-Presentational components are encapsulated into container components, that provide more dedicated app logic, that is generally not meant to be reusable. Containers may connect to app state via [react-redux](https://github.com/reactjs/react-redux) @connect decorator. Usually, they don’t render data directly, but pass it down to presentational components.
-</aside>
-
-So to render our AddNodeModal we would need a couple of components: Dialog, Button, Icon, Headline and Grid (to nicely layout buttons into multiple rows). Luckily all of the needed components were already created by somebody else, so we can just play a bit of Lego composing our piece of UI out of existing components.
-
-<a target="_blank" class="Button" href="https://github.com/PackageFactory/PackageFactory.Guevara/blob/9e06fdd96c1627a262c42b8405c1f128de972fa4/Resources/Private/JavaScript/Host/Containers/AddNodeModal/index.js">AddNodeModal container component</a>
-
-### State
-
-<aside class="Callout Info" markdown="1">
-The main reason for the switch to this new stack was the desire to give more predictability and integrity to the UI. You see, our case is slightly complicated by the fact that we have the same data distributed across multiple places: the navigation tree, inline editing etc. Before we did not have a unified data model, and all of this modules functioned independently, carefully glued together by some state syncing code. Yes, that was kind of a nightmare.
