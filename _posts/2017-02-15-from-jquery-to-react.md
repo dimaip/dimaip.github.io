@@ -153,6 +153,10 @@ Cons:
 
 - Yet one more dependency, one more abstraction to master
 
+# Step X. Beyond JavaScript
+
+I won't write in detail about it here, but just so you know, there is a world of web development beyound JavaScript. [Elm](http://elm-lang.org), the inspirer of Redux, and Facebook's next toy, [ReasonML](https://facebook.github.io/reason/) are among a few. Static type checking, immutabillity and functional programming paradigms are among the things to expect in that outer space. But we've gone too far from our comfy jQuery shire, haven't we?
+
 # Conclusion
 
 Remember, every abstraction, every dependency comes at a cost. Start from the basics, learn the low-level APIs and gradually climb up the abstraction steps.
