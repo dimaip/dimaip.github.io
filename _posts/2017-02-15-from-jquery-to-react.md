@@ -161,7 +161,7 @@ I won't write in detail about it here, but just so you know, there is a world of
 
 Remember, every abstraction, every dependency comes at a cost. Start from the basics, learn the low-level APIs and gradually climb up the abstraction steps.
 
-Recently I had to create a simple ["report a typo on a page"](https://github.com/psmb/typo-reporter)" widget. I had to stop at Step 4, as adding a 3KB of virtual DOM on top of 2KB of my own code was just not worth it.
+Recently I had to create a simple ["report a typo on a page"](https://github.com/psmb/typo-reporter) widget. I had to stop at Step 4, as adding a 3KB of virtual DOM on top of 2KB of my own code was just not worth it.
 
 Even if you are developing a small 2KB widget and not a Facebook-like SPA, your code doesn't have to suck and you should not treat the decisions you take lightly.
 
