@@ -160,3 +160,5 @@ Remember, every abstraction, every dependency comes at a cost. Start from the ba
 Recently I had to create a simple ["report a typo on a page"](https://github.com/psmb/typo-reporter)" widget. I had to stop at Step 4, as adding a 3KB of virtual DOM on top of 2KB of my own code was just not worth it.
 
 Even if you are developing a small 2KB widget and not a Facebook-like SPA, your code doesn't have to suck and you should not treat the decisions you take lightly.
+
+P.S.: If you've gone this far, watch [this talk](https://www.youtube.com/watch?v=mVVNJKv9esE).
