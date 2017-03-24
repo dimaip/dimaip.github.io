@@ -19,7 +19,7 @@ That's a conceptual mess, and I'm sure we can do better with some clear guidelin
 
 Fluid templates are great for storing your HTML markup, as long as they are not bloated with logic. Fusion is much better for encapsulating logic, as it's more declarative, better for both planned and unplanned extensibility and is definitely more powerful. Let's examine how to move most logic from Fluid to your Fusion objects.
 
-### f:for -> TypoScript:Collection
+### f:for -> Fusion:Collection
 
 Let's render a list of blog posts.
 
@@ -48,11 +48,11 @@ Simple, huh? It is, but it's not very componentized and declarative. Imagine you
 
 {% highlight bash%}
 #BlogPost.ts2
-prototype(Your.NameSpace:BlogPost) < prototype(TYPO3.TypoScript:Template) {
+prototype(Your.NameSpace:BlogPost) < prototype(Neos.Fusion:Template) {
     templatePath = 'resource://Your.NameSpace/.../BlogPost.html'
     blogPost = ${node}
 }
-prototype(Your.NameSpace:BlogPostsList) < prototype(TYPO3.TypoScript:Collection) {
+prototype(Your.NameSpace:BlogPostsList) < prototype(Neos.Fusion:Collection) {
     collection = ${blogPosts}
     itemName = 'node'
     itemRenderer = Your.NameSpace:BlogPost
@@ -64,7 +64,7 @@ At first sight, this looks a lot more cryptic and verbose, but also it's much mo
 ### f:if -> @if
 
 Fluid conditions are notoriously hard to understand and get right. Eel to the rescue!
-If you want to disable rendering of some TypoScript path based on a condition, you should use `@if`:
+If you want to disable rendering of some Fusion path based on a condition, you should use `@if`:
 
 {% highlight bash%}
 renderMeOnlyInBackend = 'Secret stuff for logged in folk!'
@@ -113,7 +113,7 @@ Fluid has a powerful partial mechanism with `f:section` and `f:render`. It's hel
 
 {% highlight bash%}
 #Header.ts2
-prototype(Your.NameSpace:Header) {
+prototype(Your.NameSpace:Header) < prototype(Neos.Fusion:Template) {
     templatePath = .../Header.html
 }
 {% endhighlight %}
@@ -158,7 +158,7 @@ With layout mechanism in fluid we have a kind of inversion of control: template 
 
 {% highlight bash%}
 #Layout.ts2
-prototype(Your.NameSpace:Layout) < prototype(TYPO3.TypoScript:Template) {
+prototype(Your.NameSpace:Layout) < prototype(Neos.Fusion:Template) {
     templatePath = .../Layout.html
     value = ${value}
 }
@@ -188,7 +188,7 @@ In cases when you need multiple sections in a layout, you can do it like this:
 
 {% highlight bash%}
 #Layout.ts2
-prototype(Your.NameSpace:Layout) < prototype(TYPO3.TypoScript:Template) {
+prototype(Your.NameSpace:Layout) < prototype(Neos.Fusion:Template) {
     templatePath = .../Layout.html
     main = ${main}
     sidebar = ${sidebar}
@@ -244,21 +244,21 @@ Now since for almost every object we have a combination of two files now (`.ts2`
 So here is my basic filesystem layout:
 
 ```
-/Resources/Private/TypoScript/Root.ts2
-/Resources/Private/TypoScript/NodeTypes/MainPage.ts2
-/Resources/Private/TypoScript/NodeTypes/MainPage.html
-/Resources/Private/TypoScript/NodeTypes/BlogPost.ts2
-/Resources/Private/TypoScript/NodeTypes/BlogPost.html
-/Resources/Private/TypoScript/NodeTypes/Teaser.ts2
-/Resources/Private/TypoScript/NodeTypes/Teaser.html
-/Resources/Private/TypoScript/NodeTypes/...
-/Resources/Private/TypoScript/Objects/Footer.ts2
-/Resources/Private/TypoScript/Objects/Footer.html
-/Resources/Private/TypoScript/Objects/BlogPostsList.ts2
-/Resources/Private/TypoScript/Objects/...
+/Resources/Private/Fusion/Root.ts2
+/Resources/Private/Fusion/NodeTypes/MainPage.ts2
+/Resources/Private/Fusion/NodeTypes/MainPage.html
+/Resources/Private/Fusion/NodeTypes/BlogPost.ts2
+/Resources/Private/Fusion/NodeTypes/BlogPost.html
+/Resources/Private/Fusion/NodeTypes/Teaser.ts2
+/Resources/Private/Fusion/NodeTypes/Teaser.html
+/Resources/Private/Fusion/NodeTypes/...
+/Resources/Private/Fusion/Objects/Footer.ts2
+/Resources/Private/Fusion/Objects/Footer.html
+/Resources/Private/Fusion/Objects/BlogPostsList.ts2
+/Resources/Private/Fusion/Objects/...
 ```
 
-I always prefer flat to nested so it's easier to find things, so I divide my Fusion objects only into two groups: those that are related to rendering a specific nodetype (`TypoScript/NodeTypes`) and those that are not (`TypoScript/Objects`).
+I always prefer flat to nested so it's easier to find things, so I divide my Fusion objects only into two groups: those that are related to rendering a specific nodetype (`Fusion/NodeTypes`) and those that are not (`Fusion/Objects`).
 
 ## Why is this cool? (a.k.a. conclusion)
 
@@ -272,6 +272,6 @@ Checkout some real-world examples of this approach:
 
 <a target="_blank" class="Button" href="https://github.com/psmb/BoilerplateDistr">Boilerplate distribution for starting new projects</a>
 
-<a target="_blank" class="Button" href="https://github.com/psmb/PsmbDistr/tree/master/Packages/Sites/Sfi.Site/Resources/Private/TypoScript">Psmb.ru website distribution</a>
+<a target="_blank" class="Button" href="https://github.com/psmb/PsmbDistr/tree/master/Packages/Sites/Sfi.Site/Resources/Private/Fusion">Psmb.ru website distribution</a>
 
 **My appreciation to [Bastian Waidelich](https://twitter.com/bwaidelich) for reviewing the article!**
