@@ -17,11 +17,11 @@ I hope this post will save you at least from part of frustration that I had gone
 
 I needed to migrate only tt_news records, but you can easily adapt it to anything you need just grasp the methode.
 
-##1. Command Controller
+## 1. Command Controller
 
 The first question I had was where to put my migration code. Most apropriate is to create a command line task for that. Luckily Neos provides an easy way of creating command controllers. Here is [a good tutorial on how to create one](http://www.matthias-witte.net/create-your-own-typo3-flow-command-line-controller/2012/11/).
 
-##2. Get records from old TYPO3
+## 2. Get records from old TYPO3
 
 Next I copied all of the relevant tables from old database to the new one.
 I needed a few minutes to figure out how to deal with direct database connections, but it wasn't hard. This is a function that retrieves all records of certain tt_news category, but you can use any query you want here.
@@ -38,7 +38,7 @@ WHERE mm.uid_foreign = '.$cat." AND tt_news.deleted=0 AND tt_news.hidden=0";
 }
 {% endhighlight %}
 
-##3. Node template
+## 3. Node template
 
 I had defined my own node type: Sfi.Sfi:News to hold news records. Now to actually insert anything to TYPO3CR, you need to create a NodeTemplate object for every news record, and fill it in with relevant properties.
 
@@ -66,7 +66,7 @@ $infoCollectionNode = $this->context->getNode('/sites/sfi/news/info');
         	$newsNode = $infoCollectionNode->createNodeFromTemplate($nodeTemplate);
 {% endhighlight %}
 
-###Bodytext
+### Bodytext
 
 I wanted my new News object to be really flexible in the future, so I decided to store bodytext in the mainContent child node.
 
@@ -82,7 +82,7 @@ if($newsItem['bodytext']){
 }
 {% endhighlight %}
 
-###Image
+### Image
 
 With images I had to spend even more time.
 
@@ -119,7 +119,7 @@ private function importImage($filename){
 {% endhighlight %}
 
 
-###Files
+### Files
 
 And finally, migrating files:
 
@@ -150,7 +150,7 @@ private function importFile($filename){
 }
 {% endhighlight %}
 
-###Adding properties in different content dimensions
+### Adding properties in different content dimensions
 
 At first create the context for the different content dimensions. 
 Create the context before iterating  your data.
@@ -176,7 +176,7 @@ $infoCollectionNodeEn = $contextEN->adoptNode($infoCollectionNode);
 $infoCollectionNodeEn->setProperty('title',$newsItem['titleEN']);
 {% endhighlight %}
 
-##Result
+## Result
 
 Here you can see the final code: [the gist](https://gist.github.com/dimaip/43d027f184e06f1cd37c).
 
