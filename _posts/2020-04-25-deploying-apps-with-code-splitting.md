@@ -119,3 +119,7 @@ But this technique is not 100% reliable in preventing the aforementioned excepti
 ## Conclusion
 
 I find it super strange that such a crucial topic of deploying web apps does not get enough attention. I sincerely hope that deployment platforms like Vercel will get their shit together and provide an option to keep previously deployed assets available. For the time being, some apps can get away with prefetching all JS chunks and reloading on dynamic exceptions.
+
+Please retweet if you found this article helpful!
+
+<blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">How I shot myself in a foot while deploying an app with code splitting <a href="https://t.co/qZ1d3xcBWk">https://t.co/qZ1d3xcBWk</a></p>&mdash; Dmitri Pisarev 🇷🇺 (@dimaip) <a href="https://twitter.com/dimaip/status/1254013100380106755?ref_src=twsrc%5Etfw">April 25, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
