@@ -38,6 +38,7 @@ main.a3e4.js <-- main bundle
 ## The Issue
 
 So far so good. But now comes the time to deploy our app to production. You build your app assets and put them to some static web hosting.
+
 Users start using your app, perhaps installing it on their phone, if it is a PWA.
 Then you discover a bug in your app. You quickly fix it, rebuild the app and put the new assets online, replacing the old ones.
 
@@ -64,9 +65,11 @@ Let's get this problem solved!
 ## Solution 1. Keep previous versions of assets
 
 The only no-compromise solution is to **keep all ever deployed assets forever** (or at least for a long enough time). It would obviously help to prevent the aforementioned problem and keep the users happy.
+
 There is a small consideration of disk space, but the way bigger problem is that **most deployment tools just don't support such an approach**.
 
 For example, Vercel (ex. ZEIT) [claims](https://github.com/zeit/now/discussions/4140) that it is not what their users would expect (your users never do code-splitting, huh?).
+
 On the contrary, AWS Amplify Console works correctly out of the box (though it performs considerably slower than Vercel both in terms of delivery and build times).
 
 I would love to gather more data on what deployment platforms support keeping previously deployed assets available, so **please comment if you know how other platforms behave in this regard**.
