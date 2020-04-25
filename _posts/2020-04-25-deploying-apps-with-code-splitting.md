@@ -23,7 +23,9 @@ Nowadays code splitting for JavaScript apps has become mainstream. It is trivial
 Imagine you have a React web app and you would like `SomeVeryHeavyComponent` to be loaded only when the user navigates to that route. Here's how you would achieve it:
 
 ```js
-const SomeHeavyComponent = React.lazy(() => import('./SomeHeavyComponent'));
+const SomeHeavyComponent = React.lazy(
+  () => import('./SomeHeavyComponent')
+);
 ```
 
 That's it. Webpack would extract it into a separate JS bundle so your app assets would look somehow like this:
@@ -54,6 +56,7 @@ Had we had assets always named the same way (e.g. `0.js` instead of `0.ef23.js`)
 TypeError __webpack_require__(webpack/bootstrap)
 Cannot read property 'call' of undefined
 ```
+
 That happens because `SomeHeavyComponent` might have changed, and Webpack no longer finds what it expected to see in it.
 
 Let's get this problem solved!
@@ -79,7 +82,10 @@ Recap:
 If we can't afford to keep previous versions of assets deployed, we can at least catch those loading mistakes and force-reload the app. Since dynamic imports return just a Promise, it is very easy to do that:
 
 ```js
-const SomeHeavyComponent = React.lazy(() => import('./SomeHeavyComponent').catch(e => window.location.reload()));
+const SomeHeavyComponent = React.lazy(
+  () => import('./SomeHeavyComponent')
+     .catch(e => window.location.reload())
+);
 ```
 
 Of course, your app should be able to self update its service worker on reload. It is actually rather tricky to do it and it desires a dedicated article which I may right some day. For now read this Twitter thread: 
@@ -95,7 +101,7 @@ But this approach has one serious down side: if your app is stateful, it would b
 
 Alternatively, another technique could be to pre-cache all JS bundles with a service worker on initial page load.
 
-This technique is very easy to implement with Workbox, in just one line of code:
+This technique is very easy to implement with Workbox, in just one line of code with the help of `workbox-webpack-plugin` Webpack Plugin:
 
 ```js
 precacheAndRoute(self.__WB_MANIFEST);
