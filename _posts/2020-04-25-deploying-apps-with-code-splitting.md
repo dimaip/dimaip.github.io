@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What You should Consider before Deploying an App with Code Splitting"
-description: "The challenges I've faced deploying my first app with code splitting"
+description: "How I shot myself in the foot while deploying my first app with code splitting"
 image: "https://user-images.githubusercontent.com/837032/80278193-fc3da380-86fc-11ea-810c-c7c7b92aa0f3.png"
 tags: core-splitting, webpack, react
 comments: true
@@ -10,7 +10,7 @@ comments: true
 ![Some exceptions from Sentry](https://user-images.githubusercontent.com/837032/80278193-fc3da380-86fc-11ea-810c-c7c7b92aa0f3.png)
 
 <p class="LeadParagraph" markdown="1">
-Recently I had to publish my first ever PWA with code-splitting. Quite quickly I figured out I had no idea what I was doing... Maybe I am not the only one who didn't consider that deploying apps with code-splitting is not all that trivial.
+Recently I had to publish [my first ever PWA with code-splitting](https://c.psmb.ru)([here](https://github.com/dimaip/calendar) is the source). Quite quickly I figured out I had no idea what I was doing... Maybe I am not the only one who didn't consider that deploying apps with code-splitting is not all that trivial.
 </p>
 
 **TL;DR**
@@ -39,7 +39,7 @@ main.a3e4.js <-- main bundle
 
 So far so good. But now comes the time to deploy our app to production. You build your app assets and put them to some static web hosting.
 Users start using your app, perhaps installing it on their phone, if it is a PWA.
-Then you discover a bug in your app. You quickly fix it, rebuild the app and put new assets online, replacing the old ones.
+Then you discover a bug in your app. You quickly fix it, rebuild the app and put the new assets online, replacing the old ones.
 
 And here comes the boom! You start getting exceptions of this kind popping up in Sentry (you do monitor your JS apps, right?!):
 
@@ -63,13 +63,13 @@ Let's get this problem solved!
 
 ## Solution 1. Keep previous versions of assets
 
-The only no-compromise solution is to keep all ever deployed assets forever (or at least for a long enough time). It would obviously help to prevent the aforementioned problem and keep the users happy.
-There is a small consideration of disk space, but the way bigger problem is that most deployment tools just don't support such an approach.
+The only no-compromise solution is to **keep all ever deployed assets forever** (or at least for a long enough time). It would obviously help to prevent the aforementioned problem and keep the users happy.
+There is a small consideration of disk space, but the way bigger problem is that **most deployment tools just don't support such an approach**.
 
-For example, Vercel (ex. ZEIT) [claims](https://github.com/zeit/now/discussions/4140) that it is not what their users would expect.
+For example, Vercel (ex. ZEIT) [claims](https://github.com/zeit/now/discussions/4140) that it is not what their users would expect (your users never do code-splitting, huh?).
 On the contrary, AWS Amplify Console works correctly out of the box (though it performs considerably slower than Vercel both in terms of delivery and build times).
 
-I would love to gather more data on what deployment platforms support keeping previously deployed assets available, so please comment if you know how other platforms behave in this regard.
+I would love to gather more data on what deployment platforms support keeping previously deployed assets available, so **please comment if you know how other platforms behave in this regard**.
 
 You can always build a custom deployment pipeline that would support keeping previously deployed assets, but in many cases it is just not worths the effort.
 
@@ -88,11 +88,11 @@ const SomeHeavyComponent = React.lazy(
 );
 ```
 
-Of course, your app should be able to self update its service worker on reload. It is actually rather tricky to do it and it desires a dedicated article which I may right some day. For now read this Twitter thread: 
+Of course, your app should be able to self update its service worker on reload. It is actually rather tricky to do it and it deserves a dedicated article which I may write some day. For now read this Twitter thread: 
 
 <blockquote class="twitter-tweet" data-lang="en" data-dnt="true"><p lang="en" dir="ltr">So people have asked me to share how to make sure your PWA automatically updates itself, even on <a href="https://twitter.com/hashtag/iOS?src=hash&amp;ref_src=twsrc%5Etfw">#iOS</a> 12 (which preserves the state of your app even when quitting it). Thread follows.</p>&mdash; Dmitri Pisarev 🇷🇺 (@dimaip) <a href="https://twitter.com/dimaip/status/1250009587866009601?ref_src=twsrc%5Etfw">April 14, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-But this approach has one serious down side: if your app is stateful, it would be hard to keep the app's state during force-update. E.g. imagine writing some Tweet and getting Twitter to force-reload on you, that would be a drama.
+But this approach has one serious down side: if your app is stateful, it would be hard to keep the app's state after force-update. E.g. imagine writing some Tweet and getting Twitter to force-reload on you, that would be some drama!
 
 **PROS**: works with all deployment platforms
 **CONS**: horrible UX for stateful apps
