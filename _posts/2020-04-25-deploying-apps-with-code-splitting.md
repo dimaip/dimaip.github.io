@@ -66,7 +66,7 @@ Let's get this problem solved!
 The only no-compromise solution is to keep all ever deployed assets forever (or at least for a long enough time). It would obviously help to prevent the aforementioned problem and keep the users happy.
 There is a small consideration of disk space, but the way bigger problem is that most deployment tools just don't support such an approach.
 
-For example, Vercel (ex. ZEIT) claims that it is not what their users would expect https://github.com/zeit/now/discussions/4140
+For example, Vercel (ex. ZEIT) [claims](https://github.com/zeit/now/discussions/4140) that it is not what their users would expect.
 On the contrary, AWS Amplify Console works correctly out of the box (though it performs considerably slower than Vercel both in terms of delivery and build times).
 
 I would love to gather more data on what deployment platforms support keeping previously deployed assets available, so please comment if you know how other platforms behave in this regard.
