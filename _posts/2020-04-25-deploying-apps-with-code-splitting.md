@@ -73,8 +73,8 @@ I would love to gather more data on what deployment platforms support keeping pr
 
 You can always build a custom deployment pipeline that would support keeping previously deployed assets, but in many cases it is just not worths the effort.
 
-Recap:
 **PROS**: the most reliable solution
+
 **CONS**: not many platforms support it out of the box
 
 ## Solution 2. Catch exceptions and force-reload app
@@ -95,6 +95,7 @@ Of course, your app should be able to self update its service worker on reload. 
 But this approach has one serious down side: if your app is stateful, it would be hard to keep the app's state after force-update. E.g. imagine writing some Tweet and getting Twitter to force-reload on you, that would be some drama!
 
 **PROS**: works with all deployment platforms
+
 **CONS**: horrible UX for stateful apps
  
 ## Solution 3. Pre-cache all JS bundles with a service worker
@@ -112,6 +113,7 @@ It is usually a good idea to do prefetching in any case, the only consideration 
 But this technique is not 100% reliable in preventing the aforementioned exceptions, so it should still be combined with the previously described technique of catching dynamic import exceptions.
 
 **PROS**: prefetching makes sense in many cases anyways
+
 **CONS**: does not conserve bandwidth
 
 ## Conclusion
