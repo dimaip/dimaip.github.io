@@ -10,7 +10,7 @@ comments: true
 ![Some exceptions from Sentry](https://user-images.githubusercontent.com/837032/80278193-fc3da380-86fc-11ea-810c-c7c7b92aa0f3.png)
 
 <p class="LeadParagraph" markdown="1">
-Recently I had to publish [my first ever PWA with code-splitting](https://c.psmb.ru)([here](https://github.com/dimaip/calendar) is the source). Quite quickly I figured out I had no idea what I was doing... Maybe I am not the only one who didn't consider that deploying apps with code-splitting is not all that trivial.
+Recently I had to publish [my first ever PWA with code-splitting](https://c.psmb.ru) ([here](https://github.com/dimaip/calendar) is the source). Quite quickly I figured out I had no idea what I was doing... Maybe I am not the only one who didn't consider that deploying apps with code-splitting is not all that trivial.
 </p>
 
 **TL;DR**
