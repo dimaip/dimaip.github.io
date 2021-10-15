@@ -70,7 +70,8 @@ There is a small consideration of disk space, but the way bigger problem is that
 
 For example, Vercel (ex. ZEIT) [claims](https://github.com/zeit/now/discussions/4140) that it is not what their users would expect (your users never do code-splitting, huh?).
 
-On the contrary, AWS Amplify Console works correctly out of the box (though it performs considerably slower than Vercel both in terms of delivery and build times).
+~~On the contrary, AWS Amplify Console works correctly out of the box (though it performs considerably slower than Vercel both in terms of delivery and build times).~~
+(**edit: this seems no longer to be the case, AWS Amplify is hit by the same issue as of 2021**)
 
 I would love to gather more data on what deployment platforms support keeping previously deployed assets available, so **please comment if you know how other platforms behave in this regard**.
 
