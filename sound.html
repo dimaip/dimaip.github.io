@@ -1,0 +1,11 @@
+<script src="https://w.soundcloud.com/player/api.js"></script>
+
+<iframe id="crickets" width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/615138615&color=%23ff5500&inverse=false&loop=true&auto_play=true&show_user=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/tanyaskrabanskaya" title="s-t-o-l.com" target="_blank" style="color: #cccccc; text-decoration: none;">s-t-o-l.com</a> · <a href="https://soundcloud.com/tanyaskrabanskaya/warm-evening-outdoors" title="the crickets" target="_blank" style="color: #cccccc; text-decoration: none;">the crickets</a></div>
+
+<script>
+var widget = SC.Widget("crickets");
+widget.bind(SC.Widget.Events.FINISH, function() {
+    widget.seekTo(0);
+    widget.play();
+});
+</script>
